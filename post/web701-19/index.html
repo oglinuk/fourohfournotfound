@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Web701 19</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Web701 19</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-19/">Web701 19</a></h4>
+    <h5>May 14, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/django"><kbd class="item-tag">Django</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/auction-system"><kbd class="item-tag">Auction system</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="web-development-701-auction-system-cont">Web Development 701 ~ Auction System (cont.)</h1>
+
+<p>In the <a href="/post/web701-18">last blog</a> we covered authentication with the TradeMe API. After some playing around, I hit a wall with the <a href="https://developer.trademe.co.nz/api-reference/selling-methods/list-an-item/">list an item</a> API method. Instead of wasting time trying to figure it out I am going to implement a simple dummy auction system. This is partly because I&rsquo;d rather have something for an auction system than nothing and also partly because I have more important projects to work on.</p>
+
+<p>The dummy auction system is going to be a dictionary which contains some dummy data. The dummy database (dictionary) is as follows.</p>
+
+<pre><code class="language-Python">dummy_auction_items = {
+    &quot;Items&quot;: [
+        {
+            &quot;name&quot;: &quot;strawberries&quot;,
+            &quot;quantity&quot;: 100,
+            &quot;price&quot;: 1.35,
+            &quot;bidders&quot;: []
+        },
+        {
+            &quot;name&quot;: &quot;blueberries&quot;,
+            &quot;quantity&quot;: 70,
+            &quot;price&quot;: 2.10,
+            &quot;bidders&quot;: []
+        },
+        {
+            &quot;name&quot;: &quot;blackberries&quot;,
+            &quot;quantity&quot;: 130,
+            &quot;price&quot;: 3.99,
+            &quot;bidders&quot;: []
+        },
+        {
+            &quot;name&quot;: &quot;kiwiberries&quot;,
+            &quot;quantity&quot;: 50,
+            &quot;price&quot;: 6.82,
+            &quot;bidders&quot;: []
+        },
+    ]
+}
+</code></pre>
+
+<p>As stated above it&rsquo;s going to be a simple auction system, so I am not going to go overboard with the complexity of the data. These are the required pieces of information (I believe) that would be required for a basic auction system.</p>
+
+<p>The first thing we need to do is to create a new app, which we will do via <code>django-admin startapp auction</code>, then add <code>auction</code> to the <code>INSTALLED_APPS</code> list in the<code>settings.py</code> file of the <code>web701</code> directory.</p>
+
+<p>We now need to add the following to the <code>urls.py</code> file in the <code>web701</code> directory.</p>
+
+<pre><code class="language-Python">path('', include('auction.urls'))
+</code></pre>
+
+<p>Next to create a file called <code>urls.py</code> in the newly made <code>auction</code> app and add the following.</p>
+
+<pre><code class="language-Python">path('auction', views.auction, name='auction'),
+path('bid_item', views.bid_item, name='bid_item'),
+path('sell_item', views.sell_item, name='sell_item')
+</code></pre>
+
+<p>Now to create the views in <code>views.py</code> via the following.</p>
+
+<pre><code class="language-Python">def auction(request):
+    context = {'listings': dummy_auction_items}
+    return render(request, 'auction/auction.html', context=context)
+</code></pre>
+
+<pre><code class="language-Python">def bid_item(request):
+    if request.method == 'POST':
+        form_data = request.POST.dict()
+
+        bidder = form_data.get('user')
+        quantity = int(form_data.get('quantity'))
+        listing = form_data.get('listing')
+        price = float(form_data.get('price'))
+        total_price = price * quantity
+
+        for val in dummy_auction_items.values():
+            for item in val:
+                if listing == item['name']:
+                    item['bidders'].append({
+                                        'name': bidder, 
+                                        'quantity': quantity, 
+                                        'price': total_price})
+                    item['quantity'] -= quantity
+        return redirect('auction')
+
+    return redirect('auction')
+</code></pre>
+
+<pre><code class="language-Python">def sell_item(request):
+    if request.method == 'POST':
+        form_data = request.POST.dict()
+
+        item_data = {
+            'name': form_data.get('name'),
+            'quantity': int(form_data.get('quantity')),
+            'price': float(form_data.get('price')),
+            'bidders': []
+        }
+
+        dummy_auction_items[&quot;Items&quot;].append(item_data)
+        return redirect('auction')
+
+    return render(request, 'auction/sell.html')
+</code></pre>
+
+<p>Now the <code>auction.html</code> file (do note that it will be in the <code>auction</code> directory under the <code>templates</code> directory which we will need to make). The <code>auction.html</code> file will look as follows.</p>
+
+<pre><code class="language-HTML">{% extends &quot;skeleton.html&quot; %}
+
+{% block title %}Auction{% endblock %}
+
+{% block body %}
+&lt;h1&gt;Auction | &lt;a href=&quot;{% url 'sell_item' %}&quot;&gt;Sell Item&lt;/a&gt;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h3&gt;Auction Listings&lt;/h3&gt;
+&lt;ol&gt;
+    {% for listing in listings.Items %}
+    &lt;li&gt;
+        Name: {{ listing.name }}
+        &lt;br&gt;
+        Quantity: {{ listing.quantity }}
+        &lt;br&gt;
+        Price: {{ listing.price }}
+        &lt;br&gt;
+        &lt;br&gt;
+        {% if listing.bidders %}
+            {% for bidder in listing.bidders %}
+                Bidder: {{ bidder.name }}
+                &amp;nbsp;
+                Quantity: {{ bidder.quantity }}
+                &amp;nbsp;
+                Price: {{ bidder.price }}
+                &lt;br&gt;
+            {% endfor %}
+        {% endif %}
+        &lt;br&gt;
+        &lt;form method=&quot;POST&quot; action=&quot;{% url 'bid_item' %}&quot;&gt;
+            {% csrf_token %}
+            Quantity:&amp;nbsp;
+            &lt;input type=&quot;number&quot; name=&quot;quantity&quot; min=&quot;1&quot; max=&quot;{{listing.quantity}}&quot; value=&quot;1&quot;&gt;
+            &lt;br&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;price&quot; value=&quot;{{ listing.price }}&quot;&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;listing&quot; value=&quot;{{ listing.name }}&quot;&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;user&quot; value=&quot;{{ request.user.username }}&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;bid&quot;&gt;
+        &lt;/form&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+    &lt;/li&gt;
+    {% endfor %}
+&lt;/ol&gt;
+{% endblock %}
+</code></pre>
+
+<p>Now the <code>sell.html</code> template.</p>
+
+<pre><code class="language-HTML">{% extends &quot;skeleton.html&quot; %}
+
+{% block title %}Sell Item{% endblock %}
+
+{% block body %}
+&lt;h1&gt;Sell Item&lt;/h1&gt;
+&lt;form method=&quot;POST&quot; action=&quot;{% url 'sell_item' %}&quot;&gt;
+        {% csrf_token %}
+
+        Name:&amp;nbsp; &lt;input type=&quot;input&quot; name=&quot;name&quot;&gt;
+        &lt;br&gt;
+        Price:&amp;nbsp; &lt;input type=&quot;number&quot; step=&quot;0.01&quot; name=&quot;price&quot;&gt;
+        &lt;br&gt;
+        Quantity:&amp;nbsp; &lt;input type=&quot;number&quot; step=&quot;1&quot; name=&quot;quantity&quot;&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;register&quot;&gt;
+    &lt;/form&gt;
+{% endblock %}
+</code></pre>
+
+<p>With that users now have the ability to sell and bid on items in our (dummy) auction system.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-22/">Web701 22</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-21/">Web701 21</a></h4>
+    <h5>May 21, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/virtualbox"><kbd class="item-tag">VirtualBox</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-20/">Web701 20</a></h4>
+    <h5>May 20, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/django"><kbd class="item-tag">Django</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/heroku"><kbd class="item-tag">Heroku</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-hosting"><kbd class="item-tag">Web Hosting</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

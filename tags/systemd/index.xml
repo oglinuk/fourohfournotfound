@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systemd on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/systemd/</link>
+    <description>Recent content in Systemd on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2020 11:12:33 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nginx 0</title>
+      <link>https://oglinuk.github.io/post/nginx-0/</link>
+      <pubDate>Sun, 12 Apr 2020 11:12:33 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/nginx-0/</guid>
+      <description>Nginx ~ Deploying a Go Web Application Nginx is another one of those technologies that I&amp;rsquo;ve known of for a while, but haven&amp;rsquo;t had the chance to dig into. This blog will cover how to deploy a basic Golang web application on a $5/month ubuntu 18.04 vm hosted by Digital Ocean. I&amp;rsquo;ve found a really good blog by Michael Okoh which is what I am going to learn from.</description>
+    </item>
+    
+  </channel>
+</rss>

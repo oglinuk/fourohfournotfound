@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nginx 1</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Nginx 1</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/nginx-1/">Nginx 1</a></h4>
+    <h5>April 13, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/nginx"><kbd class="item-tag">Nginx</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/blogging"><kbd class="item-tag">Blogging</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-development"><kbd class="item-tag">Web Development</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="nginx-subdomains-and-a-blog">Nginx ~ Subdomains and a Blog</h1>
+
+<p>In the <a href="/post/nginx-0">previous blog</a> we explored serving a Go web application with <a href="https://nginx.com">Nginx</a> on <a href="https://digitalocean.com">Digital Ocean</a>.
+This blog is going to cover how to host a static website on a subdomain. One of the things I did not cover in the last blog is how to point to your domain name with Digital Ocean. For more on this please refer to <a href="https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars">this blog</a> that I found/used originally.</p>
+
+<p>The first thing to do is create another droplet. There might be a way to host the static website on the same droplet, but I have not figured that out yet. Once you have your droplet running and up-to-date, install Nginx via <code>sudo apt install nginx</code>. After you&rsquo;ve installed Nginx, copy over your static site using an <code>scp</code> or <code>rsync</code> command. If you&rsquo;re wondering what the difference between the two like I did, you can refer to <a href="https://unix.stackexchange.com/a/39719">this stackexchange answer</a>. I copied my static website to the <code>/var/www</code> directory, but you can choose to store it wherever you would like, just make sure you use that same path in the Nginx configuration.</p>
+
+<p>The next thing to do is create a Nginx server block file in <code>/etc/nginx/sites-available</code>. Add the following to the file.</p>
+
+<pre><code>server {
+	root /var/www/fourohfournotfound;
+
+	server_name blog.fourohfournotfound.com www.blog.fourohfournotfound.com;
+}
+</code></pre>
+
+<p>Finally, to add a subdomain to point to the droplet. In my case, since my static website is my blog I am adding <code>blog</code> and <code>www.blog</code> as the hostname directing to the droplet with the static website.</p>
+
+<p>Thanks it! Check out <a href="http://blog.fourohfournotfound.com">blog.fourohfournotfound.com</a> and learn on!</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/nginx-0/">Nginx 0</a></h4>
+    <h5>April 12, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/nginx"><kbd class="item-tag">Nginx</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/golang"><kbd class="item-tag">Golang</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/systemd"><kbd class="item-tag">Systemd</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-development"><kbd class="item-tag">Web Development</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-22/">Web701 22</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

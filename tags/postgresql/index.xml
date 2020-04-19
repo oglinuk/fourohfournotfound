@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postgresql on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/postgresql/</link>
+    <description>Recent content in Postgresql on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prj701 10 ~ Creating an Odoo Module</title>
+      <link>https://oglinuk.github.io/post/prj701-10/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-10/</guid>
+      <description>PRJ701 - Creating an Odoo Module One of the most powerful things that Odoo brings is the fact that it is open-source. This allows developers like myself to extend the existing structure to fit any use case. To make it even better, Odoo has taken it a step further and provided a built in way to generating the skeleton of an entirely new module. This is done via the scaffold flag when executing odoo-bin.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 6 ~ Vim</title>
+      <link>https://oglinuk.github.io/post/prj701-6/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-6/</guid>
+      <description>Project 701 ~ Vim I am sure if you have heard of vim then you probably haven&amp;rsquo;t heard good things. I mean hell there are jokes about just exiting vim. Vim (Vi IMproved) is a clone of the vi text editor made by Bill Joy for Unix. When I was first exposed to a text editor (nano) I wasn&amp;rsquo;t very fond of it. It didn&amp;rsquo;t make sense why I would use a text editor over what I was currently using at the time (atom).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 3 - PostgreSQL</title>
+      <link>https://oglinuk.github.io/post/prj701-3/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-3/</guid>
+      <description>Project 701 ~ PostgreSQL PostgreSQL is an open source, no-sql (object-relational) database (ORDBMS) which is the db Odoo is built upon. I only have experience with MySQL which is entirely different since, its MySQL relation database management system (RDBMS). I&amp;rsquo;ve never actually used or played around with Postgres so I will be utilizing an awesome blog I found (via quick duckduckgo(ddg) search) which is by the Nanyang Technological University. This blog contains 6 sections with great snippets of quick refence information (I purposely left out the section about PHP cause don&amp;rsquo;t touch that stuff with a 20ft pole).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 0 ~ Odoo ~ Venus Informatics</title>
+      <link>https://oglinuk.github.io/post/prj701-0/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-0/</guid>
+      <description>Project 701 ~ Odoo ~ Venus Informatics My 3rd year project proposal started to form without me really knowing it during my first year DAT501(database) class, which at the time was taught by my now best friend Krupesh Desai. At the time Krupesh was working at the NMDHB(Nelson Marlborough District Health Board) on a solution to merge all of the DHB&amp;rsquo;s throughout New Zealand onto one platform. Around May the following year I had met Krupesh again at an ITP (IT Professionals) meeting where I asked him a question on feasability of a malware detecting AI.</description>
+    </item>
+    
+  </channel>
+</rss>

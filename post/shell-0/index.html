@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shell 0</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Shell 0</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/shell-0/">Shell 0</a></h4>
+    <h5>April 19, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/shell"><kbd class="item-tag">Shell</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="unix-shell">Unix Shell</h1>
+
+<p>It has been almost 3 years since I made the the switch to Linux, and have enjoyed every moment. Like most, I found the terminal to be a daunting thing at first, much like Linux itself. I quickly discovered how much more I enjoyed using a terminal over GUI applications. Though I have gotten by over the past years with the basic commands like <code>cd</code> or <code>rm</code>, I never really dedicated time to improving my skills with the command line.</p>
+
+<p>This is going to be the first of many blogs aimed to record my learnings and discoveries with the Linux shell. Before I go any further I just want to stop and take a moment to recognize the many who have contributed to projects that have shaped the world as we know it today. Thank you. You are amazing and I will forever remember what you have done for not only me but all of those who use the things you have helped create.</p>
+
+<p>One of those wonderful humans is <a href="http://www.linuxcommand.org">William Shotts</a>, who is the author of the book <a href="http://www.linuxcommand.org/tlcl.php">The Linux Command Line</a>. This is a freely available book (in pdf form) under the Creative Commons Attribution-Noncommercial-No De-rivative Works 3.0 license. If you ever read this blog William, thank you.</p>
+
+<p>Now I can&rsquo;t think of a better reason to learn the shell than the one that William gives on his website. &ldquo;A few years ago we had a problem where I used to work. There was a shared drive on one of our file servers that kept getting full. I won&rsquo;t mention that this legacy operating system did not support user quotas; that&rsquo;s another story. But the server kept getting full and it stopped people from working. One of our software engineers spent the better part of a day writing a C++ program that would look through all the user&rsquo;s directories and add up the space they were using and make a listing of the results. Since I was forced to use the legacy OS while I was on the job, I installed a Linux-like command line environment for it. When I heard about the problem, I realized I could do all the work this engineer had done with this single line:</p>
+
+<p><code>du -s * | sort -nr &gt; $HOME/user_space_report.txt</code>.&rdquo; <a href="http://www.linuxcommand.org/lc3_learning_the_shell.php">[source]</a></p>
+
+<p>Not only did this make me laugh, but this also made me realize just how <em>powerful</em> the shell can be. Lets take this command as the first to deconstruct and understand. <code>man du</code> shows that the <code>du</code> command is used to summarize the disk usage of a set of files, recursively for directories. The <code>-s</code> flag is to display only a total for each argument, which in this case is the wildcard <code>*</code>. The <code>|</code> means that we pipe the output of the first command to the command that follows after the <code>|</code>. <code>man sort</code> shows that <code>sort</code> is used to write the sorted concatenation of all file(s) to standard output. The <code>n</code> flag is to compare according to string numerical value, and the <code>r</code> flag is to reverse the result of the comparisons. The result of those two commands are then redirected via <code>&gt;</code> to a file called <code>user_space_report.txt</code>.</p>
+
+<p>Truly amazing.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/arch-0/">Arch 0</a></h4>
+    <h5>April 15, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/arch"><kbd class="item-tag">Arch</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/quake3-0/">Quake3 0</a></h4>
+    <h5>April 13, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/quake3"><kbd class="item-tag">Quake3</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/c"><kbd class="item-tag">C</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/alacritty-0/">Alacritty 0</a></h4>
+    <h5>April 11, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/alacrity"><kbd class="item-tag">Alacrity</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/rust"><kbd class="item-tag">Rust</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

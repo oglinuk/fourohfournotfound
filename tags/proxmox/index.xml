@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxmox on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/proxmox/</link>
+    <description>Recent content in Proxmox on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/proxmox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prj701 5 ~ Proxmox</title>
+      <link>https://oglinuk.github.io/post/prj701-5/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-5/</guid>
+      <description>Project 701 ~ Proxmox Networking is one of the IT sectors that I have yet to spend much time in. My only exposure has been a NET501 class where we covered the basics of things like booting a virtual machine, routers/IPs, certificates, dhcp, and a few others. Since then I haven&amp;rsquo;t really touched anything to do with networking except for creation/use of virtual machines on the cloud platforms (GCP, AWS and Azure).</description>
+    </item>
+    
+  </channel>
+</rss>

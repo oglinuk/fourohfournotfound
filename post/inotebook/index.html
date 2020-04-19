@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inotebook</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Inotebook</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/inotebook/">Inotebook</a></h4>
+    <h5>November 20, 2018</h5>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cryptography"><kbd class="item-tag">Cryptography</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/vigenere-cipher"><kbd class="item-tag">Vigenere Cipher</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="i-llusionists-notebook">I(llusionists) Notebook</h1>
+
+<p>If you have seen the Prestige, then this program will look familiar. Inotebook is a personal notebook that is encrypted with the vigenere cipher. A vigenere cipher is similar to a caesar cipher (where characters are shifted by a certain offset), but the vigenere cipher uses a key to determine the offset rather than a number. The key is repeated to the length of the message, then each character of the message is offset by the character of the key. For example if I had a key of hello and a message of world; w would be offset by 8 (since h is 8th in position), e would be offset by 15, and so on. In that example the message is the exact length of the message, so the key wouldnlt be repeated but for messages larger than the hey length, the key is repeated. An example of this would look like</p>
+
+<pre><code>key = 'HELLO'
+message = ' MESSAGE'
+
+offsets = (['M', 'H'], ['E', 'E',], ['S', 'L'], ['S', 'L'], ['A', 'O'], ['G', 'H'], ['E', E'])
+</code></pre>
+
+<p>Now to write some Python&hellip;</p>
+
+<p>The first thing is to make a class which will be our object for the notebook. This looks like the following &hellip;</p>
+
+<pre><code>class IllusionistsNotebook(object):
+	def __init__(self, key):
+		self.key = self.mapKey(key)
+        	self.matrix = [ascii_uppercase[(i + 1) % 26] for i in range(len(ascii_uppercase))]
+		self.entriesFile = 'entries.txt'
+		self.entries = []
+	
+	def mapKey(self, k):
+		key = ''
+		for i, c in enumerate(k):
+			if c.isalpha():
+				key += c.upper()
+			if c.isdigit():
+				key += ascii_uppercase[int(c) % len(ascii_uppercase)].upper()
+		return key
+</code></pre>
+
+<p>The class takes a key which is passed to the mapKey function. The purpose of the mapKey function is to be able to use both alphabet characters and numerical values (so that I can use hash&rsquo;s produced by my personal SBH program). <code>Self.matrix</code> is an array of all uppercase alphabetical characters to map the message characters to. The <code>self.entriesFile</code> value is a hardcoded file that is used to store entries of inotebook, and <code>self.entries</code> is for the entries made within the current session. The next function is the vigenere encryption function, which takes a string as a parameter. The function creates an empty string for which the resulting values are appended to. <code>repK</code> is a variable that maps the key to the entire message (repeating the key characters if the message is longer than the key). The next thing that is done is the actual mapping of the individual characters in the passed string to the key characters. ~ Remember the example above? The code itself is pretty simple.</p>
+
+<pre><code>for x, i in enumerate(s.upper()):
+	if i not in ascii_uppercase:
+		cipherText += i
+	else:
+		cipherText += ascii_uppercase[(ascii_uppercase.find(i) + self.matrix.index(repK[x])) % 26]
+	return cipherText
+</code></pre>
+
+<p>For each character that is enumerated over, the program checks to see if the current character is within the ascii_uppercase variable, if not the program will append the (i)ndex value of the ascii_uppercase variable. If the character is <em>not</em> within the ascii_uppercase variable then the program appends the value of i. I am not entirely sure if this is bad practice since there is essentially nothing changed to a non-alphabetical character. I will leave this for now since it is not a massive priority, but will be something that I will adjust in the future. I already have an idea for a solution, which does the same thing as the else statement above, but for numerical values and for symbols.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-22/">Web701 22</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-21/">Web701 21</a></h4>
+    <h5>May 21, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/virtualbox"><kbd class="item-tag">VirtualBox</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-20/">Web701 20</a></h4>
+    <h5>May 20, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/django"><kbd class="item-tag">Django</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/heroku"><kbd class="item-tag">Heroku</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-hosting"><kbd class="item-tag">Web Hosting</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

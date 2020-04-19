@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vim 0</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Vim 0</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/vim-0/">Vim 0</a></h4>
+    <h5>April 4, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/vim"><kbd class="item-tag">Vim</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/c"><kbd class="item-tag">C</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="vim">Vim</h1>
+
+<p>I was first introduced to <a href="https://www.vim.org">Vim</a> by my good friend <a href="https://github.com/pigeonhands">Sam</a>. As someone who tries to work as much in the terminal as possible, Vim was perfect for my text editing needs. Although I&rsquo;ve known/used Vim for a while, it&rsquo;s always basic usage for quick edititing, and its always been a secondary editor to Visual Studio Code. This was because I relied heavily on the intellisense when programming in langauges like Go.</p>
+
+<p>Today I read something that changed my perspective on intellisense. I&rsquo;ve recently started watching a twitch streamer by the name of <a href="https://twitch.tv/rwxrob">rwxrob</a>, who replied to someone posting in his discord about the <a href="https://en.wikipedia.org/wiki/Language_Server_Protocol">Language Server Protocol</a>. He stated that &ldquo;intellisense and autocompletion are two of the most disasterously bad things adopted by modern developers and are only appreciated by those just beginning as a crutch that is better served by learning to search through syntax and documentation with examples instead. The end.&rdquo;</p>
+
+<p>Now I would like to also say that after talking with Rob, he did state that &ldquo;I do have opinions but I&rsquo;m happy to change them when I have new information. I&rsquo;m a little softer on my position about tab completion over the popups from intellisense. The fact that I have become very fast at looking stuff up with <a href="https://linux.die.net/man/1/lynx">Lynx</a> has also influenced my opinion on the matter. If I had to look up everything on a graphic browser I would probably like intellisense a lot more. I was raised on man pages and lynx and therefore am biased.&rdquo;</p>
+
+<p>This has inspired me to properly learn Vim and ditch my reliance on intellisense.</p>
+
+<p>Time to hit that <code>vimtutor</code>.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/shell-0/">Shell 0</a></h4>
+    <h5>April 19, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/shell"><kbd class="item-tag">Shell</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/arch-0/">Arch 0</a></h4>
+    <h5>April 15, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/arch"><kbd class="item-tag">Arch</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/quake3-0/">Quake3 0</a></h4>
+    <h5>April 13, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/quake3"><kbd class="item-tag">Quake3</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/c"><kbd class="item-tag">C</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

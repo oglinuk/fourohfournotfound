@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/development/</link>
+    <description>Recent content in Development on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tmux</title>
+      <link>https://oglinuk.github.io/post/tmux/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/tmux/</guid>
+      <description>Tmux - Terminal Multiplexer If you&amp;rsquo;re like me then you use a terminal a lot. If you were me 20 minutes ago then you would also have multiple terminal tabs open with various applications running. I had heard of an application from some of my peers before about the ability to open multiple terminal panes within the same terminal window. For a while I didn&amp;rsquo;t look into it, but then (about 20 minutes ago) I had enough of swapping between terminal tabs and the editor I had been using (vscode).</description>
+    </item>
+    
+  </channel>
+</rss>

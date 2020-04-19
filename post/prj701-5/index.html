@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Prj701 5 ~ Proxmox</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Prj701 5 ~ Proxmox</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/prj701-5/">Prj701 5 ~ Proxmox</a></h4>
+    <h5>September 5, 2018</h5>
+    
+    <a href="https://oglinuk.github.io/tags/prj701"><kbd class="item-tag">PRJ701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/networking"><kbd class="item-tag">Networking</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/proxmox"><kbd class="item-tag">Proxmox</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open source</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="project-701-proxmox">Project 701 ~ Proxmox</h1>
+
+<p>Networking is one of the IT sectors that I have yet to spend much time in. My only exposure has been a NET501 class where we covered the basics of things like booting a virtual machine, routers/IPs, certificates, dhcp, and a few others. Since then I haven&rsquo;t really touched anything to do with networking except for creation/use of virtual machines on the cloud platforms (GCP, AWS and Azure). This blog is going to be my path to installing and running open-source server virtualization environment called ProxMox. I am not endorsed by ProxMox, this is just an open source solution that the company I work for is going with.</p>
+
+<p>At first glance of their website I was able to easily find the get started section, which led to an ISO download link. After loading the ISO onto a USB via Rufus on my desktop (since my laptop is arch Linux), I plugged it into the desktop I was given to use for the server. Once the machine booted, a screen came up with 4 options, one being to install ProxMox VE. After this I encountered my first problem&hellip; I searched the error and quickly found a hopeful solution, in this instance it seems that Rufus is not suggested for the installation process. I&rsquo;ve disliked that I needed to use windows in order to use Rufus anyway so this problem is actually a nice opportunity to learn a new live-boot software that is available on Linux. I&rsquo;ve been meaning to learn how to burn an ISO to a USB on Linux for a while now so this is just a bonus for me.</p>
+
+<p>After a quick ddg search for Rufus alternatives I found a couple lists to draw from. I chose the first one that was suggested on 2 or more site (within the highest rankings) that were cross-platform. Etcher was what I ended up trying out first. It is GUI based which is something that I don&rsquo;t really like most often, but I have to give it to Etcher, they pull it off quite well. It is a simple 3 step process starting with the image, then device, and finally a check to make sure the process completed successfully. Booting up the tower with the newly flashed USB worked fine and the error didn&rsquo;t occur; success! Not a very hard problem, but one that felt good solving none the less. The wizard following was simple enough, some typical time formatting, the storage device, and one that I only knew how to do because of duckduckgo and my previous experience in setting up static IP addresses (for my raspberry pi(s)). The thing I had to search ddg for was what a hostname (FQDN) was. I ended up going with pmve.venusinformatics.com, will find out down the road if it was the correct choice or not. I had to do a quick search to find the default username to login, and after finding out it was root I was in.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/omega2-0/">Omega2 0</a></h4>
+    <h5>October 19, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/hardware"><kbd class="item-tag">Hardware</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openwrt"><kbd class="item-tag">OpenWRT</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/networking"><kbd class="item-tag">Networking</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/golang"><kbd class="item-tag">Golang</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/prj701-12/">Prj701 12 ~ The Future</a></h4>
+    <h5>October 24, 2018</h5>
+    
+    <a href="https://oglinuk.github.io/tags/prj701"><kbd class="item-tag">PRJ701</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/prj701-11/">Prj701 11 ~ Problem Solving</a></h4>
+    <h5>October 17, 2018</h5>
+    
+    <a href="https://oglinuk.github.io/tags/prj701"><kbd class="item-tag">PRJ701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/conceptual-skills"><kbd class="item-tag">Conceptual skills</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Goccer</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Goccer</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/goccer/">Goccer</a></h4>
+    <h5>September 2, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/golang"><kbd class="item-tag">Golang</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/concurrency"><kbd class="item-tag">Concurrency</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-crawling"><kbd class="item-tag">Web Crawling</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="goccer-go-c-on-c-urrent-web-crawl-er">Goccer ~ <strong>Go</strong> <strong>C</strong>on<strong>c</strong>urrent Web Crawl<strong>er</strong></h1>
+
+<p>In one of the classes during my bachelor of IT, I started making my first program in <a href="https://en.wikipedia.org/wiki/Go_(programming_language)">Golang</a>. That first program is what is now know as <a href="https://github.com/OGLinuk/goccer">goccer</a>. The idea behind the program was inspired by my fascination of <a href="https://en.wikipedia.org/wiki/Web_crawler">web crawling</a>. This blog is not going to cover every part of goccer, but will cover the key components. It will also cover the issues I ran into and the solution(s) that I used to overcome the problem(s).</p>
+
+<p>The first of the key components is the configuration of the crawler. This is done with a <a href="https://en.wikipedia.org/wiki/JSON#Example">JSON</a> file. In my case the structure of the <code>config.json</code> file is as follows.</p>
+
+<pre><code class="language-Go">type Config struct {
+	MaxWorkers int
+	Seeds      []string
+}
+</code></pre>
+
+<p>It&rsquo;s pretty simple, there is an int value called <code>MaxWorkers</code>, which is essentially the number of cores that the host machine has and the number of workers it can run. <code>Seeds</code> is a string array containing the urls to initially crawl.</p>
+
+<p>The next key components are the producer/consumer. One of the first iterations of <a href="https://github.com/OGLinuk/goccer">goccer</a> crawled urls sequentially (in a for loop). If you&rsquo;ve never heard of <a href="https://en.wikipedia.org/wiki/Time_complexity">time complexity</a>, I would suggest spending some time to study and grasp a basic understanding of the concept. In my case I ran into O(n), and usually by the second or third time running <a href="https://github.com/OGLinuk/goccer">goccer</a> the number of seeds grew to &gt; 100000. Enter the <a href="https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem">producer/consumer</a> pattern. My friend <a href="https://github.com/Bahnahnah">Sam</a> sent me a blog post on <a href="http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/">handling 1 million requests per minute with Go</a>, which is what I went off of originally. The following is the current producer/consumer implementation.</p>
+
+<pre><code class="language-Go">// Producer
+
+func InitProducer(cfg Config) {
+	jobs := make(chan Job)
+
+	wg := &amp;sync.WaitGroup{}
+	for i := 0; i &lt;= cfg.MaxWorkers; i++ {
+		go consume(jobs, wg)
+	}
+
+	for i, seed := range cfg.Seeds {
+		wg.Add(1)
+		go func(i int, seed string) {
+			log.Printf(&quot;Fetching[%d]: %s&quot;, i, seed)
+			jobs &lt;- Job{URL: seed}
+		}(i, seed)
+	}
+	wg.Wait()
+	close(jobs)
+}
+</code></pre>
+
+<pre><code class="language-Go">// Consumer
+
+type Job struct {
+	URL string
+}
+
+func consume(jobs &lt;-chan Job, wg *sync.WaitGroup) {
+	for {
+		select {
+		case job, ok := &lt;-jobs:
+			if !ok {
+				return
+			}
+			q := hive.NewQueen(job.URL, ArchiveFile)
+			q.SpawnDrone()
+			q.Aggregate()
+			wg.Done()
+		}
+	}
+}
+</code></pre>
+
+<p>The concept (at least how I understand it) is pretty straightforward. The producer creates jobs and sends them to a channel, and the consumer takes the jobs from the channel and creates a new crawler that crawls, then aggregates the results. I used to play zerg in <a href="https://en.wikipedia.org/wiki/StarCraft_II%3A_Wings_of_Liberty">Starcraft 2</a>, hence the naming convention queen and drone.</p>
+
+<p>This brings me to the last of the key components; the queen. Originally I was writing all extracted urls to a single file, which I would scan for duplicates. This spawned two problems that I had to fix. The first was <code>ioutil.ReadFile</code>. In the first iterations of <a href="https://github.com/OGLinuk/goccer">goccer</a> I used <code>ioutil.ReadFile</code>, which was fine until the file grew to &gt; 1GB (which happened quite fast). This is because <code>ioutil.ReadFile</code> reads the contents of the file into memory. This was solved by using <code>os.Open</code> in combination with <code>bufio.Scanner</code>. The second problem I faced was using a single file. Trying to check for duplicates when the file grew to &gt; 1GB causes another O(n) issue. To solve this issue <a href="https://github.com/Bahnahnah">Sam</a> suggested creating a file for each domain name and appending any paths to the file. The following is the implementation of that concept.</p>
+
+<pre><code class="language-Go">type URLFile struct {
+	file *os.File
+	urls map[string]struct{}
+}
+
+type URLWriter struct {
+	path     string
+	urlFiles map[string]*URLFile
+}
+</code></pre>
+
+<p>The <code>URLFile</code> file is the file created for the domain name, and the map is the paths within the domain. The reasoning for the value of the map being <code>struct{}</code> is because an <a href="https://dave.cheney.net/2014/03/25/the-empty-struct">empty struct has a size of 0</a>, and the reason for using a map is the lookup time is O(1).</p>
+
+<p>The <code>URLWriter</code> is a directory containing the files, and again I use a map (to check for duplicates) because the lookup time is O(1).</p>
+
+<p>I didn&rsquo;t cover a few of the components like aggregation, parsing, or archiving, but feel free to browse and read the code if you&rsquo;re interested.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/nginx-0/">Nginx 0</a></h4>
+    <h5>April 12, 2020</h5>
+    
+    <a href="https://oglinuk.github.io/tags/nginx"><kbd class="item-tag">Nginx</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/golang"><kbd class="item-tag">Golang</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/systemd"><kbd class="item-tag">Systemd</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-development"><kbd class="item-tag">Web Development</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/omega2-0/">Omega2 0</a></h4>
+    <h5>October 19, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/hardware"><kbd class="item-tag">Hardware</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openwrt"><kbd class="item-tag">OpenWRT</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/networking"><kbd class="item-tag">Networking</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/golang"><kbd class="item-tag">Golang</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open Source</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/bmus/">Bmus</a></h4>
+    <h5>November 20, 2018</h5>
+    
+    <a href="https://oglinuk.github.io/tags/golang"><kbd class="item-tag">Golang</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/backups"><kbd class="item-tag">Backups</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/linux"><kbd class="item-tag">Linux</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

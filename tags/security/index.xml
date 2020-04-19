@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/security/</link>
+    <description>Recent content in Security on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web701 3</title>
+      <link>https://oglinuk.github.io/post/web701-3/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-3/</guid>
+      <description>Web Development 701 ~ Security Though web development is not a main focus (or at least front end), I don&amp;rsquo;t spend much time investigating many web technologies/concepts. That being said computer security is a general topic that interests me, and learning the subset internet security is something that one should know. Internet security involves WWW (world wide web), browser, and networking security. Since the internet is insecure, internet securities &amp;ldquo;objective is to establish rules and measures to use against attacks over the Internet.</description>
+    </item>
+    
+  </channel>
+</rss>

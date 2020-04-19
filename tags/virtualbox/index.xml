@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtualbox on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/virtualbox/</link>
+    <description>Recent content in Virtualbox on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web701 21</title>
+      <link>https://oglinuk.github.io/post/web701-21/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-21/</guid>
+      <description>Web Development 701 ~ OpenFaas ~ Creating a Function With assessment 2 finished now it&amp;rsquo;s time to focus back on assessment 3, which serverless via OpenFaas. In this blog I am going to create the function, and it will be with a program I&amp;rsquo;ve already made; sbh. The first thing to do is create a new directory to store the code in, this will be done via mkdir web701.</description>
+    </item>
+    
+    <item>
+      <title>Web701 11</title>
+      <link>https://oglinuk.github.io/post/web701-11/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-11/</guid>
+      <description>Web Development 701 ~ OpenFaas ~ Lab 4 In this blog we are going to go through lab 4 which goes into more depth around functions.
+The first part of the lab covers configuration injection with environment variables. There are two ways of doing so; at deployment time and using query string and HTTP headers. Environment variables at deployment time are covered in lab 3 when working with write_debug, which is where the environment variable is added to the YAML file.</description>
+    </item>
+    
+    <item>
+      <title>Web701 10</title>
+      <link>https://oglinuk.github.io/post/web701-10/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-10/</guid>
+      <description>Web Development 701 ~ OpenFaas Continued ~ Lab 3 In this blog we are going to explore the OpenFaas workshop. Since we already have OpenFaas deployed and running from the previous blog, we are going to skip to lab 3; introduction to functions. OpenFaas provides two ways of creating a new function; using a template, or using an existing binary. I dont have a binary to use, so I am going to be using a template.</description>
+    </item>
+    
+    <item>
+      <title>Web701 9</title>
+      <link>https://oglinuk.github.io/post/web701-9/</link>
+      <pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-9/</guid>
+      <description>Web Development 701 ~ OpenFaas As stated in the previous blog, the first exposure to serverless was OpenFaaS. Whether its because of bias of the first exposure or because of bias towards docker, I am going to be exploring OpenFaaS for the serverless implementation of assessment three. First thing to do like anything is to head to the documentation section. &amp;ldquo;OpenFaaS (Functions as a Service) is a framework for building serverless functions with Docker and Kubernetes which has first class support for metrics.</description>
+    </item>
+    
+    <item>
+      <title>Web701 6</title>
+      <link>https://oglinuk.github.io/post/web701-6/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-6/</guid>
+      <description>Web Development 701 ~ Django-cms, Wagtail &amp;amp; Odoo Last blog I didn&amp;rsquo;t really go into much detail around getting the Django based CMSs or Odoo installed/running. This blog is going to cover those in more detail. To recap, as stated in the previous blog, I have no experience with Django but do have some with Odoo. The reason I am working with Django and not the framework I&amp;rsquo;ve been using (Flask) is because Django is a fullstack framwork, where Flask is only a microframework.</description>
+    </item>
+    
+    <item>
+      <title>Web701 5</title>
+      <link>https://oglinuk.github.io/post/web701-5/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-5/</guid>
+      <description>Web Development 701 ~ Virtual Machines and Docker Class was mainly reviewing the mock projects, so this blog is going to be dedicated to the virtual machines that I use on virtualbox. For the second milestone we have to describe three frameworks, two of which were prompted in class; laravel (PHP), and meteor (NodeJS). Its times like these that I am thankful for virtual machines. Im not sure how difficult these were to install and get running on windows machines and I dont care to.</description>
+    </item>
+    
+    <item>
+      <title>Web701 1</title>
+      <link>https://oglinuk.github.io/post/web701-1/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-1/</guid>
+      <description>Web Development 701 ~ Frameworks and VirtualBox Today in web701 we covered the frameworks and softwares that are going to be used for the assessment. The frameworks are laravel (an open-source PHP web framework) and meteor (an open-source NodeJS web framework). The softwares are XAMPP (an open-source web server) and composer (a dependancy manager for PHP). I am going to be installing these on a ubuntu virtual machine, so the first thing I need to do is install virtualbox on my manjaro partition.</description>
+    </item>
+    
+  </channel>
+</rss>

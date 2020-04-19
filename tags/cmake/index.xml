@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cmake on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/cmake/</link>
+    <description>Recent content in Cmake on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jul 2019 09:30:37 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43; 1</title>
+      <link>https://oglinuk.github.io/post/cpp-1/</link>
+      <pubDate>Sun, 21 Jul 2019 09:30:37 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-1/</guid>
+      <description>C++ ~ Make and CMake One of the things Sam suggested to learn/use with C++ is make and cmake. I&amp;rsquo;ve come across make before, but not cmake. This blog is going to be about learning the basics of both make and cmake, as well as creating simple example projects with them.
+The following is a simple program that I made to start with make.
+// main.cpp #include &amp;quot;hello.h&amp;quot; int main() { Hello h; h.</description>
+    </item>
+    
+  </channel>
+</rss>

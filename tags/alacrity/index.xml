@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alacrity on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/alacrity/</link>
+    <description>Recent content in Alacrity on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2020 10:36:28 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/alacrity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Alacritty 0</title>
+      <link>https://oglinuk.github.io/post/alacritty-0/</link>
+      <pubDate>Sat, 11 Apr 2020 10:36:28 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/alacritty-0/</guid>
+      <description>Alacritty If you use Linux then most likely you also use a terminal. One of the things that I still have not gotten used to after switching from windows is how customizable Linux really is. In this case the terminal. The first thing I asked myself when I came across Alacritty is &amp;ldquo;why?&amp;rdquo;. It never clicked until rwxrob made a comment about how he was using Alacritty as his terminal.</description>
+    </item>
+    
+  </channel>
+</rss>

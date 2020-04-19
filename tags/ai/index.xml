@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/ai/</link>
+    <description>Recent content in Ai on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Sep 2019 23:41:56 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ai 0</title>
+      <link>https://oglinuk.github.io/post/ai-0/</link>
+      <pubDate>Tue, 03 Sep 2019 23:41:56 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/ai-0/</guid>
+      <description>Artificial Intelligence This is going to be the first of many blogs that I am excited to write as this topic is what peeks my interest within the IT industry and never ceases to amaze me. I was introduced to the field by my good friend Krupesh, who was also the one that got me into Python back in 2017. Since then I knew that my dream career would be within the field of AI.</description>
+    </item>
+    
+  </channel>
+</rss>

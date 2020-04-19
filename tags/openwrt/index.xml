@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openwrt on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/openwrt/</link>
+    <description>Recent content in Openwrt on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Oct 2019 13:46:09 +1300</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/openwrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Omega2 0</title>
+      <link>https://oglinuk.github.io/post/omega2-0/</link>
+      <pubDate>Sat, 19 Oct 2019 13:46:09 +1300</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/omega2-0/</guid>
+      <description>Onion Omega 2 During a Python meetup one of my tutors Mark showed me a new device he had purchased from kickstarter called the onion omega 2. All that I knew at the time was that it was a smaller version of a raspberry pi. When I first got my hands on one I found out it was so much more under the hood. The first things to note is the unit itself needs another component (a dock).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencv on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/opencv/</link>
+    <description>Recent content in Opencv on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jul 2019 15:22:42 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43; 2</title>
+      <link>https://oglinuk.github.io/post/cpp-2/</link>
+      <pubDate>Sun, 21 Jul 2019 15:22:42 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-2/</guid>
+      <description>C++ ~ OpenCV OpenCV is a library that I will be working with in C++, so this blog is going to be dedicated to installing OpenCV and setting it up for C++. The steps I will be following are the ones found on the linux tutorial section of the OpenCV website.
+To start, we need to install the following dependancies.
+sudo apt install build-essential \ cmake \ git \ libgtk2.</description>
+    </item>
+    
+  </channel>
+</rss>

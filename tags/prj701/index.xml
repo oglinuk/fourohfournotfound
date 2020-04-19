@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prj701 on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/prj701/</link>
+    <description>Recent content in Prj701 on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/prj701/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prj701 12 ~ The Future</title>
+      <link>https://oglinuk.github.io/post/prj701-12/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-12/</guid>
+      <description>Project 701 ~ The Future The project is now coming to an end, and I find myself writing my last blog which I am titling &amp;ldquo;The Future&amp;rdquo; to discuss my plans from here. Now that I know the basics of Odoo and how to deploy an instance, I will most certainly be using Odoo for the infrastructure of all my personal business ventures (like Ponte Posterum). Krupesh has offered me a permanent position at Venus, so I will be continuing with him and helping to build some amazing stuff.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 11 ~ Problem Solving</title>
+      <link>https://oglinuk.github.io/post/prj701-11/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-11/</guid>
+      <description>Project 702 ~ Problem Solving and Facing Difficulties It never occured to me that problem solving was a skill, and it wasn&amp;rsquo;t up until recent that I have come to understand that it falls under conceptual skills. I learned during my studies at Nelson Marlborough Institute of Technology that problem solving is in fact the only skill required to be in the IT industry. By my definition or perception all one really needs to know in order to be a good problem solver is how to structure a web search on duckduckgo.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 10 ~ Creating an Odoo Module</title>
+      <link>https://oglinuk.github.io/post/prj701-10/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-10/</guid>
+      <description>PRJ701 - Creating an Odoo Module One of the most powerful things that Odoo brings is the fact that it is open-source. This allows developers like myself to extend the existing structure to fit any use case. To make it even better, Odoo has taken it a step further and provided a built in way to generating the skeleton of an entirely new module. This is done via the scaffold flag when executing odoo-bin.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 9 ~ Sales Module</title>
+      <link>https://oglinuk.github.io/post/prj701-9/</link>
+      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-9/</guid>
+      <description>Project 701 ~ Sales Module Since the module to be developed involves the sales module, I will be dedicating a blog to exploring the various components that make up the module. For me to better understand what it is I am manipulating or changing I will go through the processes that the sales module provides; half the battle is understanding how it all comes together. One of the resources available to me is the Odoo training center, which contains various tutorials on the different modules, including one for sales.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 8 - Setting Up Odoo</title>
+      <link>https://oglinuk.github.io/post/prj701-8/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-8/</guid>
+      <description>Project 701 ~ Setting Up Odoo The first thing I need to do is to ssh into the linux virtual machine that I created on Azure and install a few dependancies. Before I do that I will start with a simple sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade. Now to install the following dependancies; git python3.5 python3.5-dev virtualenv vim postgresql xz-utils wget fontconfig libfreetype6 libx11-6 libxext6 libxrender1 node-less node-clean-css xfonts-75dpi libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libssl1.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 7 ~ Sales Order XML Parse</title>
+      <link>https://oglinuk.github.io/post/prj701-7/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-7/</guid>
+      <description>Project 702 ~ Sales Order XML Parse One of the stages in the project is to create a module which provides the functionality of automatically generating a sales order based on the values from an XML file retrived from an FTP server. Before I create a module I am going to create a test-driven example using the standard library ftplib which provides an FTP client, containing the functions (nlist and retrbinary) that are necessary.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 6 ~ Vim</title>
+      <link>https://oglinuk.github.io/post/prj701-6/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-6/</guid>
+      <description>Project 701 ~ Vim I am sure if you have heard of vim then you probably haven&amp;rsquo;t heard good things. I mean hell there are jokes about just exiting vim. Vim (Vi IMproved) is a clone of the vi text editor made by Bill Joy for Unix. When I was first exposed to a text editor (nano) I wasn&amp;rsquo;t very fond of it. It didn&amp;rsquo;t make sense why I would use a text editor over what I was currently using at the time (atom).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 5 ~ Proxmox</title>
+      <link>https://oglinuk.github.io/post/prj701-5/</link>
+      <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-5/</guid>
+      <description>Project 701 ~ Proxmox Networking is one of the IT sectors that I have yet to spend much time in. My only exposure has been a NET501 class where we covered the basics of things like booting a virtual machine, routers/IPs, certificates, dhcp, and a few others. Since then I haven&amp;rsquo;t really touched anything to do with networking except for creation/use of virtual machines on the cloud platforms (GCP, AWS and Azure).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 4 ~ XML</title>
+      <link>https://oglinuk.github.io/post/prj701-4/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-4/</guid>
+      <description>Project 701 ~ XML (Extensive Markup Language) I&amp;rsquo;m personally not a fan of XML as I feel it can get to complicated and cluttered, although I do come from a bias of JSON. Even so again this is what I have to learn, so learn I shall. XML to me is just HTML but with more tags so picking up XML shouldn&amp;rsquo;t be too difficult. For anything I normally look for documentation or blogs with examples.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 3 - PostgreSQL</title>
+      <link>https://oglinuk.github.io/post/prj701-3/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-3/</guid>
+      <description>Project 701 ~ PostgreSQL PostgreSQL is an open source, no-sql (object-relational) database (ORDBMS) which is the db Odoo is built upon. I only have experience with MySQL which is entirely different since, its MySQL relation database management system (RDBMS). I&amp;rsquo;ve never actually used or played around with Postgres so I will be utilizing an awesome blog I found (via quick duckduckgo(ddg) search) which is by the Nanyang Technological University. This blog contains 6 sections with great snippets of quick refence information (I purposely left out the section about PHP cause don&amp;rsquo;t touch that stuff with a 20ft pole).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 2 ~ Azure</title>
+      <link>https://oglinuk.github.io/post/prj701-2/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-2/</guid>
+      <description>Project 701 ~ Azure Part of the stack that is being used for this project is Azure. I am not a fan of microsoft so my opinion on anything to do with them is not positive. This is the cloud provider that Krupesh has chosen to go with however, so I will learn it anyway. Azure (like most cloud providers) gives 200 credits which are only valid for 30 days (GCP and AWS are both a year).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 1 ~ Python(3)</title>
+      <link>https://oglinuk.github.io/post/prj701-1/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-1/</guid>
+      <description>Project 701 ~ Python (3) I attended a Python meetup group in May 18th 2017. Krupesh was giving a presentation on Python and what it is capable of. The day after this meeting I decided I was going to start learning Python. The first thing I did was make a file containing the basic syntax of the Python programming language. This would become the foundation for what I know today.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 0 ~ Odoo ~ Venus Informatics</title>
+      <link>https://oglinuk.github.io/post/prj701-0/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-0/</guid>
+      <description>Project 701 ~ Odoo ~ Venus Informatics My 3rd year project proposal started to form without me really knowing it during my first year DAT501(database) class, which at the time was taught by my now best friend Krupesh Desai. At the time Krupesh was working at the NMDHB(Nelson Marlborough District Health Board) on a solution to merge all of the DHB&amp;rsquo;s throughout New Zealand onto one platform. Around May the following year I had met Krupesh again at an ITP (IT Professionals) meeting where I asked him a question on feasability of a malware detecting AI.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/ssh/</link>
+    <description>Recent content in Ssh on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web701 7</title>
+      <link>https://oglinuk.github.io/post/web701-7/</link>
+      <pubDate>Tue, 19 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-7/</guid>
+      <description>Web Development 701 ~ Web Hosting This blog is going to cover web hosting, to make the website publicly available to the outside world. I don&amp;rsquo;t really know much about web hosting, nor do I care to go into much detail since this is something that a web developer needs to know. As I stated in the web security blog, I have little interest in web development. That being said hosting the website is something that our tutor wants us to get some experience with so here I am writing a blog about it.</description>
+    </item>
+    
+    <item>
+      <title>Web701 4</title>
+      <link>https://oglinuk.github.io/post/web701-4/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-4/</guid>
+      <description>Web Development 701 ~ S(ecure) SH(ell) Today in Web701 we learned about SSH so that we can access a remote server for hosting out web technologies on. I have had experience with SSH before since that is how I connect to my raspberry pi&amp;rsquo;s and my onion omega, though I prefer the terminal SSH cli to a GUI like putty. Yet another advantage of Linux is that distributions come with SSH pre-installed.</description>
+    </item>
+    
+  </channel>
+</rss>

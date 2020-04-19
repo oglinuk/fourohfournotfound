@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Sep 2019 11:20:58 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PTP</title>
+      <link>https://oglinuk.github.io/project/ptp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/project/ptp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doom 0</title>
+      <link>https://oglinuk.github.io/post/doom-0/</link>
+      <pubDate>Sun, 22 Sep 2019 11:20:58 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/doom-0/</guid>
+      <description>DOOM DOOM is easily (in my opinion), one of the most iconic games ever made. It is enjoyable to play even to this day. The best part of DOOM is the fact that it has been made open source under a GPL license. From this there have been many source ports of the original DOOM code. I particularly like gzdoom as it adds graphics rending features, but there are quite a few that all have their own unique additions.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 4</title>
+      <link>https://oglinuk.github.io/post/cpp-4/</link>
+      <pubDate>Fri, 26 Jul 2019 22:02:59 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-4/</guid>
+      <description>C++ ~ CMake In-Depth In C++ 1, my examples had both a system defined header (&amp;lt;iostream&amp;gt;) and a user defined header (hello.h). In this blog we are going to cover headers in more detail. Most of the information in this blog is from a book called C++ in a nutshell, any other sources will be listed following the information.
+Standard Library Headers There are 51 headers in the standard library which are listed below.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 3</title>
+      <link>https://oglinuk.github.io/post/cpp-3/</link>
+      <pubDate>Tue, 23 Jul 2019 08:37:58 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-3/</guid>
+      <description>C++ ~ Grasping the Basics In the previous blogs I have just dived straight into programming in C++. This blog is going to focus around getting a better understanding of the language itself, including the various components that make up the language. It will cover the basics so for an experienced C++ programmer this blog will not be very interesting. If you are like me and new to C++ however, this blog may be beneficial.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 2</title>
+      <link>https://oglinuk.github.io/post/cpp-2/</link>
+      <pubDate>Sun, 21 Jul 2019 15:22:42 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-2/</guid>
+      <description>C++ ~ OpenCV OpenCV is a library that I will be working with in C++, so this blog is going to be dedicated to installing OpenCV and setting it up for C++. The steps I will be following are the ones found on the linux tutorial section of the OpenCV website.
+To start, we need to install the following dependancies.
+sudo apt install build-essential \ cmake \ git \ libgtk2.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 1</title>
+      <link>https://oglinuk.github.io/post/cpp-1/</link>
+      <pubDate>Sun, 21 Jul 2019 09:30:37 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-1/</guid>
+      <description>C++ ~ Make and CMake One of the things Sam suggested to learn/use with C++ is make and cmake. I&amp;rsquo;ve come across make before, but not cmake. This blog is going to be about learning the basics of both make and cmake, as well as creating simple example projects with them.
+The following is a simple program that I made to start with make.
+// main.cpp #include &amp;quot;hello.h&amp;quot; int main() { Hello h; h.</description>
+    </item>
+    
+    <item>
+      <title>hello_c&#43;&#43;.cpp</title>
+      <link>https://oglinuk.github.io/post/cpp-0/</link>
+      <pubDate>Sun, 21 Jul 2019 06:17:33 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-0/</guid>
+      <description>C++ For a while I&amp;rsquo;ve been meaning to dive into a lower language such as C++, but never found the time to do so. Now I have an excuse as my new employment involves working with C++. To start, like with anything I made a simple hello world program. This looks like the following&amp;hellip;
+#include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &amp;quot;Hello world from C++!\n&amp;quot;; return 0; }  Now to compile the program via g++ main.</description>
+    </item>
+    
+  </channel>
+</rss>

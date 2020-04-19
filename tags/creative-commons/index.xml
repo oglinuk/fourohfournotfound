@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creative Commons on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/creative-commons/</link>
+    <description>Recent content in Creative Commons on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/creative-commons/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Res701 9</title>
+      <link>https://oglinuk.github.io/post/res701-9/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/res701-9/</guid>
+      <description>Research 701 ~ Copyright vs Copyleft Todays class was around creative commons, which is a permissive license designed as a better alternative to copyright. We were shown a video which covered how copying is not stealing. Makes sense if you think about it. Copying is taking something and making a duplicate of it, where as stealing is taking something and leaving nothing.
+There is a website called choosealicense which clearly describes the use cases/scenarios that a certain license would cover.</description>
+    </item>
+    
+  </channel>
+</rss>

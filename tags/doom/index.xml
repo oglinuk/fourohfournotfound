@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doom on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/doom/</link>
+    <description>Recent content in Doom on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Sep 2019 11:20:58 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/doom/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Doom 0</title>
+      <link>https://oglinuk.github.io/post/doom-0/</link>
+      <pubDate>Sun, 22 Sep 2019 11:20:58 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/doom-0/</guid>
+      <description>DOOM DOOM is easily (in my opinion), one of the most iconic games ever made. It is enjoyable to play even to this day. The best part of DOOM is the fact that it has been made open source under a GPL license. From this there have been many source ports of the original DOOM code. I particularly like gzdoom as it adds graphics rending features, but there are quite a few that all have their own unique additions.</description>
+    </item>
+    
+  </channel>
+</rss>

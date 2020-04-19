@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Profile on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/profile/</link>
+    <description>Recent content in Profile on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/profile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web701 16</title>
+      <link>https://oglinuk.github.io/post/web701-16/</link>
+      <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-16/</guid>
+      <description>Web Development 701 ~ Profile (editing) Last blog covered extending the user model of Django to add additional fields and then implementing a profile page. In this blog we are going to cover editing and updating the profile information. The first thing to do is to add the following to the urlpatterns variable in the urls.py file.
+path(&#39;edit_profile&#39;, views.edit_profile, name=&#39;edit_profile&#39;)  Next to create the edit_profile view in the views.</description>
+    </item>
+    
+    <item>
+      <title>Web701 15</title>
+      <link>https://oglinuk.github.io/post/web701-15/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-15/</guid>
+      <description>Web Development 701 ~ Profile In the previous blog we implemented the registration functionality. Now to add additional fields when registering and a profile page for users. In this blog we are going to explore extending the user model. The first thing we need to do is to create a new class in the models.py file in our authentication app. To this file we are going to add the following code.</description>
+    </item>
+    
+  </channel>
+</rss>

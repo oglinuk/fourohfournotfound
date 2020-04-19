@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sales on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/sales/</link>
+    <description>Recent content in Sales on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/sales/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prj701 9 ~ Sales Module</title>
+      <link>https://oglinuk.github.io/post/prj701-9/</link>
+      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-9/</guid>
+      <description>Project 701 ~ Sales Module Since the module to be developed involves the sales module, I will be dedicating a blog to exploring the various components that make up the module. For me to better understand what it is I am manipulating or changing I will go through the processes that the sales module provides; half the battle is understanding how it all comes together. One of the resources available to me is the Odoo training center, which contains various tutorials on the different modules, including one for sales.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 7 ~ Sales Order XML Parse</title>
+      <link>https://oglinuk.github.io/post/prj701-7/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-7/</guid>
+      <description>Project 702 ~ Sales Order XML Parse One of the stages in the project is to create a module which provides the functionality of automatically generating a sales order based on the values from an XML file retrived from an FTP server. Before I create a module I am going to create a test-driven example using the standard library ftplib which provides an FTP client, containing the functions (nlist and retrbinary) that are necessary.</description>
+    </item>
+    
+  </channel>
+</rss>

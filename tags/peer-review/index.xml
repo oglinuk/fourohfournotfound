@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peer Review on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/peer-review/</link>
+    <description>Recent content in Peer Review on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/peer-review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Res701 7</title>
+      <link>https://oglinuk.github.io/post/res701-7/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/res701-7/</guid>
+      <description>Research 701 ~ Project Proposal Peer Review Todays blog is around reviewing another classmates project proposal. There are quite a lot of good proposals, but the one that I have chosen to review is Stewart&amp;rsquo;s project proposal. His proposal is about building a neural network to recognize and classify a face in an image. The activities he has listed are as follows.
+ Read an academic article on face detection Research computer vision and find relevant articles Research academic articles on computer vision Lynda courses  Neural networks and convolutional neural networks essential training Deep learning: face recognition Classify images and detect recognition  CourseRA tutorials  Convolutional neural networks  Exploring and using Azure&amp;rsquo;s cloud based face or computer vision services  As I have a bias for AI, I like this proposal and am glad to see a classmate interested in it.</description>
+    </item>
+    
+  </channel>
+</rss>

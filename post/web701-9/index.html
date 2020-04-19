@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Web701 9</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Web701 9</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-9/">Web701 9</a></h4>
+    <h5>March 26, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/virtualbox"><kbd class="item-tag">VirtualBox</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="web-development-701-openfaas">Web Development 701 ~ OpenFaas</h1>
+
+<p>As stated in the <a href="/post/web701-8">previous blog</a>, the first exposure to serverless was <a href="https://github.com/openfaas/faas">OpenFaaS</a>. Whether its because of bias of the first exposure or because of bias towards <em>docker</em>, I am going to be exploring OpenFaaS for the serverless implementation of assessment three. First thing to do like anything is to head to the <a href="https://docs.openfaas.com/">documentation section</a>. &ldquo;OpenFaaS (Functions as a Service) is a framework for building serverless functions with Docker and Kubernetes which has first class support for metrics.&rdquo; <a href="https://docs.openfaas.com/#openfaas-serverless-functions-made-simple">[source]</a> &ldquo;OpenFaaS is free to use and completely open source under the MIT license.&rdquo; <a href="https://docs.openfaas.com/#support-for-openfaas">[source]</a></p>
+
+<p>The <a href="https://docs.openfaas.com/conceptual/">overview of OpenFaaS</a> are as follows.</p>
+
+<ul>
+<li><p><a href="https://docs.openfaas.com/conceptual/#function-watchdog"><strong>Fuction Watchdog</strong></a></p></li>
+
+<li><p><a href="https://docs.openfaas.com/conceptual/#api-gateway-ui-portal"><strong>API Gateway / UI Portal</strong></a></p></li>
+
+<li><p><a href="https://docs.openfaas.com/conceptual/#cli"><strong>CLI</strong></a></p></li>
+</ul>
+
+<p>Now to move on to the <a href="https://docs.openfaas.com/deployment/">getting started</a> section and get our hands dirty.</p>
+
+<p>There are two available options for deployment <a href="https://docs.openfaas.com/deployment/docker-swarm/">docker swarm</a> and <a href="https://docs.openfaas.com/deployment/kubernetes/">kubernetes</a>. Docker swarm is recommended for beginners so I will run through that guide first.</p>
+
+<p>The first step is to install the <a href="https://docs.openfaas.com/deployment/docker-swarm/#10-install-the-faas-cli">faas-cli</a>. I am using my ubuntu 16.04 LTS virtual machine, so I will be installing via the curl command which is as follows.</p>
+
+<p><code>curl -sL https://cli.openfaas.com | sudo sh</code></p>
+
+<p>Next is to <a href="https://docs.openfaas.com/deployment/docker-swarm/#11-initialize-swarm-mode">initialize a docker swarm</a> via the following command.</p>
+
+<p><code>docker swarm init</code></p>
+
+<p>Now to deploy the OpenFaas stack via the following.</p>
+
+<p><code>git clone https://github.com/openfaas/faas &amp;&amp; cd faas &amp;&amp; ./deploy_stack.sh</code></p>
+
+<p>Going to <code>localhost:8080</code> should give us a login panel to access the UI.</p>
+
+<p>It works!</p>
+
+<p>Finally to make sure everything is working the guide suggests to deploy a sample function from the <a href="https://docs.openfaas.com/deployment/docker-swarm/#22-deploy-functions-from-the-openfaas-function-store">OpenFaas function store</a>. The example function in the guide is figlet and the command to deploy/evoke it is as follows.</p>
+
+<p><code>faas-cli store deploy figlet</code></p>
+
+<p><code>echo &quot;Hello OpenFaas!&quot; | faas-cli invoke figlet</code></p>
+
+<p>With this done the next step is to go through the <a href="https://docs.openfaas.com/tutorials/workshop/">OpenFaas workshop</a> which I will cover in the next blog.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-22/">Web701 22</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-21/">Web701 21</a></h4>
+    <h5>May 21, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/virtualbox"><kbd class="item-tag">VirtualBox</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-20/">Web701 20</a></h4>
+    <h5>May 20, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/django"><kbd class="item-tag">Django</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/heroku"><kbd class="item-tag">Heroku</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-hosting"><kbd class="item-tag">Web Hosting</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

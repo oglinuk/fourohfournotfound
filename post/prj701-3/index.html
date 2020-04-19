@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Prj701 3 - PostgreSQL</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: gray;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://oglinuk.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/mysql.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.40.1" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Prj701 3 - PostgreSQL</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:daniel-l-black@protonmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/oglinuk/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/danielblackamericankiwi/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.reddit.com/u/linukbot/"><i class="fa fa-reddit"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/prj701-3/">Prj701 3 - PostgreSQL</a></h4>
+    <h5>August 22, 2018</h5>
+    
+    <a href="https://oglinuk.github.io/tags/prj701"><kbd class="item-tag">PRJ701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/postgresql"><kbd class="item-tag">PostgreSQL</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/open-source"><kbd class="item-tag">Open source</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<h1 id="project-701-postgresql">Project 701 ~ PostgreSQL</h1>
+
+<p>PostgreSQL is an open source, <em>no-sql</em> (object-relational) database (ORDBMS) which is the db Odoo is built upon. I only have experience with MySQL which is entirely different since, its MySQL relation database management system (RDBMS). I&rsquo;ve never actually used or played around with Postgres so I will be utilizing an awesome blog I found (via quick duckduckgo(ddg) search) which is by the <a href="http://ntu.edu.sg">Nanyang Technological University</a>. This blog contains 6 sections with great snippets of quick refence information (I purposely left out the section about PHP cause don&rsquo;t touch that stuff with a 20ft pole). There is also a reference to Python database programming, which (after a quick ddg search) led me to this rich wiki page on <a href="https://wiki.python.org/moin/UsingDbApiWithPostgres#getting-started">UsingDbApiWithPostgres</a> The best way to solidify something for me is to create a <em>hello world</em> like example that I can refer back to if I ever need it. I keep all of my examples in a public github repo called <a href="https://github.com/OGLinuk/ptp">ptp</a>. Before I create a hello world example I should familiarize myself a bit more with PosgreSQL. Before I begin I will go through the <a href="https://www.postgresql.org/docs/9.5/static/installation.html">installation</a> process to ensure that Postgresql is up and running on my local machine.</p>
+
+<p>I am using manjaro so my installation process is going to be slightly different. After a quick ddg search I found a simple <a href="https://dev.to/lobo_tuerto/how-to-install-postgresql-in-manjaro-linux--24bj">guide</a>. All that I need to do to install is ~ <code>sudo yay -S postgresql</code> (I am using the <a href="https://aur.archlinux.org/packages/yay/">yay</a> <a href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helper</a> instead of the default pacman). Next I need to set the password for the postgres user with <code>sudo passwd postgres</code> Finally to change to the postgres user (<code>sudo su postgres -l</code>) and initialize the cluster (<code>initdb --local $LANG -E UTF8 -D '/var/lib/postgres/data/'</code>).</p>
+
+<p>I got the output ~</p>
+
+<pre><code>The files belonging to this database system will be owned by user &quot;postgres&quot;.
+This user must also own the server process.
+
+The database cluster will be initialized with locale &quot;en_NZ.UTF-8&quot;.
+The default text search configuration will be set to &quot;english&quot;.
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgres/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+WARNING: enabling &quot;trust&quot; authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgres/data/ -l logfile start
+</code></pre>
+
+<p>Time to start the postgresql.service with <code>systemctl enable --now postgresql.service</code>. I am not entirely aware of the difference between starting with systemctl and starting with pg_ctl but that is something that I can look into down the road.</p>
+
+<p>Creating a database is simple enough ~ <code>createdb &lt;dbname&gt;</code></p>
+
+<p>Likewise for deleting a database ~ <code>dropdb &lt;dbname&gt;</code></p>
+
+<p>To connect to a database we use the <code>psql</code> command with our databases&rsquo; name like so ~ <code>psql &lt;dbname&gt;</code></p>
+
+<p>A lot of Postgreql is behind the scenes with Odoo, even the creation/duplication/deletion is entirely abstracted behind the web UI. It will still be good to have the references for using the command line.</p>
+
+<p>To create a database in Odoo I simply have to go to X.X.X.X:8069/web/database/manager and from here I have the ability to backup/duplicate/delete/create/restore and even set a master password.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-22/">Web701 22</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/digital-ocean"><kbd class="item-tag">Digital Ocean</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-21/">Web701 21</a></h4>
+    <h5>May 21, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/virtualbox"><kbd class="item-tag">VirtualBox</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/serverless"><kbd class="item-tag">Serverless</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/openfaas"><kbd class="item-tag">OpenFaas</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/docker"><kbd class="item-tag">Docker</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/cli"><kbd class="item-tag">CLI</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/web701-20/">Web701 20</a></h4>
+    <h5>May 20, 2019</h5>
+    
+    <a href="https://oglinuk.github.io/tags/web701"><kbd class="item-tag">Web701</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/django"><kbd class="item-tag">Django</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/heroku"><kbd class="item-tag">Heroku</kbd></a>
+    
+    <a href="https://oglinuk.github.io/tags/web-hosting"><kbd class="item-tag">Web Hosting</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "oglinuk-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

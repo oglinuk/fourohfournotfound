@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xml on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/xml/</link>
+    <description>Recent content in Xml on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prj701 10 ~ Creating an Odoo Module</title>
+      <link>https://oglinuk.github.io/post/prj701-10/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-10/</guid>
+      <description>PRJ701 - Creating an Odoo Module One of the most powerful things that Odoo brings is the fact that it is open-source. This allows developers like myself to extend the existing structure to fit any use case. To make it even better, Odoo has taken it a step further and provided a built in way to generating the skeleton of an entirely new module. This is done via the scaffold flag when executing odoo-bin.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 7 ~ Sales Order XML Parse</title>
+      <link>https://oglinuk.github.io/post/prj701-7/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-7/</guid>
+      <description>Project 702 ~ Sales Order XML Parse One of the stages in the project is to create a module which provides the functionality of automatically generating a sales order based on the values from an XML file retrived from an FTP server. Before I create a module I am going to create a test-driven example using the standard library ftplib which provides an FTP client, containing the functions (nlist and retrbinary) that are necessary.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 6 ~ Vim</title>
+      <link>https://oglinuk.github.io/post/prj701-6/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-6/</guid>
+      <description>Project 701 ~ Vim I am sure if you have heard of vim then you probably haven&amp;rsquo;t heard good things. I mean hell there are jokes about just exiting vim. Vim (Vi IMproved) is a clone of the vi text editor made by Bill Joy for Unix. When I was first exposed to a text editor (nano) I wasn&amp;rsquo;t very fond of it. It didn&amp;rsquo;t make sense why I would use a text editor over what I was currently using at the time (atom).</description>
+    </item>
+    
+    <item>
+      <title>Prj701 4 ~ XML</title>
+      <link>https://oglinuk.github.io/post/prj701-4/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-4/</guid>
+      <description>Project 701 ~ XML (Extensive Markup Language) I&amp;rsquo;m personally not a fan of XML as I feel it can get to complicated and cluttered, although I do come from a bias of JSON. Even so again this is what I have to learn, so learn I shall. XML to me is just HTML but with more tags so picking up XML shouldn&amp;rsquo;t be too difficult. For anything I normally look for documentation or blogs with examples.</description>
+    </item>
+    
+    <item>
+      <title>Prj701 0 ~ Odoo ~ Venus Informatics</title>
+      <link>https://oglinuk.github.io/post/prj701-0/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-0/</guid>
+      <description>Project 701 ~ Odoo ~ Venus Informatics My 3rd year project proposal started to form without me really knowing it during my first year DAT501(database) class, which at the time was taught by my now best friend Krupesh Desai. At the time Krupesh was working at the NMDHB(Nelson Marlborough District Health Board) on a solution to merge all of the DHB&amp;rsquo;s throughout New Zealand onto one platform. Around May the following year I had met Krupesh again at an ITP (IT Professionals) meeting where I asked him a question on feasability of a malware detecting AI.</description>
+    </item>
+    
+  </channel>
+</rss>

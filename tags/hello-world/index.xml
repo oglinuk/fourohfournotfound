@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hello World on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/hello-world/</link>
+    <description>Recent content in Hello World on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jul 2019 06:17:33 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/hello-world/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hello_c&#43;&#43;.cpp</title>
+      <link>https://oglinuk.github.io/post/cpp-0/</link>
+      <pubDate>Sun, 21 Jul 2019 06:17:33 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-0/</guid>
+      <description>C++ For a while I&amp;rsquo;ve been meaning to dive into a lower language such as C++, but never found the time to do so. Now I have an excuse as my new employment involves working with C++. To start, like with anything I made a simple hello world program. This looks like the following&amp;hellip;
+#include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &amp;quot;Hello world from C++!\n&amp;quot;; return 0; }  Now to compile the program via g++ main.</description>
+    </item>
+    
+    <item>
+      <title>hello_rust.rs</title>
+      <link>https://oglinuk.github.io/post/hello-rust/</link>
+      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/hello-rust/</guid>
+      <description>Why Rust? The first question anyone might ask themselves when they read the title. This is an extremely valid question, since why if one could learn something as simple as Python, would one want to learn a language like Rust? I know this because that was the first question that I asked. The answer is not entirely formulated as I still learn new and exciting things everyday.
+The why&amp;rsquo;s What I can say is that for one Rust is fast.</description>
+    </item>
+    
+    <item>
+      <title>hello_self.me</title>
+      <link>https://oglinuk.github.io/post/hello-world/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/hello-world/</guid>
+      <description>Hello World! What better way to start a blog off than the classical way of starting in programming ~ the ol&amp;rsquo; Hello World! My name is Daniel, I go by OGLinuk as my online handler, and I have a raging passion for IT. Technology has been apart of my life for as long as I can remember, starting with an old windows 98 desktop and an N64. This is where my passion for gaming began, with classics like 007 golden eye, banjo-kazooie, diddy kong racing, donkey kong 64, legoland, and so many more.</description>
+    </item>
+    
+  </channel>
+</rss>

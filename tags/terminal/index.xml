@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/terminal/</link>
+    <description>Recent content in Terminal on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Partitioning</title>
+      <link>https://oglinuk.github.io/post/partitioning/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/partitioning/</guid>
+      <description>Partitioning Partitioning? No not mathematics partitions, computer partitions. More specifically hardware partitions (in my case a microSD card). I am officially put off GUIs and am taking a hiatus from them. My raspberry pi&amp;rsquo;s microSDD card isn&amp;rsquo;t being used at the moment, so I am formatting it to be used as storage for pcap files that I am capturing on my network. Perfect time to learn how to partition drives from the terminal!</description>
+    </item>
+    
+  </channel>
+</rss>

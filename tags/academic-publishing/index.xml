@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic Publishing on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/academic-publishing/</link>
+    <description>Recent content in Academic Publishing on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/academic-publishing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Res701 5</title>
+      <link>https://oglinuk.github.io/post/res701-5/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/res701-5/</guid>
+      <description>Research 701 ~ Analyzing Academic Articles Todays blog is about reading and understanding one of the academic articles that I chose for the previous blog. We are to answer the following questions around the article.
+ Did the abstract tell you three things I said it should? If not what did it tell you?
+ What seems to be the research question(s) they were trying to answer?
+ What method(s) did they use to answer the question(s)?</description>
+    </item>
+    
+    <item>
+      <title>Res701 4</title>
+      <link>https://oglinuk.github.io/post/res701-4/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/res701-4/</guid>
+      <description>Research 701 ~ Academic Publishing Today&amp;rsquo;s blog is about finding two academic research papers of my choice, which as stated in the first res701 blog will be around data science, machine learning, or deep learning. I stumbled across a gentleman by the name of Jürgen Schmidhuber when watching a video on a panel of specialists talking about the current state of AI. At the time I had no clue who he was or what his accomplishments were, but came to know that he was behind the publication of LSTM (long short-term memory) architectures and also the advancements in CNN (convolutional neural networks) architectures.</description>
+    </item>
+    
+  </channel>
+</rss>

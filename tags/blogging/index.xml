@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogging on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/blogging/</link>
+    <description>Recent content in Blogging on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Apr 2020 11:34:19 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nginx 1</title>
+      <link>https://oglinuk.github.io/post/nginx-1/</link>
+      <pubDate>Mon, 13 Apr 2020 11:34:19 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/nginx-1/</guid>
+      <description>Nginx ~ Subdomains and a Blog In the previous blog we explored serving a Go web application with Nginx on Digital Ocean. This blog is going to cover how to host a static website on a subdomain. One of the things I did not cover in the last blog is how to point to your domain name with Digital Ocean. For more on this please refer to this blog that I found/used originally.</description>
+    </item>
+    
+  </channel>
+</rss>

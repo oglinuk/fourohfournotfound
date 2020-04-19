@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Practical Skills on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/practical-skills/</link>
+    <description>Recent content in Practical Skills on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/practical-skills/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prj701 8 - Setting Up Odoo</title>
+      <link>https://oglinuk.github.io/post/prj701-8/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/prj701-8/</guid>
+      <description>Project 701 ~ Setting Up Odoo The first thing I need to do is to ssh into the linux virtual machine that I created on Azure and install a few dependancies. Before I do that I will start with a simple sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade. Now to install the following dependancies; git python3.5 python3.5-dev virtualenv vim postgresql xz-utils wget fontconfig libfreetype6 libx11-6 libxext6 libxrender1 node-less node-clean-css xfonts-75dpi libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libssl1.</description>
+    </item>
+    
+  </channel>
+</rss>

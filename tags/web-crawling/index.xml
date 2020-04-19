@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Crawling on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/web-crawling/</link>
+    <description>Recent content in Web Crawling on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2019 20:27:11 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/web-crawling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Goccer</title>
+      <link>https://oglinuk.github.io/post/goccer/</link>
+      <pubDate>Mon, 02 Sep 2019 20:27:11 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/goccer/</guid>
+      <description>Goccer ~ Go Concurrent Web Crawler In one of the classes during my bachelor of IT, I started making my first program in Golang. That first program is what is now know as goccer. The idea behind the program was inspired by my fascination of web crawling. This blog is not going to cover every part of goccer, but will cover the key components. It will also cover the issues I ran into and the solution(s) that I used to overcome the problem(s).</description>
+    </item>
+    
+  </channel>
+</rss>

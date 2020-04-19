@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authentication on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/authentication/</link>
+    <description>Recent content in Authentication on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/authentication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web701 14</title>
+      <link>https://oglinuk.github.io/post/web701-14/</link>
+      <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-14/</guid>
+      <description>Web Development 701 ~ Registration In the previous blog we covered the basic implementation of authentication using the built-in authentication system of Django. In this blog we are going to cover how to handle user registration. The first thing to do is to add the following line to the urls.py file under our authentication app.
+path(&#39;register&#39;, views.register, name=&#39;register&#39;)  Now to create the corresponding view in the views.py file.</description>
+    </item>
+    
+    <item>
+      <title>Web701 13</title>
+      <link>https://oglinuk.github.io/post/web701-13/</link>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/web701-13/</guid>
+      <description>Web Development 701 ~ Authentication In this blog post we are going to cover the implementation of user authentication. First thing to do is to create a new app via python3 manage.py startapp authentication. Next we need to run python3 manage.py migrate. Then we need to create a super user via python3 manage.py createsuperuser. Now we need to add authentication to the INSTALLED_APPS list in the settings.py file. Once that is done we can start to add the authentication functionality.</description>
+    </item>
+    
+  </channel>
+</rss>

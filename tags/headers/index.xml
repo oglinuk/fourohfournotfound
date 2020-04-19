@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Headers on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/headers/</link>
+    <description>Recent content in Headers on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jul 2019 22:02:59 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/headers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43; 4</title>
+      <link>https://oglinuk.github.io/post/cpp-4/</link>
+      <pubDate>Fri, 26 Jul 2019 22:02:59 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/cpp-4/</guid>
+      <description>C++ ~ CMake In-Depth In C++ 1, my examples had both a system defined header (&amp;lt;iostream&amp;gt;) and a user defined header (hello.h). In this blog we are going to cover headers in more detail. Most of the information in this blog is from a book called C++ in a nutshell, any other sources will be listed following the information.
+Standard Library Headers There are 51 headers in the standard library which are listed below.</description>
+    </item>
+    
+  </channel>
+</rss>

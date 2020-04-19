@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Ponte Posterum</title>
+    <link>https://oglinuk.github.io/tags/shell/</link>
+    <description>Recent content in Shell on Ponte Posterum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Apr 2020 00:17:28 +1200</lastBuildDate>
+    
+	<atom:link href="https://oglinuk.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shell 0</title>
+      <link>https://oglinuk.github.io/post/shell-0/</link>
+      <pubDate>Sun, 19 Apr 2020 00:17:28 +1200</pubDate>
+      
+      <guid>https://oglinuk.github.io/post/shell-0/</guid>
+      <description>Unix Shell It has been almost 3 years since I made the the switch to Linux, and have enjoyed every moment. Like most, I found the terminal to be a daunting thing at first, much like Linux itself. I quickly discovered how much more I enjoyed using a terminal over GUI applications. Though I have gotten by over the past years with the basic commands like cd or rm, I never really dedicated time to improving my skills with the command line.</description>
+    </item>
+    
+  </channel>
+</rss>
