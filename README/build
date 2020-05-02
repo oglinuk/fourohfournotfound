@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#pandoc --template=template.html -s -o index.html --quiet README.md
+
+#pandoc --template=template.html -s -o schedule/index.html --quiet schedule/README.md
+
+#pandoc --template=template.html -s -o about/index.html --quiet about/README.md
+
+render () {
+  declare dir="$1"
+  #pandoc --template=template.html -s -o "$dir/index.html" --quiet "$dir/README.md"
+  echo Building "$dir"
+  pandoc -s -o "$dir/index.html" "$dir/README.md"
+}
+
+for i in . **/README.md; do 
+  declare dir=${i/\/README.md}
+  render $dir
+done
