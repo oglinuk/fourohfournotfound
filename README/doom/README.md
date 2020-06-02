@@ -1,5 +1,5 @@
 ---
-title: DOOM
+Title: DOOM
 draft: false
 ---
 

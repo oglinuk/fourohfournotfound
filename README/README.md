@@ -1,5 +1,5 @@
 ---
-title: Fourohfournotfound
+Title: Fourohfournotfound
 draft: false
 ---
 
@@ -9,6 +9,6 @@ This site is a work in progress as I am shifting from `hugo` to `rw`, so please 
 
 I encourage you to first browse/download (and potentially contribute) [books](books).
 
-## Blogs
+---
 
-* [DOOM](doom)
+[DOOM](doom)
