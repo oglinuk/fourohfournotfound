@@ -11,4 +11,4 @@ I encourage you to first browse/download (and potentially contribute) [books](bo
 
 ## Blogs
 
-* [DOOM](/doom)
+* [DOOM](doom)
