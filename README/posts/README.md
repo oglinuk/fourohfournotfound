@@ -1,0 +1,5 @@
+---
+title: Posts
+---
+
+[DOOM](doom)
