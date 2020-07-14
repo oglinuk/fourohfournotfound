@@ -2,4 +2,4 @@
 title: Posts
 ---
 
-[DOOM](doom)
+[DOOM](/doom)
