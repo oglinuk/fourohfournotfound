@@ -12,7 +12,7 @@ in touch!
 * C manual ([HTML](html/c-manual.html)) ([PDF](pdfs/c-manual.pdf))
 * Eloquent JavaScript ([HTML](html/eloquent-javascript.html)) ([PDF](pdfs/eloquent-javascript.pdf))
 
-## Linux
+## Tools
 
 * Bash manual ([HTML](html/bash-manual.html)) ([PDF](pdfs/bash-manual.pdf))
 * Linux command-line ([HTML](html/linux-command-line.html)) ([PDF](pdfs/linux-command-line.pdf))
