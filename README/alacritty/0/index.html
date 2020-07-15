@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Alacritty 0 ~ Hello Alacritty!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Alacritty 0 ~ Hello Alacritty!</h1>
+		<h4>
+							[				Hello World,
+								Alacrity,
+								Linux,
+								Rust,
+								Open Source,
+								Tools
+				]
+					</h4>
+
+		<br>
+
+		<main>
+			<p>If you use Linux then most likely you also use a terminal. One of the things that I still have not gotten used to after switching from windows is how <em>customizable</em> Linux really is. In this case the terminal. The first thing I asked myself when I came across <a href="https://github.com/alacritty/alacritty">Alacritty</a> is “why?”. It never clicked until <a href="https://twitch.tv/rwxrob">rwxrob</a> made a comment about how he was using Alacritty as his terminal.</p>
+<p>Alacritty is a GPU-accelerated terminal built in <a href="https://www.rust-lang.org/">Rust</a>. In this blog I am going to cover how to install and configure Alacritty. I am using ubuntu 18.04, but the <a href="https://github.com/alacritty/alacritty#Installation">installation</a> section covers other distributions.</p>
+<p>First to install the required debian dependencies</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install cmake \</a>
+<a class="sourceLine" id="cb1-2" title="2">                 pkg-config \</a>
+<a class="sourceLine" id="cb1-3" title="3">                 libfreetype6-dev \</a>
+<a class="sourceLine" id="cb1-4" title="4">                 libfontconfig1-dev \</a>
+<a class="sourceLine" id="cb1-5" title="5">                 libxcb-xfixes0-dev \</a>
+<a class="sourceLine" id="cb1-6" title="6">                 python3</a></code></pre></div>
+<p>We also need rust which can be easily installed by the following <a href="https://github.com/curl/curl">cURL</a> command.</p>
+<p><code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></p>
+<p>The installation page of Alacritty suggests using the stable compiler which can be enabled via the following.</p>
+<p><code>rustup override set stable</code> &amp;&amp; <code>rustup update stable</code></p>
+<hr />
+<p>Once all of the dependencies are installed the next thing to do is to clone the Alacritty repository via the following git command.</p>
+<p><code>git clone https://github.com/alacritty/alacritty</code> &amp;&amp; <code>cd alacritty</code></p>
+<p>If you’re on a debian distribution, then you can run the following commands.</p>
+<p><code>cargo install cargo-deb</code> &amp;&amp; <code>cargo deb --install -p alacritty</code></p>
+<p>If not you can simply run <code>cargo build --release</code>.</p>
+<p>Then to set the default terminal run</p>
+<p><code>gsettings set org.gnome.desktop.default-applications.terminal exec 'alacritty'</code></p>
+<hr />
+<p>Open and enjoy the awesome terminal!</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

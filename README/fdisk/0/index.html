@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>fdisk 0 ~ Hello fdisk!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>fdisk 0 ~ Hello fdisk!</h1>
+		<h4>
+							[				Hello World,
+								fdisk,
+								Linux,
+								Partitioning,
+								Open Source,
+								Tools
+				]
+					</h4>
+
+		<br>
+
+		<main>
+			<p><a href="https://en.wikipedia.org/wiki/Partition">Partitioning?</a> No not mathematics partitions, computer partitions. More specifically hardware partitions (in my case a microSD card). I am officially put off GUIs and am taking a hiatus from them. My raspberry pi’s microSD card isn’t being used at the moment, so I am formatting it to be used as storage for pcap files that I am capturing on my network. Perfect time to learn how to partition drives from the terminal! After a quick ddg search, the first link was about <code>fdisk</code>. Since the microSD card was accessible from my onion I wanted to see if I could install fdisk using opkg on the onion and format the microSD card from there. <code>opkg install fdisk</code> …</p>
+<p>It works! Eureka!</p>
+<p>First thing to do is list the partitions ~ <code>fdisk -l</code>. I don’t need to use <code>sudo</code> as the onion operates as root.</p>
+<p>Next to enter command mode via <code>fdisk &lt;partition&gt;</code></p>
+<p>From the help argument (<code>h</code>) we can see the available commands.</p>
+<p><code>p</code> to print the partition table.</p>
+<p><code>d</code> to delete the partition(s).</p>
+<p><code>n</code> to create a new partition table</p>
+<p><code>w</code> to write the changes to the drive</p>
+<p>Pretty straight-forward.</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

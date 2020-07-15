@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Docker 2 ~ Multitier Architecture</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Docker 2 ~ Multitier Architecture</h1>
+		<h4>
+							[				Docker,
+								Python,
+								Docker-compose
+				]
+					</h4>
+
+		<br>
+
+		<main>
+			<p>For my SDV701 assessment 2 we have to build a tiered software. I’ve decided to use Flask for the presentation tier, Flask-restful for the logic tier, and mongodb (via pymongo) for the data tier. I’ve also decided to use docker and docker-compose since running a mongodb server in docker is as easy as pulling an image from docker-hub. Below is a snippet from the <code>docker-compose.yml</code> file, showing how easy it is.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">mongodb:</span></a>
+<a class="sourceLine" id="cb1-2" title="2">  <span class="fu">image:</span><span class="at"> mongo:latest</span></a>
+<a class="sourceLine" id="cb1-3" title="3">  <span class="fu">ports:</span></a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="kw">-</span> 27017:27017</a>
+<a class="sourceLine" id="cb1-5" title="5">  <span class="fu">volumes:</span></a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="kw">-</span> ./data/db:/usr/data/db</a>
+<a class="sourceLine" id="cb1-7" title="7">  <span class="fu">command:</span><span class="at"> mongod --smallfiles --logpath=/dev/null</span></a></code></pre></div>
+<p>During the development of the REST API I ran into <code>[Errno 111] Connection refused</code>.</p>
+<p>This was because when I was calling the API method from the presentation tier (using requests), I was using <code>localhost</code> for the host in the url. This was confusing for a while since I was able to execute a <code>curl</code> command, passing <code>'http://localhost:9124/todo'</code> as the url with no errors. Eventually (after a bit of duckduckgo searches and tampering) I asked <a href="https://github.com/pigeonhands">Sam</a> and he pointed out that the docker containers can’t use <code>localhost</code> and should instead use the containers <a href="https://docs.docker.com/compose/compose-file/#container_name">container_name</a>. Do note that the documentation states that “you cannot scale a service beyond 1 container if you have specified a custom name. Attempting to do so results in an error.” In this case I am only needing 1 container, so it shouldn’t be a problem.</p>
+<p>In order for the <code>container_name</code> to be used, (originally) <a href="https://github.com/pigeonhands">Sam</a> suggested to use <a href="https://docs.docker.com/compose/compose-file/#links">links</a>. After reading the documentation on <code>links</code>, it is suggested to use <a href="https://docs.docker.com/compose/compose-file/#networks">networks</a>, as <code>links</code> may eventually be removed. The <code>docker-compose.yml</code> file now looks like the following (with the addition of the presentation and logic tier).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">version:</span><span class="at"> </span><span class="st">&#39;3.7&#39;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="fu">services:</span></a>
+<a class="sourceLine" id="cb2-3" title="3">  <span class="fu">web:</span></a>
+<a class="sourceLine" id="cb2-4" title="4">    <span class="fu">hostname:</span><span class="at"> frontend</span></a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="fu">container_name:</span><span class="at"> tiered-frontend</span></a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="fu">build:</span><span class="at"> ./frontend</span></a>
+<a class="sourceLine" id="cb2-7" title="7">    <span class="fu">depends_on:</span></a>
+<a class="sourceLine" id="cb2-8" title="8">      <span class="kw">-</span> api</a>
+<a class="sourceLine" id="cb2-9" title="9">    <span class="fu">ports:</span></a>
+<a class="sourceLine" id="cb2-10" title="10">      <span class="kw">-</span> 9123:9123</a>
+<a class="sourceLine" id="cb2-11" title="11">    <span class="fu">volumes:</span></a>
+<a class="sourceLine" id="cb2-12" title="12">      <span class="kw">-</span> .:/usr/src/application</a>
+<a class="sourceLine" id="cb2-13" title="13">    <span class="fu">environment:</span></a>
+<a class="sourceLine" id="cb2-14" title="14">      <span class="kw">-</span> ENV=development</a>
+<a class="sourceLine" id="cb2-15" title="15">      <span class="kw">-</span> WEB_HOST=0.0.0.0</a>
+<a class="sourceLine" id="cb2-16" title="16">      <span class="kw">-</span> WEB_PORT=9123</a>
+<a class="sourceLine" id="cb2-17" title="17">    <span class="fu">networks:</span></a>
+<a class="sourceLine" id="cb2-18" title="18">      <span class="kw">-</span> tiered</a>
+<a class="sourceLine" id="cb2-19" title="19">  <span class="fu">api:</span></a>
+<a class="sourceLine" id="cb2-20" title="20">    <span class="fu">hostname:</span><span class="at"> backend</span></a>
+<a class="sourceLine" id="cb2-21" title="21">    <span class="fu">container_name:</span><span class="at"> tiered-backend</span></a>
+<a class="sourceLine" id="cb2-22" title="22">    <span class="fu">build:</span><span class="at"> ./backend</span></a>
+<a class="sourceLine" id="cb2-23" title="23">    <span class="fu">depends_on:</span></a>
+<a class="sourceLine" id="cb2-24" title="24">      <span class="kw">-</span> mongodb</a>
+<a class="sourceLine" id="cb2-25" title="25">    <span class="fu">ports:</span></a>
+<a class="sourceLine" id="cb2-26" title="26">      <span class="kw">-</span> 9124:9124</a>
+<a class="sourceLine" id="cb2-27" title="27">    <span class="fu">volumes:</span></a>
+<a class="sourceLine" id="cb2-28" title="28">      <span class="kw">-</span> .:/usr/src/application</a>
+<a class="sourceLine" id="cb2-29" title="29">    <span class="fu">environment:</span></a>
+<a class="sourceLine" id="cb2-30" title="30">      <span class="kw">-</span> ENV=development</a>
+<a class="sourceLine" id="cb2-31" title="31">      <span class="kw">-</span> API_HOST=0.0.0.0</a>
+<a class="sourceLine" id="cb2-32" title="32">      <span class="kw">-</span> API_PORT=9124</a>
+<a class="sourceLine" id="cb2-33" title="33">      <span class="kw">-</span> DB=mongodb://mongodb:27017/tieredapp</a>
+<a class="sourceLine" id="cb2-34" title="34">    <span class="fu">networks:</span></a>
+<a class="sourceLine" id="cb2-35" title="35">      <span class="kw">-</span> tiered</a>
+<a class="sourceLine" id="cb2-36" title="36">  <span class="fu">mongodb:</span></a>
+<a class="sourceLine" id="cb2-37" title="37">    <span class="fu">hostname:</span><span class="at"> database</span></a>
+<a class="sourceLine" id="cb2-38" title="38">    <span class="fu">container_name:</span><span class="at"> tiered-database</span></a>
+<a class="sourceLine" id="cb2-39" title="39">    <span class="fu">image:</span><span class="at"> mongo:latest</span></a>
+<a class="sourceLine" id="cb2-40" title="40">    <span class="fu">ports:</span></a>
+<a class="sourceLine" id="cb2-41" title="41">      <span class="kw">-</span> 27017:27017</a>
+<a class="sourceLine" id="cb2-42" title="42">    <span class="fu">volumes:</span></a>
+<a class="sourceLine" id="cb2-43" title="43">      <span class="kw">-</span> ./data/db:/usr/data/db</a>
+<a class="sourceLine" id="cb2-44" title="44">    <span class="fu">command:</span><span class="at"> mongod --smallfiles --logpath=/dev/null</span></a>
+<a class="sourceLine" id="cb2-45" title="45">    <span class="fu">networks:</span></a>
+<a class="sourceLine" id="cb2-46" title="46">      <span class="kw">-</span> tiered</a>
+<a class="sourceLine" id="cb2-47" title="47"><span class="fu">networks:</span></a>
+<a class="sourceLine" id="cb2-48" title="48">  <span class="fu">tiered:</span></a></code></pre></div>
+<p>Now we can call the REST API from the presentation tier (via <code>requests</code>) with the following.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1">r <span class="op">=</span> requests.get(<span class="st">&#39;http://tiered-backend:9124/todo&#39;</span>)</a></code></pre></div>
+<p><strong><em>Spicy</em></strong></p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

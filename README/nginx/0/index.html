@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Nginx 0 ~ Hello Nginx!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Nginx 0 ~ Hello Nginx!</h1>
+		<h4>
+							[				Hello World,
+								Nginx,
+								Golang,
+								Digital Ocean,
+								Systemd,
+								Web Development
+				]
+					</h4>
+
+		<br>
+
+		<main>
+			<p>Nginx is another one of those technologies that I’ve known of for a while, but haven’t had the chance to dig into. This blog will cover how to deploy a basic Golang web application on a $5/month ubuntu 18.04 vm hosted by <a href="https://www.digitalocean.com">Digital Ocean</a>. I’ve found a really good blog by <a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-go-web-application-using-nginx-on-ubuntu-18-04">Michael Okoh</a> which is what I am going to learn from.</p>
+<p>The first thing needed is a Go web application. I’ve already done this step with a simple web app that returns the IPv4 address of the user and a quote from one of my favorite movies.</p>
+<hr />
+<p>Next is to create a systemd unit file. Mine looks like the following.</p>
+<pre><code>[Unit]
+Description=iseeyou
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=/root/iseeyou/iseeyou
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+<p>There was an issue with <code>tpl = template.Must(template.ParseGlob("templates/*"))</code>, and I didn’t dig into it much, but fixed my changing the path to <code>"/root/iseeyou/templates/*"</code>. My assumption is the service looks for a <code>templates</code> dir within <code>/lib/systemd/system</code> where the <code>iseeyou.service</code> file is.</p>
+<hr />
+<p>With the service and application running, now for Nginx. A simple <code>sudo apt install nginx</code> and it’s installed. Next to create a file in <code>/etc/nginx/sites-available</code> called <code>fourohfournotfound.com</code>. In this file we want to specify the following.</p>
+<pre><code>server {
+    server_name fourohfournotfound.com www.fourohfournotfound.com;
+
+    location / {
+        proxy_pass http://localhost:&lt;YOUR SERVERS PORT&gt;;
+        proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}</code></pre>
+<p>Finally run</p>
+<p><code>sudo ln -s /etc/nginx/sites-available/fourohfournotfound.com /etc/nginx/sites-enabled/fourohfournotfound.com</code></p>
+<p>&amp;&amp;</p>
+<p><code>sudo nginx -s reload</code></p>
+<p>Make sure you replace fourohfournotfound.com with your own domain.</p>
+<hr />
+<p>Goto <a href="http://fourohfournotfound.com">fourohfournotfound.com</a> and enjoy!</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

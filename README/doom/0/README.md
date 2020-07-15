@@ -1,7 +1,7 @@
 ---
-title: Doom 0
+title: Doom 0 ~ Hello DOOM!
 date: 2019-09-22T11:20:58+12:00
-tags: ["DOOM", "C", "C++", "Linux", "Open Source"]
+tags: ["Hello World,", "DOOM,", "C,", "C++,", "Linux,", "Open Source"]
 draft: false
 ---
 

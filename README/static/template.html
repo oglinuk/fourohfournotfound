@@ -35,6 +35,16 @@
 			</nav>
 		</header>
 		<h1>$title$</h1>
+		<h4>
+		$if(tags)$
+			[$for(tags)$
+			$tags$
+			$endfor$]
+		$endif$
+		</h4>
+
+		<br>
+
 		<main>
 			$body$
 		</main>
