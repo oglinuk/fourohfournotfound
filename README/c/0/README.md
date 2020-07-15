@@ -5,7 +5,7 @@ draft: false
 tags: ["Hello World,", "C"]
 ---
 
-Well I always new this day was going to come. Originally I was going to learn C++ and not C, but [rwxrob](https://gitlab.com/rwxrob) has convinced me otherwise. His reasoning? "The C programming language is mandatory learning for anyone who truly wants to understand how all languages and digital computers work." [[source]](https://gitlab.com/rwx.gg/README/-/tree/master/c) For me, the reason why I decided on learning C is because I want to someday contribute to projects I use and love like the [Linux kernel](https://github.com/torvalds/linux), [Lynx](https://lynx.invisible-island.net), [Tmux](https://github.com/tmux/tmux), and so on. 
+Well I always new this day was going to come. Originally I was going to learn C++ and not C, but [rwxrob](https://gitlab.com/rwxrob) has convinced me otherwise. His reasoning? "The C programming language is mandatory learning for anyone who truly wants to understand how all languages and digital computers work." [[source]](https://gitlab.com/rwx.gg/README/-/tree/master/lang/c) For me, the reason why I decided on learning C is because I want to someday contribute to projects I use and love like the [Linux kernel](https://github.com/torvalds/linux), [Lynx](https://lynx.invisible-island.net), [Tmux](https://github.com/tmux/tmux), and so on.
 
 As always lets start off with the classic *hello world!*. 
 
