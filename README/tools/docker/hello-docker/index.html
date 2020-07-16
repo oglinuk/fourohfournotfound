@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Hello Docker!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Hello Docker!</h1>
+				<h4>
+			[			Hello World,
+						Docker,
+						Python
+			]
+		</h4>
+		
+		<br>
+
+		<main>
+			<p>Back in 2017 I learned about a ton of new and exciting technologies that I had never used or even heard of. One of those technologies is <strong><em>docker</em></strong>. If you don’t know of docker, then let me give some background information. “Docker is an open platform for developing, shipping, and running applications.” <a href="https://docs.docker.com/engine/docker-overview/">[source]</a>. Before we can dive further into what this really means we need to first come to an understanding of <a href="https://en.wikipedia.org/wiki/Container_(virtualization)"><em>containerization</em></a>. According to the docker website, “a container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.” <a href="https://www.docker.com/resources/what-container">[source]</a>.</p>
+<p>One of the biggest things to remember is that containers are <em>not</em> virtual machines. “Containers and virtual machines have similar resource isolation and allocation benefits, but function differently because containers virtualize the operating system instead of hardware. Containers are more portable and efficient.” <a href="https://www.docker.com/resources/what-container">[source]</a></p>
+<p>A question I was once asked when I gave a talk at a Python meetup was “how easy is it to dockerize an existing project?” This is a great question, as one of the biggest make or breaks with technology is its capability of integrating with existing code bases. Though I can’t say for larger code bases, I can say for my projects, adding docker is simple. This is coming from the perspective of Python projects, which have whats called <em>requirements.txt</em> files that contain all the dependancies. All that needs adding is a <em>Dockerfile</em>, which an example can be found below.</p>
+<hr />
+<div class="sourceCode" id="cb1"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">FROM</span> python:3.6</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">ADD</span> . /code</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">WORKDIR</span> /code</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">EXPOSE</span> 9123</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="kw">RUN</span> pip install -r requirements.txt</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="kw">CMD</span> [<span class="st">&quot;python3&quot;</span>, <span class="st">&quot;run.py&quot;</span>]</a></code></pre></div>
+<p>Let’s break the above down line by line.</p>
+<p><code>FROM</code> gets the <em>python 3.6</em> <a href="https://docs.docker.com/glossary/?term=image">image</a> and uses it for the base.</p>
+<p><code>ADD</code> copies the current directory (.) to the filesystem of the image at the <code>/code</code> path.</p>
+<p><code>WORKDIR</code> sets the working directory for the <code>RUN</code> and <code>CMD</code> instructions that follow.</p>
+<p><code>EXPOSE</code> instructs the docker container to listen on the specified port at runtime.</p>
+<p><code>RUN</code> executes any given command(s). In this case we are executing a pip install.</p>
+<p><code>CMD</code> provides defaults for an executing container. In this case the default is running <code>python3 run.py</code>.</p>
+<hr />
+<p>With this one file, the application is now dockerized. All that needs done is executing the following commands.</p>
+<p><code>docker build . --tag=hello-world</code></p>
+<p><code>docker run hello-world</code></p>
+<p>Now that’s what I call <strong><em>Spicy</em></strong>.</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

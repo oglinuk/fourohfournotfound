@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Basics</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Basics</h1>
+				<h4>
+			[			C++,
+						Fundamentals
+			]
+		</h4>
+		
+		<br>
+
+		<main>
+			<p>In the previous blogs I have just dived straight into programming in C++. This blog is going to focus around getting a better understanding of the language itself, including the various components that make up the language. It will cover the basics so for an experienced C++ programmer this blog will not be very interesting. If you are like me and new to C++ however, this blog may be beneficial.</p>
+<hr />
+<h2 id="standard-c-file-structure">Standard C++ File Structure</h2>
+<p>I found a great stackoverflow post on <a href="https://stackoverflow.com/a/1398594">directory structure for a C++ library</a>, which covers this topic. According to the post the file structure is as follows.</p>
+<ul>
+<li><code>./</code> ~ Makefile and configure scripts</li>
+<li><code>./src</code> ~ General sources</li>
+<li><code>./include</code> ~ Header files that expose the public interface and are to be installed</li>
+<li><code>./lib</code> ~ Library build directory</li>
+<li><code>./bin</code> ~ Tools build directory</li>
+<li><code>./tools</code> ~ Tools sources</li>
+<li><code>./test</code> ~ Test suites that should be run during <em>make test</em></li>
+</ul>
+<p>It is good to note what the person states about <em>choose a directory layout that makes sense for you (and your team). Do whatever is most sensible for your chosen development environment, build tools, and source control.</em></p>
+<hr />
+<h2 id="fundamental-types">Fundamental Types</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/types">Sourced from cppreference fundamental types</a>.</p>
+<ul>
+<li><p><code>void</code> ~ empty set of values. Objects of type void are disallowed. There are no arrays of void, nor references of void. Pointers to void and functions returning type void are permitted.</p></li>
+<li><p><code>std::nullptr_t</code> ~ null pointer literal, nullptr. Not itself a pointer type or a pointer to member type.</p></li>
+<li><p><code>bool</code> ~ capable of holding one of two values: true or false. The value is implementation defined and might differ from 1.</p></li>
+<li><code>int</code> ~ basic integer type. If no length modifiers are present, it’s guaranteed to have a width of at least 16 bits. However, on 32 / 64 bit systems it is almost exclusively guaranteed to have width of at least 32 bits.
+<ul>
+<li><strong>Modifiers</strong>
+<ul>
+<li><strong><em>Signedness</em></strong>
+<ul>
+<li><code>signed</code> ~ target type will have signed representation (default if omitted).</li>
+<li><code>unsigned</code> ~ target type will have unsigned representation.</li>
+</ul></li>
+<li><strong><em>Size</em></strong>
+<ul>
+<li><code>short</code> ~ target type will be optimized for space and will have width of at least 16 bits.</li>
+<li><code>long</code> ~ target type will have width of at least 32 bits.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li><p><code>signed char</code> ~ type for signed character representation.</p></li>
+<li><p><code>unsigned char</code> ~ type for unsigned character representation.</p></li>
+<li><p><code>char</code> ~ type for character representation which can be most efficiently processed on the target system.</p></li>
+<li><p><code>wchar_t</code> ~ type for wide character representation. Required to be large enough to represent any supported character code point. It has the same size, signedness, and alignment as one of the integer types, but is a distinct type.</p></li>
+<li><p><code>float</code> ~ single precision floating point type. Usually IEEE-754 32 bit floating point type.</p></li>
+<li><p><code>double</code> ~ double precision floating point type. Usually IEEE-754 64 bit floating point type.</p></li>
+<li><p><code>long double</code> ~ extended precision floating point type. Does not necessarily map to types mandated by IEEE-754. Usually 80-bit x87 floating point type on x86 and x86-64 architectures.</p></li>
+</ul>
+<hr />
+<h2 id="assignment-operators">Assignment Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_assignment">Sourced from cppreference assignment operators</a></p>
+<ul>
+<li><code>simple assignment</code> ~ <code>a = b</code></li>
+<li><code>addition assignment</code> ~ <code>a += b</code></li>
+<li><code>subtraction assignment</code> ~ <code>a -= b</code></li>
+<li><code>multiplication assignment</code> ~ <code>a *= b</code></li>
+<li><code>division assignment</code> ~ <code>a /= b</code></li>
+<li><code>modulo assignment</code> ~ <code>a %= b</code></li>
+<li><code>bitwise AND assignment</code> ~ <code>a &amp;= b</code></li>
+<li><code>bitwise OR assignment</code> ~ <code>a |= b</code></li>
+<li><code>bitwise XOR assignment</code> ~ <code>a ^= b</code></li>
+<li><code>bitwise left shift assignment</code> ~ <code>a &lt;&lt;= b</code></li>
+<li><code>bitwise right shift assignment</code> ~ <code>a &gt;&gt;= b</code></li>
+</ul>
+<hr />
+<h2 id="incrementdecrement-operators">Increment/Decrement Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_incdec">Sourced from cppreference increment/decrement operators</a></p>
+<ul>
+<li><code>pre-increment</code> ~ <code>++a</code></li>
+<li><code>pre-decrement</code> ~ <code>--a</code></li>
+<li><code>post-increment</code> ~ <code>a++</code></li>
+<li><code>post-decrement</code> ~ <code>a--</code></li>
+</ul>
+<hr />
+<h2 id="arithmetic-operators">Arithmetic Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_arithmetic">Sourced from cppreference arithmetic operators</a></p>
+<ul>
+<li><code>unary plus</code> ~ <code>+a</code></li>
+<li><code>unary minus</code> ~ <code>-a</code></li>
+<li><code>addition</code> ~ <code>a + b</code></li>
+<li><code>subtraction</code> ~ <code>a - b</code></li>
+<li><code>multiplication</code> ~ <code>a * b</code></li>
+<li><code>division</code> ~ <code>a / b</code></li>
+<li><code>modulo</code> ~ <code>a % b</code></li>
+<li><code>bitwise NOT</code> ~ <code>~a</code></li>
+<li><code>bitwise AND</code> ~ <code>a &amp; b</code></li>
+<li><code>bitwise OR</code> ~ <code>a | b</code></li>
+<li><code>bitwise XOR</code> ~ <code>a ^ b</code></li>
+<li><code>bitwise left shift</code> ~ <code>a &lt;&lt; b</code></li>
+<li><code>bitwise right shift</code> ~ <code>a &gt;&gt; b</code></li>
+</ul>
+<hr />
+<h2 id="logical-operators">Logical Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_logical">Source from cppreference logical operators</a></p>
+<ul>
+<li><code>negation</code> ~ <code>!a</code></li>
+<li><code>AND</code> ~ <code>a &amp;&amp; b</code></li>
+<li><code>inclusive OR</code> ~ <code>a || b</code></li>
+</ul>
+<hr />
+<h2 id="comparison-operators">Comparison Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_comparison">Sourced from cppreference comparison operators</a></p>
+<ul>
+<li><code>equal to</code> ~ <code>a == b</code></li>
+<li><code>not equal to</code> ~ <code>a != b</code></li>
+<li><code>less than</code> ~ <code>a &lt; b</code></li>
+<li><code>greater than</code> ~ <code>a &gt; b</code></li>
+<li><code>less than or equal to</code> ~ <code>a &lt;=b</code></li>
+<li><code>greater than or equal to</code> ~ <code>a &gt;= b</code></li>
+<li><code>three-way comparison</code> ~ <code>a &lt;=&gt; b</code></li>
+</ul>
+<hr />
+<h2 id="member-access-operators">Member Access Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_member_access">Sourced from cppreference member access operators</a></p>
+<ul>
+<li><code>subscript</code> ~ <code>a[b]</code></li>
+<li><code>indirection</code> ~ <code>*a</code></li>
+<li><code>address-of</code> ~ <code>&amp;a</code></li>
+<li><code>member of object</code> ~ <code>a.b</code></li>
+<li><code>member of pointer</code> ~ <code>a-&gt;b</code></li>
+<li><code>pointer to member of object</code> ~ <code>a.*b</code></li>
+<li><code>pointer to member of pointer</code> ~ <code>a-&gt;*b</code></li>
+</ul>
+<hr />
+<h2 id="other-operators">Other Operators</h2>
+<p><a href="https://en.cppreference.com/w/cpp/language/operator_other">Sourced from cppreference other operators</a></p>
+<ul>
+<li><code>function call</code> ~ <code>a(a1, a2)</code></li>
+<li><code>comma</code> ~ <code>a, b</code></li>
+<li><code>conditional operator</code> ~ <code>a ? b: c</code></li>
+</ul>
+<hr />
+<h2 id="if-statements">If Statements</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span>(a &gt; b) {</a>
+<a class="sourceLine" id="cb1-2" title="2">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb1-3" title="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="cf">if</span>(a &gt; b) {</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb2-3" title="3">} <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb2-4" title="4">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb2-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="cf">if</span>(a &gt; b) {</a>
+<a class="sourceLine" id="cb3-2" title="2">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb3-3" title="3">} <span class="cf">else</span> <span class="cf">if</span> (a &lt; b) {</a>
+<a class="sourceLine" id="cb3-4" title="4">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb3-5" title="5">} <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb3-6" title="6">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb3-7" title="7">}</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">int</span> result = (a &gt; b) ? <span class="kw">true</span> : <span class="kw">false</span>;</a></code></pre></div>
+<hr />
+<h2 id="switch-statements">Switch Statements</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="dt">int</span> op = <span class="dv">3</span>;</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="cf">switch</span>(op) {</a>
+<a class="sourceLine" id="cb5-3" title="3">    <span class="cf">case</span> <span class="dv">0</span>:</a>
+<a class="sourceLine" id="cb5-4" title="4">        cout &lt;&lt; <span class="st">&quot;+&quot;</span>;</a>
+<a class="sourceLine" id="cb5-5" title="5">    <span class="cf">case</span> <span class="dv">1</span>:</a>
+<a class="sourceLine" id="cb5-6" title="6">        cout &lt;&lt; <span class="st">&quot;-&quot;</span>;</a>
+<a class="sourceLine" id="cb5-7" title="7">    <span class="cf">case</span> <span class="dv">2</span>:</a>
+<a class="sourceLine" id="cb5-8" title="8">        cout &lt;&lt; <span class="st">&quot;*&quot;</span>;</a>
+<a class="sourceLine" id="cb5-9" title="9">    <span class="cf">case</span> <span class="dv">3</span>:</a>
+<a class="sourceLine" id="cb5-10" title="10">        cout &lt;&lt; <span class="st">&quot;/&quot;</span>;</a>
+<a class="sourceLine" id="cb5-11" title="11">    <span class="cf">case</span> <span class="dv">4</span>:</a>
+<a class="sourceLine" id="cb5-12" title="12">        cout &lt;&lt; <span class="st">&quot;%&quot;</span>;</a>
+<a class="sourceLine" id="cb5-13" title="13">}</a></code></pre></div>
+<hr />
+<h2 id="loop-statements">Loop Statements</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">int</span> i = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="cf">while</span>(i &lt; <span class="dv">7</span>) {</a>
+<a class="sourceLine" id="cb6-3" title="3">    i++;</a>
+<a class="sourceLine" id="cb6-4" title="4">}</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">int</span> i = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="cf">do</span> {</a>
+<a class="sourceLine" id="cb7-3" title="3">    i++;</a>
+<a class="sourceLine" id="cb7-4" title="4">} <span class="cf">while</span>(i &lt; <span class="dv">7</span>);</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="cf">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">7</span>; i++) {</a>
+<a class="sourceLine" id="cb8-2" title="2">    <span class="co">// ...</span></a>
+<a class="sourceLine" id="cb8-3" title="3">}</a></code></pre></div>
+<hr />
+<h2 id="pointers-and-references">Pointers and References</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">int</span> v = <span class="dv">42</span>;</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="dt">int</span>* ptr = &amp;v;</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="bu">std::</span>cout &lt;&lt; ptr &lt;&lt; <span class="bu">std::</span>endl; <span class="co">// Outputs the memory address of v (0x7ffdf796773c)</span></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="bu">std::</span>cout &lt;&lt; *ptr &lt;&lt; <span class="bu">std::</span>endl; <span class="co">// Outputs the value of v</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="dt">int</span> v = <span class="dv">42</span>;</a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="bu">std::</span>cout &lt;&lt; &amp;x &lt;&lt; <span class="bu">std::</span>endl; <span class="co">// Outputs the memory address of x (0x7fffe6d57bb4)</span></a></code></pre></div>
+<hr />
+<h2 id="classes-and-objects">Classes and Objects</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb11-1" title="1"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="co">// Base class</span></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="kw">class</span> Person</a>
+<a class="sourceLine" id="cb11-5" title="5">{</a>
+<a class="sourceLine" id="cb11-6" title="6">    <span class="kw">private</span>: <span class="co">// Access specifier</span></a>
+<a class="sourceLine" id="cb11-7" title="7"></a>
+<a class="sourceLine" id="cb11-8" title="8">        <span class="bu">std::</span>string name;   <span class="co">// (string) Attribute</span></a>
+<a class="sourceLine" id="cb11-9" title="9">        <span class="dt">int</span> age;            <span class="co">// (int) Attribute</span></a>
+<a class="sourceLine" id="cb11-10" title="10"></a>
+<a class="sourceLine" id="cb11-11" title="11">    <span class="kw">public</span>: <span class="co">// Access specifier</span></a>
+<a class="sourceLine" id="cb11-12" title="12"></a>
+<a class="sourceLine" id="cb11-13" title="13">        <span class="co">/* Getters and Setters */</span></a>
+<a class="sourceLine" id="cb11-14" title="14">        <span class="dt">void</span> setName(<span class="bu">std::</span>string n)</a>
+<a class="sourceLine" id="cb11-15" title="15">        {</a>
+<a class="sourceLine" id="cb11-16" title="16">            <span class="kw">this</span>-&gt;name = n;</a>
+<a class="sourceLine" id="cb11-17" title="17">        }</a>
+<a class="sourceLine" id="cb11-18" title="18"></a>
+<a class="sourceLine" id="cb11-19" title="19">        <span class="bu">std::</span>string getName()</a>
+<a class="sourceLine" id="cb11-20" title="20">        {</a>
+<a class="sourceLine" id="cb11-21" title="21">            <span class="cf">return</span> <span class="kw">this</span>-&gt;name;</a>
+<a class="sourceLine" id="cb11-22" title="22">        }</a>
+<a class="sourceLine" id="cb11-23" title="23"></a>
+<a class="sourceLine" id="cb11-24" title="24">        <span class="dt">void</span> setAge(<span class="dt">int</span> a)</a>
+<a class="sourceLine" id="cb11-25" title="25">        {</a>
+<a class="sourceLine" id="cb11-26" title="26">            <span class="kw">this</span>-&gt;age = a;</a>
+<a class="sourceLine" id="cb11-27" title="27">        }</a>
+<a class="sourceLine" id="cb11-28" title="28"></a>
+<a class="sourceLine" id="cb11-29" title="29">        <span class="dt">int</span> getAge()</a>
+<a class="sourceLine" id="cb11-30" title="30">        {</a>
+<a class="sourceLine" id="cb11-31" title="31">            <span class="cf">return</span> <span class="kw">this</span>-&gt;age;</a>
+<a class="sourceLine" id="cb11-32" title="32">        }</a>
+<a class="sourceLine" id="cb11-33" title="33"></a>
+<a class="sourceLine" id="cb11-34" title="34">        <span class="co">/* Methods */</span></a>
+<a class="sourceLine" id="cb11-35" title="35">        <span class="dt">void</span> printInfo(); <span class="co">// Method declaration inside the class</span></a>
+<a class="sourceLine" id="cb11-36" title="36"></a>
+<a class="sourceLine" id="cb11-37" title="37">        <span class="dt">void</span> speak(<span class="bu">std::</span>string word) <span class="co">// Method definition inside the class</span></a>
+<a class="sourceLine" id="cb11-38" title="38">        {</a>
+<a class="sourceLine" id="cb11-39" title="39">            <span class="bu">std::</span>cout &lt;&lt; word &lt;&lt; <span class="bu">std::</span>endl;</a>
+<a class="sourceLine" id="cb11-40" title="40">        }</a>
+<a class="sourceLine" id="cb11-41" title="41"></a>
+<a class="sourceLine" id="cb11-42" title="42">        <span class="co">/* Constructors */</span></a>
+<a class="sourceLine" id="cb11-43" title="43">        Person(){}; <span class="co">// Default constructor</span></a>
+<a class="sourceLine" id="cb11-44" title="44"></a>
+<a class="sourceLine" id="cb11-45" title="45">        <span class="co">// Constructor declaration inside the class</span></a>
+<a class="sourceLine" id="cb11-46" title="46">        Person(<span class="bu">std::</span>string name, <span class="dt">int</span> age); </a>
+<a class="sourceLine" id="cb11-47" title="47">};</a>
+<a class="sourceLine" id="cb11-48" title="48"></a>
+<a class="sourceLine" id="cb11-49" title="49"><span class="co">// Constructor definition outside the class</span></a>
+<a class="sourceLine" id="cb11-50" title="50">Person::Person(<span class="bu">std::</span>string name, <span class="dt">int</span> age)</a>
+<a class="sourceLine" id="cb11-51" title="51">{</a>
+<a class="sourceLine" id="cb11-52" title="52">    <span class="kw">this</span>-&gt;setName(name);</a>
+<a class="sourceLine" id="cb11-53" title="53">    <span class="kw">this</span>-&gt;setAge(age); <span class="co">//age = age; // Causes bug</span></a>
+<a class="sourceLine" id="cb11-54" title="54">}</a>
+<a class="sourceLine" id="cb11-55" title="55"></a>
+<a class="sourceLine" id="cb11-56" title="56"><span class="co">// Method definition outside the class</span></a>
+<a class="sourceLine" id="cb11-57" title="57"><span class="dt">void</span> Person::printInfo()</a>
+<a class="sourceLine" id="cb11-58" title="58">{</a>
+<a class="sourceLine" id="cb11-59" title="59">    <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;My name is &quot;</span> &lt;&lt; getName() &lt;&lt; <span class="bu">std::</span>endl;</a>
+<a class="sourceLine" id="cb11-60" title="60">    <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;My age is &quot;</span> &lt;&lt; getAge() &lt;&lt; <span class="bu">std::</span>endl;</a>
+<a class="sourceLine" id="cb11-61" title="61">}</a>
+<a class="sourceLine" id="cb11-62" title="62"></a>
+<a class="sourceLine" id="cb11-63" title="63"><span class="co">// Subclass that inherits from Person</span></a>
+<a class="sourceLine" id="cb11-64" title="64"><span class="kw">class</span> Programmer: <span class="kw">public</span> Person</a>
+<a class="sourceLine" id="cb11-65" title="65">{</a>
+<a class="sourceLine" id="cb11-66" title="66">    <span class="kw">private</span>:</a>
+<a class="sourceLine" id="cb11-67" title="67">        <span class="bu">std::</span>string language;</a>
+<a class="sourceLine" id="cb11-68" title="68"></a>
+<a class="sourceLine" id="cb11-69" title="69">    <span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb11-70" title="70">        <span class="co">/* Getters and Setters */</span></a>
+<a class="sourceLine" id="cb11-71" title="71">        <span class="dt">void</span> setLanguage(<span class="bu">std::</span>string l)</a>
+<a class="sourceLine" id="cb11-72" title="72">        {</a>
+<a class="sourceLine" id="cb11-73" title="73">            <span class="kw">this</span>-&gt;language = l;</a>
+<a class="sourceLine" id="cb11-74" title="74">        }</a>
+<a class="sourceLine" id="cb11-75" title="75"></a>
+<a class="sourceLine" id="cb11-76" title="76">        <span class="bu">std::</span>string getLanguage()</a>
+<a class="sourceLine" id="cb11-77" title="77">        {</a>
+<a class="sourceLine" id="cb11-78" title="78">            <span class="cf">return</span> <span class="kw">this</span>-&gt;language;</a>
+<a class="sourceLine" id="cb11-79" title="79">        }</a>
+<a class="sourceLine" id="cb11-80" title="80"></a>
+<a class="sourceLine" id="cb11-81" title="81">        <span class="co">/* Methods */</span></a>
+<a class="sourceLine" id="cb11-82" title="82">        <span class="dt">void</span> cry()</a>
+<a class="sourceLine" id="cb11-83" title="83">        {</a>
+<a class="sourceLine" id="cb11-84" title="84">            <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;Why wont you work :*(</span><span class="sc">\n</span><span class="st">&quot;</span>;</a>
+<a class="sourceLine" id="cb11-85" title="85">        }</a>
+<a class="sourceLine" id="cb11-86" title="86">        </a>
+<a class="sourceLine" id="cb11-87" title="87">        <span class="dt">void</span> printInfo()</a>
+<a class="sourceLine" id="cb11-88" title="88">        {</a>
+<a class="sourceLine" id="cb11-89" title="89">            <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;My name is &quot;</span> &lt;&lt; getName() &lt;&lt; <span class="bu">std::</span>endl;</a>
+<a class="sourceLine" id="cb11-90" title="90">            <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;My age is &quot;</span> &lt;&lt; getAge() &lt;&lt; <span class="bu">std::</span>endl;</a>
+<a class="sourceLine" id="cb11-91" title="91">            <span class="bu">std::</span>cout &lt;&lt; <span class="st">&quot;My programming language is &quot;</span> &lt;&lt; getLanguage();</a>
+<a class="sourceLine" id="cb11-92" title="92">        }</a>
+<a class="sourceLine" id="cb11-93" title="93"></a>
+<a class="sourceLine" id="cb11-94" title="94">        <span class="co">/* Constructors */</span></a>
+<a class="sourceLine" id="cb11-95" title="95">        Programmer(){};</a>
+<a class="sourceLine" id="cb11-96" title="96">        Programmer(<span class="bu">std::</span>string name, <span class="dt">int</span> age, <span class="bu">std::</span>string language)</a>
+<a class="sourceLine" id="cb11-97" title="97">        {</a>
+<a class="sourceLine" id="cb11-98" title="98">            <span class="kw">this</span>-&gt;setName(name);</a>
+<a class="sourceLine" id="cb11-99" title="99">            <span class="kw">this</span>-&gt;setAge(age);</a>
+<a class="sourceLine" id="cb11-100" title="100">            <span class="kw">this</span>-&gt;setLanguage(language);</a>
+<a class="sourceLine" id="cb11-101" title="101">        };</a>
+<a class="sourceLine" id="cb11-102" title="102">};</a>
+<a class="sourceLine" id="cb11-103" title="103"></a>
+<a class="sourceLine" id="cb11-104" title="104"><span class="dt">int</span> main()</a>
+<a class="sourceLine" id="cb11-105" title="105">{</a>
+<a class="sourceLine" id="cb11-106" title="106">    Person manager(<span class="st">&quot;Bob&quot;</span>, <span class="dv">23</span>); <span class="co">// Person object using constructor with params</span></a>
+<a class="sourceLine" id="cb11-107" title="107">    manager.speak(<span class="st">&quot;Hello world!&quot;</span>);</a>
+<a class="sourceLine" id="cb11-108" title="108">    manager.printInfo();</a>
+<a class="sourceLine" id="cb11-109" title="109"></a>
+<a class="sourceLine" id="cb11-110" title="110">    Programmer cppProgrammer; <span class="co">// Programmer object using default constructor</span></a>
+<a class="sourceLine" id="cb11-111" title="111">    cppProgrammer.setName(<span class="st">&quot;Alice&quot;</span>);</a>
+<a class="sourceLine" id="cb11-112" title="112">    cppProgrammer.setAge(<span class="dv">33</span>);</a>
+<a class="sourceLine" id="cb11-113" title="113">    cppProgrammer.setLanguage(<span class="st">&quot;C++&quot;</span>);</a>
+<a class="sourceLine" id="cb11-114" title="114">    cppProgrammer.printInfo();</a>
+<a class="sourceLine" id="cb11-115" title="115">    cppProgrammer.cry();</a>
+<a class="sourceLine" id="cb11-116" title="116"></a>
+<a class="sourceLine" id="cb11-117" title="117">    <span class="cf">return</span> <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb11-118" title="118">}</a></code></pre></div>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

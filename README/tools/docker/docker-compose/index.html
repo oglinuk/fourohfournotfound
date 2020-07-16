@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Docker Compose</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Docker Compose</h1>
+				<h4>
+			[			Docker,
+						Python,
+						Docker-compose
+			]
+		</h4>
+		
+		<br>
+
+		<main>
+			<p>In this blog we are going to explore a tool thats apart of the docker ecosystem; <strong><em>docker-compose</em></strong>. “Compose is a tool for defining and running multi-container Docker applications.” <a href="https://docs.docker.com/compose/">[source]</a> There is an awesome example found on the <a href="https://docs.docker.com/compose/gettingstarted/">getting started</a> section, which shows the power of docker-compose. The example is shown below.</p>
+<p><strong><em>app.py</em></strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="im">from</span> flask <span class="im">import</span> Flask</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="im">import</span> time</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="im">import</span> redis</a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5">app <span class="op">=</span> Flask(<span class="va">__name__</span>)</a>
+<a class="sourceLine" id="cb1-6" title="6">cache <span class="op">=</span> redis.Redis(host<span class="op">=</span><span class="st">&#39;redis&#39;</span>, port<span class="op">=</span><span class="dv">6379</span>)</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="kw">def</span> get_seen_count():</a>
+<a class="sourceLine" id="cb1-9" title="9">    retries <span class="op">=</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="cf">while</span> <span class="va">True</span>:</a>
+<a class="sourceLine" id="cb1-11" title="11">        <span class="cf">try</span>:</a>
+<a class="sourceLine" id="cb1-12" title="12">            <span class="cf">return</span> cache.incr(<span class="st">&#39;seen&#39;</span>)</a>
+<a class="sourceLine" id="cb1-13" title="13">        <span class="cf">except</span> redis.exceptions.<span class="pp">ConnectionError</span> <span class="im">as</span> exc:</a>
+<a class="sourceLine" id="cb1-14" title="14">            <span class="cf">if</span> retries <span class="op">==</span> <span class="dv">0</span>:</a>
+<a class="sourceLine" id="cb1-15" title="15">                <span class="cf">raise</span> exc</a>
+<a class="sourceLine" id="cb1-16" title="16">            retries <span class="op">-=</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb1-17" title="17">            time.sleep(<span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb1-18" title="18"></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="at">@app.route</span>(<span class="st">&#39;/&#39;</span>)</a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="kw">def</span> hello():</a>
+<a class="sourceLine" id="cb1-21" title="21">    count <span class="op">=</span> get_hit_count()</a>
+<a class="sourceLine" id="cb1-22" title="22">    <span class="cf">return</span> <span class="st">&#39;Hello World! I have been seen </span><span class="sc">{}</span><span class="st"> times.</span><span class="ch">\n</span><span class="st">&#39;</span>.<span class="bu">format</span>(count)</a>
+<a class="sourceLine" id="cb1-23" title="23"></a>
+<a class="sourceLine" id="cb1-24" title="24"><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</a>
+<a class="sourceLine" id="cb1-25" title="25">    app.run(host<span class="op">=</span><span class="st">&quot;0.0.0.0&quot;</span>, debug<span class="op">=</span><span class="va">True</span>)</a></code></pre></div>
+<p><br />
+</p>
+<p><strong><em>requirements.txt</em></strong></p>
+<pre><code>flask
+redis</code></pre>
+<p><br />
+</p>
+<p><strong><em>Dockerfile</em></strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">FROM</span> python:3.6-alpine</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">ADD</span> . /code</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">WORKDIR</span> /code</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="kw">EXPOSE</span> 9001</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw">RUN</span> pip install -r requirements.txt</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="kw">CMD</span> [<span class="st">&quot;python&quot;</span>, <span class="st">&quot;app.py&quot;</span>]</a></code></pre></div>
+<p><br />
+</p>
+<p><strong><em>docker-compose.yml</em></strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">version:</span><span class="at"> </span><span class="st">&#39;3&#39;</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="fu">services:</span></a>
+<a class="sourceLine" id="cb4-3" title="3">  <span class="fu">web:</span></a>
+<a class="sourceLine" id="cb4-4" title="4">    <span class="fu">build:</span><span class="at"> .</span></a>
+<a class="sourceLine" id="cb4-5" title="5">    <span class="fu">ports:</span></a>
+<a class="sourceLine" id="cb4-6" title="6">     <span class="kw">-</span> <span class="st">&quot;9001:9001&quot;</span></a>
+<a class="sourceLine" id="cb4-7" title="7">  <span class="fu">redis:</span></a>
+<a class="sourceLine" id="cb4-8" title="8">    <span class="fu">image:</span><span class="at"> </span><span class="st">&quot;redis:alpine&quot;</span></a></code></pre></div>
+<p>Now all that we need to do is execute <code>docker-compose up --build</code> and we have a flask web application with a redis database running.</p>
+<p><strong><em>Spicy</em></strong></p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

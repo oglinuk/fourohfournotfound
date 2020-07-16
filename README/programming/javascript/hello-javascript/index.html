@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Hello JavaScript!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Hello JavaScript!</h1>
+				<h4>
+			[			Hello World,
+						JavaScript
+			]
+		</h4>
+		
+		<br>
+
+		<main>
+			<p>JavaScript is everywhere. Along side HTML and CSS, JavaScript is what powers most websites on the <a href="https://en.wikipedia.org/wiki/World_Wide_Web">world wide web</a>. I’ve known the very basics of JavaScript for a while now, but have never really spent time to learn it more than just simple functionality. For my learnings, I will be using another resource that was suggested by <a href="https://gitlab.com/rwxrob">rwxrob</a> called <a href="https://eloquentjavascript.net/">Eloquent JavaScript</a>, which was written by yet another amazing human being; <a href="https://marijnhaverbeke.nl/">Marijn Haverbeke</a>. If you ever happen to read this blog Marijn, thank you. The book is freely available under the <a href="https://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribute-NonCommercial 3.0 license</a>, and can be downloaded as a <a href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf">pdf</a>. I would also like to thank the <a href="https://eloquentjavascript.net/backers3.html">325 backers</a> who helped financially fund the book, one person who I actually know! If you ever read this blog <a href="https://belma.dev/">Belma Gaukrodger</a>, thank you!</p>
+<p>Chapter 1 of the book covers <code>values</code>, <code>types</code>, and <code>operators</code>. Before it goes into that it covers <em>bits</em> and how to express numbers in binary. I have to say representing numbers in binary never really clicked until now which is kind of odd cause it seems simplistic. The number they use is 13, but I am going to challenge myself and represent the famous number 1729 for practice.</p>
+<pre class="none"><code>  1   1   0   1  1  0  0  0 0 0 1
+1024 512 256 128 64 32 16 8 4 2 1</code></pre>
+<p>Make sense? If not then think of it this way. You add the values of a base 2 number line to sum a desired number (in this case 1729). Any numbers used to sum the number are represented by a 1, any that are notare represented by a 0. So to sum 1729 we add 1024 + 512 + 128 + 64 + 1, and so the binary representation of 1729 is <code>11011000001</code>. Lets do another, this time 7. This one is rather easy since its just 4 + 2 + 1, which means the binary representation is <code>111</code>. Cool stuff!</p>
+<p>Another thing Eloquent JavaScript has clicked for me is the max values of <em>integers</em>, or the <em>number</em> type as its referred to in the book. In programming languages there are different types of integers ranging from int8 to normally int64. The max value of the int8 data type is 2^8 - 1, 2^16 - 1 for the int16, and so on up to 2^64 - 1 for int64. This is of course only if the integer is <a href="https://en.wikipedia.org/wiki/Integer_(computer_science)#Common_integral_data_types"><em>unsigned</em></a>.</p>
+<p>Something that I found rather interesting is the three <em>special numbers</em> in JavaScript <code>infinity</code>, <code>-infinity</code>, and <code>NaN</code>. I’ve come across <code>NaN</code> or <em>not a number</em> before, but not <code>infinity</code>/<code>-infinity</code>. After a quick search I found that the <code>infinity</code> value is used when a “number exceeds the upper limit of the floating point number which is 1.797693134862315E+308”. <a href="https://www.w3schools.com/jsref/jsref_infinity.asp">[source]</a> The same goes for a number lower than -1.797693134862316E+308. The book does note not to trust it in infinity-based computation as it isn’t mathematically sound and leads to <code>NaN</code>.</p>
+<p>Strings in JavaScript are syntactically similar to Python in the ability to use either <code>"valid"</code> or <code>'valid'</code>, but differs in also having backticks being valid for strings. Not very surprising as JavaScript is also an <a href="https://en.wikipedia.org/wiki/Interpreted_language">interpreted language</a>. One thing I never liked about JavaScript was how it handles string concatenation. An example is as follows.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb2-1" title="1"><span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;this &quot;</span> <span class="op">+</span> <span class="st">&quot;looks &quot;</span> <span class="op">+</span> <span class="st">&quot;ugly&quot;</span>)<span class="op">;</span></a></code></pre></div>
+<p>Fortunately there is a cleaner way in the form of <em>template literals</em>, but this is only available when using backticks for strings. An example of this is as follows.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">let</span> better <span class="op">=</span> <span class="st">&quot;cleaner&quot;</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="va">console</span>.<span class="at">log</span>(<span class="vs">`this looks </span><span class="sc">${</span>better<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></a></code></pre></div>
+<p>The next topic covered in this chapter is <em>unary operators</em>, which I’ve come across, but have never known the name until now. The example the book uses is <code>typeof</code> in JavaScript, but one that I know from C is the <code>++</code> and <code>--</code> operators. An interesting distinction the book makes is that <em>binary operators</em> are operators that use two values, where as <em>unary operators</em> only use one.</p>
+<p>Another cool operator that I’ve seen before but have never learned about is the <em>ternary operator</em> <code>?</code>. Though it may look confusing, in my opinion is an elegant way of combining a conditional operator with two possible outputs. An example of the <code>?</code> operator in action is as follows.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb4-1" title="1"><span class="va">console</span>.<span class="at">log</span>(<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">5</span> <span class="op">?</span> <span class="kw">true</span> : <span class="kw">false</span>)<span class="op">;</span> <span class="co">// outputs true</span></a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="va">console</span>.<span class="at">log</span>(<span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">5</span> <span class="op">?</span> <span class="kw">true</span> : <span class="kw">false</span><span class="op">;</span> <span class="co">// outputs false</span></a></code></pre></div>
+<p><em>Spicy</em>.</p>
+<p>An oddity in JavaScript is it’s <em>automatic type conversion</em>. The book’s examples of this are as follows.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb5-1" title="1"><span class="va">console</span>.<span class="at">log</span>(<span class="dv">8</span> <span class="op">*</span> <span class="kw">null</span>)<span class="op">;</span> <span class="co">// outputs 0</span></a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;5&quot;</span> <span class="op">-</span> <span class="dv">1</span>)<span class="op">;</span> <span class="co">// outputs 4</span></a>
+<a class="sourceLine" id="cb5-4" title="4"></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;5&quot;</span> <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span> <span class="co">// outputs 51</span></a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;five&quot;</span> <span class="op">*</span> <span class="dv">2</span>)<span class="op">;</span> <span class="co">// outputs NaN</span></a>
+<a class="sourceLine" id="cb5-8" title="8"></a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="va">console</span>.<span class="at">log</span>(<span class="kw">false</span> <span class="op">==</span> <span class="dv">0</span>)<span class="op">;</span> <span class="co">// true</span></a></code></pre></div>
+<p>Apperantly JavaScript will convert a value to a needed type using a set of rules if an operator is applied to the “wrong” type of value. This is <em>type coercion</em>. Enter the operator unique to JavaScript;<code>===</code>. The <code>===</code> operator is exactly the same as <code>==</code> except it does not apply type coercion, instead it checks to see if the <em>types</em> are equivalent. An example of this is as follows.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb6-1" title="1"><span class="va">console</span>.<span class="at">log</span>(<span class="kw">false</span> <span class="op">==</span> <span class="dv">0</span>)<span class="op">;</span> <span class="co">// outputs same as above; true</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="va">console</span>.<span class="at">log</span>(<span class="kw">false</span> <span class="op">===</span> <span class="dv">0</span>)<span class="op">;</span> <span class="co">// outputs false</span></a></code></pre></div>
+<p>The final section of chapter 1 covers <em>short-circuit evaluation</em>, which is something I’ve multiple times but have never known the name for it until now. These are the <code>||</code> and <code>&amp;&amp;</code> operators.</p>
+<p>That’s it for chapter 1 and this blog! To finish off I will write the classical <em>hello world!</em> in Javascript.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb7-1" title="1"><span class="va">console</span>.<span class="at">log</span>(<span class="st">&quot;Hello world!&quot;</span>)<span class="op">;</span></a></code></pre></div>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

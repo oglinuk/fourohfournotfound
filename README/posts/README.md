@@ -3,26 +3,36 @@ title: Posts
 draft: false
 ---
 
-## Programming
-* [C](/c)
-* [C++](/c++)
-* [Python](/python)
-* [Rust](/rust)
+## [Gaming](/gaming)
 
-## Tools
-* [Alacritty](/alacritty)
-* [Arch Linux](/arch)
-* [Docker](/docker)
-* [fdisk](/fdisk)
-* [Nginx](/nginx)
-* [Shell](/shell)
-* [Tmux](/tmux)
-* [Vim](/vim)
+* [DOOM](/gaming/doom)
+* [Quake 3](/gaming/quake3)
 
-## Study
-* [Artificial Intelligence](/ai)
-* [Research 701](/res701)
+## [Maths](/maths)
 
-## Gaming
-* [DOOM](/doom)
-* [Quake 3](/quake3)
+* [Algebra](/maths/algebra)
+
+## [Programming](/programming)
+
+* [C](/programming/c)
+* [C++](/programming/c++)
+* [JavaScript](/programming/javascript)
+* [Python](/programming/python)
+* [Rust](/programming/rust)
+
+## [Study](/study)
+
+* [Artificial Intelligence](/study/ai)
+* [Mathematics](/study/maths)
+* [NMIT](/study/nmit)
+  
+## [Tools](/tools)
+
+* [Alacritty](/tools/alacritty)
+* [Arch Linux](/tools/arch)
+* [Docker](/tools/docker)
+* [fdisk](/tools/fdisk)
+* [Nginx](/tools/nginx)
+* [Shell](/tools/shell)
+* [Tmux](/tools/tmux)
+* [Vim](/tools/vim)

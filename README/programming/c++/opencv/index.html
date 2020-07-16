@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>OpenCV</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>OpenCV</h1>
+				<h4>
+			[			C++,
+						OpenCV
+			]
+		</h4>
+		
+		<br>
+
+		<main>
+			<p><a href="https://opencv.org">OpenCV</a> is a library that I will be working with in C++, so this blog is going to be dedicated to installing OpenCV and setting it up for C++. The steps I will be following are the ones found on the <a href="https://docs.opencv.org/4.0.0/d7/d9f/tutorial_linux_install.html">linux tutorial</a> section of the OpenCV website.</p>
+<p>To start, we need to install the following dependancies.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install build-essential \</a>
+<a class="sourceLine" id="cb1-2" title="2">                 cmake \</a>
+<a class="sourceLine" id="cb1-3" title="3">                 git \</a>
+<a class="sourceLine" id="cb1-4" title="4">                 libgtk2.0-dev \</a>
+<a class="sourceLine" id="cb1-5" title="5">                 pkg-config \</a>
+<a class="sourceLine" id="cb1-6" title="6">                 libavcodec-dev \</a>
+<a class="sourceLine" id="cb1-7" title="7">                 libavformat-dev \</a>
+<a class="sourceLine" id="cb1-8" title="8">                 libswscale-dev \</a>
+<a class="sourceLine" id="cb1-9" title="9">                 python3-dev \</a>
+<a class="sourceLine" id="cb1-10" title="10">                 python3-numpy \</a>
+<a class="sourceLine" id="cb1-11" title="11">                 libtbb2 \</a>
+<a class="sourceLine" id="cb1-12" title="12">                 libtbb-dev \</a>
+<a class="sourceLine" id="cb1-13" title="13">                 libjasper-dev \</a>
+<a class="sourceLine" id="cb1-14" title="14">                 libjpeg-dev \</a>
+<a class="sourceLine" id="cb1-15" title="15">                 libpng-dev \</a>
+<a class="sourceLine" id="cb1-16" title="16">                 libtiff-dev \</a>
+<a class="sourceLine" id="cb1-17" title="17">                 libdc1394-22-dev</a></code></pre></div>
+<hr />
+<p>Next to clone the OpenCV and OpenCV contrib git repositories via</p>
+<p><code>git clone https://github.com/opencv/opencv.git</code> and</p>
+<p><code>git clone https://github.com/opencv/opencv_contrib.git</code>.</p>
+<p>To simplfy things I have made a directory called <code>opencv_dev</code>, and cloned the repositories inside of it.</p>
+<hr />
+<p>Now to create a directory called <code>build</code> inside of the <code>opencv</code> directory and <code>cd</code> into that new directory.</p>
+<p>Within <code>build</code> we now run the following command.</p>
+<pre><code>cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D OPENCV_GENERATE_PKGCONFIG=YES \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules 
+      -D INSTALL_C_EXAMPLES=ON \
+      -D INSTALL_PYTHON_EXAMPLES=ON \
+      -D WITH_V4L=ON \
+      -D WITH_QT=OFF \
+      -D WITH_TBB=ON \
+      -D WITH_CUDA=ON \
+      -D WITH_OPENGL=ON \
+      -D BUILD_EXAMPLES=ON \
+      -D BUILD_OPENCV_PYTHON2=ON \
+      -D BUILD_OPENCV_PYTHON3=ON \
+      -D BUILD_SHARED_LIBS=ON ..</code></pre>
+<p>The next command to run is <code>make -j7</code>, then <code>sudo make install</code>.</p>
+<hr />
+<p>With that I now have the ability to use <code>#include &lt;opencv2/opencv.hpp&gt;</code> in the following example.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="co">// main.cpp</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="pp">#include </span><span class="im">&lt;opencv2/opencv.hpp&gt;</span></a>
+<a class="sourceLine" id="cb3-3" title="3"></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="kw">using</span> <span class="kw">namespace</span> cv;</a>
+<a class="sourceLine" id="cb3-5" title="5"></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> <span class="at">const</span> *argv[])</a>
+<a class="sourceLine" id="cb3-7" title="7">{</a>
+<a class="sourceLine" id="cb3-8" title="8">    <span class="cf">if</span> (argc &lt; <span class="dv">2</span>) {</a>
+<a class="sourceLine" id="cb3-9" title="9">        printf(<span class="st">&quot;Usage: ./main &lt;image_path&gt;</span><span class="sc">\n</span><span class="st">&quot;</span>);</a>
+<a class="sourceLine" id="cb3-10" title="10">        <span class="cf">return</span> -<span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb3-11" title="11">    }</a>
+<a class="sourceLine" id="cb3-12" title="12"></a>
+<a class="sourceLine" id="cb3-13" title="13">    Mat img;</a>
+<a class="sourceLine" id="cb3-14" title="14">    img = imread(argv[<span class="dv">1</span>], <span class="dv">1</span>);</a>
+<a class="sourceLine" id="cb3-15" title="15"></a>
+<a class="sourceLine" id="cb3-16" title="16">    <span class="cf">if</span> (!img.data) {</a>
+<a class="sourceLine" id="cb3-17" title="17">        printf(<span class="st">&quot;No image data</span><span class="sc">\n</span><span class="st">&quot;</span>);</a>
+<a class="sourceLine" id="cb3-18" title="18">        <span class="cf">return</span> -<span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb3-19" title="19">    }</a>
+<a class="sourceLine" id="cb3-20" title="20"></a>
+<a class="sourceLine" id="cb3-21" title="21">    namedWindow(<span class="st">&quot;Image&quot;</span>, WINDOW_AUTOSIZE);</a>
+<a class="sourceLine" id="cb3-22" title="22">    imshow(<span class="st">&quot;Image&quot;</span>, img);</a>
+<a class="sourceLine" id="cb3-23" title="23"></a>
+<a class="sourceLine" id="cb3-24" title="24">    waitKey(<span class="dv">0</span>);</a>
+<a class="sourceLine" id="cb3-25" title="25"></a>
+<a class="sourceLine" id="cb3-26" title="26">    <span class="cf">return</span> <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb3-27" title="27">}</a></code></pre></div>
+<p>Then to make the <code>CMakeLists.txt</code> file, which is as follows.</p>
+<pre><code>cmake_minimum_required(VERSION 3.10)
+project( main )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( main main.cpp )
+target_link_libraries( main ${OpenCV_LIBS} )</code></pre>
+<p>Because the above is taken from the <a href="https://docs.opencv.org/3.2.0/db/df5/tutorial_linux_gcc_cmake.html">gcc and cmake tutorial</a>, I want to cover each line of the <code>CMakeLists.txt</code> file. This is mainly for my personal learning, but will be beneficial if the reader happens to also be learning.</p>
+<hr />
+<p>The first line <code>cmake_minimum_required(VERSION 3.10)</code>, sets the minimum required version of <code>cmake</code> for a project and update policy settings to match the version given. In my case, <code>3.10</code> is specified since that is the installed version of <code>cmake</code> on my machine. <a href="https://cmake.org/cmake/help/v3.10/command/cmake_minimum_required.html?highlight=cmake_minimum#command:cmake_minimum_required">[source]</a></p>
+<p>The second line <code>project( main )</code>, sets a name, version, and enables languages for the entire project. <a href="https://cmake.org/cmake/help/v3.10/command/project.html?highlight=project">[source]</a></p>
+<p>The third line <code>find_package( OpenCV REQUIRED )</code>, loads settings for an external project. <a href="https://cmake.org/cmake/help/v3.10/command/find_package.html?highlight=find_package">[source]</a></p>
+<p>The fourth line <code>include_directories( ${OpenCV_INCLUDE_DIRS} )</code>, adds include directories to the build. <a href="https://cmake.org/cmake/help/v3.10/command/include_directories.html?highlight=include_directories#command:include_directories">[source]</a></p>
+<p>The fifth line <code>add_executable( main main.cpp )</code>, adds an executable to the project using the specified source files. <a href="https://cmake.org/cmake/help/v3.10/command/add_executable.html?highlight=add_executable">[source]</a></p>
+<p>The sixth and final line <code>target_link_libraries( main ${OpenCV_LIBS} )</code>, specify libraries or flags to use when linking a given target and/or its dependents. <a href="https://cmake.org/cmake/help/v3.10/command/target_link_libraries.html?highlight=target_link_libraries">[source]</a></p>
+<hr />
+<p>Finally to build/compile via <code>mkdir build &amp;&amp; cd build</code>, <code>cmake ..</code>, <code>make</code>, then <code>./main os.jpeg</code>.</p>
+<p>We got the <code>os.jpeg</code> picture to open; OpenCV with C++ works!</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

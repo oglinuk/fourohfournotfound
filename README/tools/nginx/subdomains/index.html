@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Subdomains</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Subdomains</h1>
+				<h4>
+			[			Nginx,
+						Digital Ocean,
+						Web Development
+			]
+		</h4>
+		
+		<br>
+
+		<main>
+			<p>In the <a href="/nginx/hello-nginx/index.html">previous blog</a> we explored serving a Go web application with <a href="https://nginx.com">Nginx</a> on <a href="https://digitalocean.com">Digital Ocean</a>. This blog is going to cover how to host a static website on a subdomain. One of the things I did not cover in the last blog is how to point to your domain name with Digital Ocean. For more on this please refer to <a href="https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars">this blog</a> that I found/used originally.</p>
+<p>The first thing to do is copy over your static site using an <code>scp</code> or <code>rsync</code> command. If you’re wondering what the difference between the two like I did, you can refer to <a href="https://unix.stackexchange.com/a/39719">this stackexchange answer</a>. I copied my static website to the <code>/var/www</code> directory, but you can choose to store it wherever you would like, just make sure you use that same path in the Nginx configuration.</p>
+<p>The next thing to do is create another Nginx server block file in <code>/etc/nginx/sites-available</code>. Add the following to the file.</p>
+<pre><code>server {
+    root /var/www/fourohfournotfound;
+
+    server_name blog.fourohfournotfound.com www.blog.fourohfournotfound.com;
+}</code></pre>
+<p>Finally, to add a subdomain to point to the droplet. In my case, since my static website is my blog I am adding <code>blog</code> and <code>www.blog</code> as the hostname directing to the droplet with the static website.</p>
+<p>Thanks it! Check out <a href="http://blog.fourohfournotfound.com">blog.fourohfournotfound.com</a> and learn on!</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

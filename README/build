@@ -1,27 +1,59 @@
 #!/bin/bash
-render () {
-  declare dir="$1"
-  echo Building "'$dir'"
-  pandoc -s -o "$dir/index.html" --quiet "$dir/README.md"
+
+new() {
+  mkdir $*
+  cd $*
+  touch README.md
+  echo "---" >> README.md
+  echo "title: " >> README.md
+  echo "draft: true" >> README.md
+  echo "---" >> README.md
 }
 
-if [[ -n "$*" ]];then
-  for i in "$@"; do
-    i=${i%/README.md}
-    render $i
+render() {
+        declare dir="$1"
+        echo Building "'$dir'"
+        pandoc -s -o "$dir/index.html" --template=template.html "$dir/README.md"
+}
+
+checkdraft() {
+  while IFS= read -r line; do
+    if [[ $line == *"draft:"* ]];then
+      if [[ $line == *"true"* ]]; then
+        return 1
+      else
+        return 0
+      fi
+    fi
+  done < ./README.md
+}
+
+walkdir() {
+  cd $*
+  echo $*
+  for thing in *; do
+    if [[ -f README.md ]]; then
+      if checkdraft; then
+        #echo "Found README @ $thing"
+        render $thing
+      fi
+    fi
+    if [[ -d $thing ]]; then
+      walkdir $thing
+    fi
+    #sleep 1
   done
-  exit
-fi
+  cd ..
+}
 
-declare -a pids
+main() {
+  opts="$1"
 
-for i in . **/README.md; do 
-  declare dir=${i/\/README.md}
-  declare key=${dir/\./BASE}
-  render "$dir" &
-  pids["$key"]=$!
-done
+  if [[ $opts =~ ^[new] ]];
+    then new $2
+  fi
 
-for pid in ${pids[*]}; do
-  wait $pid
-done
+  walkdir .
+}
+
+main $*
