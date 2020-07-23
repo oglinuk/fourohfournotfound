@@ -8,10 +8,6 @@ draft: false
 * [DOOM](/posts/gaming/doom)
 * [Quake 3](/posts/gaming/quake3)
 
-## [`Maths`](/posts/maths)
-
-* [Algebra](/posts/maths/algebra)
-
 ## [`Programming`](/posts/programming)
 
 * [C](/posts/programming/c)
