@@ -42,7 +42,8 @@
 		<br>
 
 		<main>
-			<p>This blog is going to cover the <a href="https://www.tensorflow.org/tutorials/keras/classification">basic image classifciation tutorial</a> provided by Tensorflow. For this blog you will need to install the following dependencies via <code>pip3</code>.</p>
+			<p>This blog is going to cover the <a href="https://www.tensorflow.org/tutorials/keras/classification">basic image classifciation tutorial</a> provided by Tensorflow.</p>
+<p>Install the following dependencies:</p>
 <ul>
 <li>Tensorflow</li>
 <li>Numpy</li>
@@ -51,10 +52,16 @@
 <p><br />
 </p>
 <p>First things first, I am going to make a class that will contain the functionality to make it easier for me to reference down the road.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">class</span> BasicImageClassifier(<span class="bu">object</span>):</a>
-<a class="sourceLine" id="cb1-2" title="2">    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb1-3" title="3">        <span class="va">self</span>.classes <span class="op">=</span> [<span class="st">&#39;t-shirt&#39;</span>, <span class="st">&#39;trousers&#39;</span>, <span class="st">&#39;pullover&#39;</span>, <span class="st">&#39;dress&#39;</span>, <span class="st">&#39;coat&#39;</span>, <span class="st">&#39;sandal&#39;</span>, <span class="st">&#39;shirt&#39;</span>, <span class="st">&#39;sneaker&#39;</span>, <span class="st">&#39;bag&#39;</span>, <span class="st">&#39;ankle boot&#39;</span>]</a>
-<a class="sourceLine" id="cb1-4" title="4">        (<span class="va">self</span>.train_imgs, <span class="va">self</span>.train_labels), (<span class="va">self</span>.test_imgs, <span class="va">self</span>.test_labels) <span class="op">=</span> <span class="va">self</span>.obtain_data()</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="im">import</span> numpy <span class="im">as</span> np</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="im">import</span> tensorflow <span class="im">as</span> tf</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="im">from</span> tensorflow <span class="im">import</span> keras</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="im">from</span> tensorflow.keras.datasets <span class="im">import</span> fashion_mnist</a>
+<a class="sourceLine" id="cb1-6" title="6"></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="kw">class</span> BasicImageClassifier(<span class="bu">object</span>):</a>
+<a class="sourceLine" id="cb1-8" title="8">    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb1-9" title="9">        <span class="va">self</span>.classes <span class="op">=</span> [<span class="st">&#39;t-shirt&#39;</span>, <span class="st">&#39;trousers&#39;</span>, <span class="st">&#39;pullover&#39;</span>, <span class="st">&#39;dress&#39;</span>, <span class="st">&#39;coat&#39;</span>, <span class="st">&#39;sandal&#39;</span>, <span class="st">&#39;shirt&#39;</span>, <span class="st">&#39;sneaker&#39;</span>, <span class="st">&#39;bag&#39;</span>, <span class="st">&#39;ankle boot&#39;</span>]</a>
+<a class="sourceLine" id="cb1-10" title="10">        (<span class="va">self</span>.train_imgs, <span class="va">self</span>.train_labels), (<span class="va">self</span>.test_imgs, <span class="va">self</span>.test_labels) <span class="op">=</span> <span class="va">self</span>.obtain_data()</a></code></pre></div>
 <p>Normally I would put the functionality of getting the data it’s own method called <code>obtain_data</code>, but since keras provides a nice <code>load_data</code> function for the <a href="https://keras.io/api/datasets/fashion_mnist/">fashion MNIST dataset</a>, there is no need. Hard coding <code>self.classes</code> is also not ideal, but since there is only 10 I am not bothered. A better way would be storing the classes in a text file and retrieving them.</p>
 <p><br />
 </p>
@@ -63,27 +70,28 @@
 <a class="sourceLine" id="cb2-2" title="2">        <span class="bu">print</span>(<span class="ss">f&#39;</span><span class="ch">\n</span><span class="ss">Training image shape: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>train_imgs<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</a>
 <a class="sourceLine" id="cb2-3" title="3">        <span class="bu">print</span>(<span class="ss">f&#39;</span><span class="sc">{</span><span class="bu">len</span>(<span class="va">self</span>.train_imgs)<span class="sc">}</span><span class="ss"> training images&#39;</span>)</a>
 <a class="sourceLine" id="cb2-4" title="4">        <span class="bu">print</span>(<span class="ss">f&#39;Labels: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>train_labels<span class="sc">}</span><span class="ch">\n</span><span class="ss">&#39;</span>)</a>
-<a class="sourceLine" id="cb2-5" title="5">        <span class="bu">print</span>(<span class="ss">f&#39;Training images type: </span><span class="sc">{</span><span class="bu">type</span>(<span class="va">self</span>.train_imgs)<span class="sc">}</span><span class="ss">&#39;</span>)</a>
+<a class="sourceLine" id="cb2-5" title="5">        <span class="bu">print</span>(<span class="ss">f&#39;Training labels type: </span><span class="sc">{</span><span class="bu">type</span>(<span class="va">self</span>.train_labels)<span class="sc">}</span><span class="ss">&#39;</span>)</a>
 <a class="sourceLine" id="cb2-6" title="6">        </a>
 <a class="sourceLine" id="cb2-7" title="7">        <span class="bu">print</span>(<span class="ss">f&#39;</span><span class="ch">\n</span><span class="ss">Testing image shape: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>test_imgs<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&#39;</span>)</a>
 <a class="sourceLine" id="cb2-8" title="8">        <span class="bu">print</span>(<span class="ss">f&#39;</span><span class="sc">{</span><span class="bu">len</span>(<span class="va">self</span>.test_imgs)<span class="sc">}</span><span class="ss"> test images&#39;</span>)</a>
 <a class="sourceLine" id="cb2-9" title="9">        <span class="bu">print</span>(<span class="ss">f&#39;Labels: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>test_labels<span class="sc">}</span><span class="ss">&#39;</span>)</a>
-<a class="sourceLine" id="cb2-10" title="10"></a>
-<a class="sourceLine" id="cb2-11" title="11">        <span class="co"># Visualize a training image</span></a>
-<a class="sourceLine" id="cb2-12" title="12">        plt.figure()</a>
-<a class="sourceLine" id="cb2-13" title="13">        plt.title(<span class="ss">f&#39;</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>classess[<span class="va">self</span>.train_labels[<span class="dv">0</span>]]<span class="sc">}</span><span class="ss">(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>train_labels[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">)&#39;</span>)</a>
-<a class="sourceLine" id="cb2-14" title="14">        plt.imshow(<span class="va">self</span>.train_imgs[<span class="dv">0</span>])</a>
-<a class="sourceLine" id="cb2-15" title="15">        plt.colorbar()</a>
-<a class="sourceLine" id="cb2-16" title="16">        plt.grid(<span class="va">False</span>)</a>
-<a class="sourceLine" id="cb2-17" title="17">        plt.show()</a>
-<a class="sourceLine" id="cb2-18" title="18"></a>
-<a class="sourceLine" id="cb2-19" title="19">        <span class="co"># Visualize a test image</span></a>
-<a class="sourceLine" id="cb2-20" title="20">        plt.figure()</a>
-<a class="sourceLine" id="cb2-21" title="21">        plt.title(<span class="ss">f&#39;</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>classess[<span class="va">self</span>.test_labels[<span class="dv">7</span>]]<span class="sc">}</span><span class="ss">(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>test_labels[<span class="dv">7</span>]<span class="sc">}</span><span class="ss">)&#39;</span>)</a>
-<a class="sourceLine" id="cb2-22" title="22">        plt.imshow(<span class="va">self</span>.test_imgs[<span class="dv">7</span>])</a>
-<a class="sourceLine" id="cb2-23" title="23">        plt.colorbar()</a>
-<a class="sourceLine" id="cb2-24" title="24">        plt.grid(<span class="va">False</span>)</a>
-<a class="sourceLine" id="cb2-25" title="25">        plt.show() </a></code></pre></div>
+<a class="sourceLine" id="cb2-10" title="10">        <span class="bu">print</span>(<span class="ss">f&#39;Test labels type: </span><span class="sc">{</span><span class="bu">type</span>(<span class="va">self</span>.test_labels)<span class="sc">}</span><span class="ss">&#39;</span>)</a>
+<a class="sourceLine" id="cb2-11" title="11"></a>
+<a class="sourceLine" id="cb2-12" title="12">        <span class="co"># Visualize a training image</span></a>
+<a class="sourceLine" id="cb2-13" title="13">        plt.figure()</a>
+<a class="sourceLine" id="cb2-14" title="14">        plt.title(<span class="ss">f&#39;</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>classess[<span class="va">self</span>.train_labels[<span class="dv">0</span>]]<span class="sc">}</span><span class="ss">(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>train_labels[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">)&#39;</span>)</a>
+<a class="sourceLine" id="cb2-15" title="15">        plt.imshow(<span class="va">self</span>.train_imgs[<span class="dv">0</span>])</a>
+<a class="sourceLine" id="cb2-16" title="16">        plt.colorbar()</a>
+<a class="sourceLine" id="cb2-17" title="17">        plt.grid(<span class="va">False</span>)</a>
+<a class="sourceLine" id="cb2-18" title="18">        plt.show()</a>
+<a class="sourceLine" id="cb2-19" title="19"></a>
+<a class="sourceLine" id="cb2-20" title="20">        <span class="co"># Visualize a test image</span></a>
+<a class="sourceLine" id="cb2-21" title="21">        plt.figure()</a>
+<a class="sourceLine" id="cb2-22" title="22">        plt.title(<span class="ss">f&#39;</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>classess[<span class="va">self</span>.test_labels[<span class="dv">7</span>]]<span class="sc">}</span><span class="ss">(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>test_labels[<span class="dv">7</span>]<span class="sc">}</span><span class="ss">)&#39;</span>)</a>
+<a class="sourceLine" id="cb2-23" title="23">        plt.imshow(<span class="va">self</span>.test_imgs[<span class="dv">7</span>])</a>
+<a class="sourceLine" id="cb2-24" title="24">        plt.colorbar()</a>
+<a class="sourceLine" id="cb2-25" title="25">        plt.grid(<span class="va">False</span>)</a>
+<a class="sourceLine" id="cb2-26" title="26">        plt.show() </a></code></pre></div>
 <p>The output:</p>
 <pre><code>Training image shape: (60000, 28, 28)
 60000 training images
@@ -93,7 +101,7 @@ Labels: [9 0 0 ... 3 0 5]
 Testing image shape: (10000, 28, 28)
 10000 test images
 Labels: [9 2 1 ... 8 1 5]</code></pre>
-<p><img src="ankle-boot.png" alt="Image of an ankle boot" /> <img src="shirt.png" alt="Image of a shirt" /></p>
+<p><img src="ankle-boot.png" /> <img src="shirt.png" /></p>
 <p><br />
 </p>
 <p>The second method we are going to add is <code>preprocess_data</code>, which is going to be the functionality for preparing the data.</p>
@@ -111,14 +119,10 @@ Labels: [9 2 1 ... 8 1 5]</code></pre>
 <a class="sourceLine" id="cb4-12" title="12">            plt.xlabel(<span class="va">self</span>.classes[<span class="va">self</span>.train_labels[i]])</a>
 <a class="sourceLine" id="cb4-13" title="13">        plt.show()</a></code></pre></div>
 <p>There isn’t much functionality in this method, but I think it is worth exploring what exactly is happening in this step. Before the <code>preprocess_data</code> step, the images are multi-dimensional arrays consisting of pixel values with a range of <code>[0, 255]</code>. When we do the <code>self.train_imgs = self.train_imgs / 255</code> operation, we then transform every pixel value of the images from a <code>[0, 255]</code> range to a range of <code>[0, 1]</code>. This is a process called <a href="https://en.wikipedia.org/wiki/Normalization_%28image_processing%29">(image processing) normalization</a>. Without normalization, “inputs with large integer values can disrupt or slow down the learning process.” <a href="https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/">[source]</a> To get a different perspective let’s compare the ankle boot image from above with a normalized one.</p>
-<p><strong>Pre-normalization</strong></p>
-<figure>
-<img src="ankle-boot.png" alt="Pre-normalized ankle boot" /><figcaption>Pre-normalized ankle boot</figcaption>
-</figure>
-<p><strong>Post-normalization</strong></p>
-<figure>
-<img src="scaled-ankle-boot.png" alt="Post-normalized ankle boot" /><figcaption>Post-normalized ankle boot</figcaption>
-</figure>
+<p><strong>Pre-normalized</strong></p>
+<p><img src="ankle-boot.png" /></p>
+<p><strong>Post-normalized</strong></p>
+<p><img src="scaled-ankle-boot.png" /></p>
 <p>Pretty neat stuff.</p>
 <p><br />
 </p>
@@ -143,6 +147,16 @@ Labels: [9 2 1 ... 8 1 5]</code></pre>
 <p>The next option used with <code>model.compile</code> is <code>loss</code>, and in this case we are using <code>SparseCategoricalCrossentropy</code>. Let’s break this down bit by bit. <code>Sparse</code> (in this instance), refers to using a single integer from zero to the number of classes minus one, instead of a dense one-hot encoding of the class label. An example (for a 3 class problem) would be <code>sparse</code>: <code>{0, 1, 2, 3}</code> and <code>one-hot encoding</code>: <code>{[1,0,0], [0,1,0], [0,0,1]}</code>. <code>Categorical</code> means that the variable “is one that has two or more categories, but there is no intrinsic ordering to the categories.” <a href="https://stats.idre.ucla.edu/other/mult-pkg/whatstat/what-is-the-difference-between-categorical-ordinal-and-numerical-variables/">[source]</a> <code>Cross entropy</code> “is a measure of the difference between two probability distributions for a given random variable or set of events.” <a href="https://machinelearningmastery.com/cross-entropy-for-machine-learning/">[source]</a></p>
 <p> </p>
 <p>With the model built and the data ready, it’s time for the fourth method: <code>train_model</code>. In this step we are going to feed the training data (training images and labels) to the model. We pass <code>self.train_imgs</code> for the x argument, <code>self.train_labels</code> for the y argument, and <code>10</code> for the number of epochs to the <code>fit</code> method. Then we invoke the <code>evaluate</code> method which returns the loss and metrics value for the model.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1">    <span class="kw">def</span> train_model(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb6-2" title="2">        <span class="va">self</span>.model.fit(</a>
+<a class="sourceLine" id="cb6-3" title="3">            <span class="va">self</span>.train_imgs, </a>
+<a class="sourceLine" id="cb6-4" title="4">            <span class="va">self</span>.train_labels, </a>
+<a class="sourceLine" id="cb6-5" title="5">            epochs<span class="op">=</span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb6-6" title="6">        )</a>
+<a class="sourceLine" id="cb6-7" title="7">        </a>
+<a class="sourceLine" id="cb6-8" title="8">        test_loss, test_acc <span class="op">=</span> <span class="va">self</span>.model.evaluate(<span class="va">self</span>.test_imgs, <span class="va">self</span>.test_labels, verbose<span class="op">=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb6-9" title="9">        <span class="bu">print</span>(<span class="ss">f&#39;Test loss: </span><span class="sc">{</span>test_loss<span class="sc">}</span><span class="ss">&#39;</span>)</a>
+<a class="sourceLine" id="cb6-10" title="10">        <span class="bu">print</span>(<span class="ss">f&#39;Test accuracy: </span><span class="sc">{</span>test_acc<span class="sc">}</span><span class="ss">&#39;</span>)</a></code></pre></div>
 <p>The output:</p>
 <pre><code>Epoch 1/10
 60000/60000 [==============================] - 3s 54us/sample - loss: 0.5045 - acc: 0.8242
@@ -170,58 +184,58 @@ Test loss: 0.3458002413749695
 Test accuracy: 0.8770999908447266</code></pre>
 <p><br />
 </p>
-<p>With the model trained, it’s time to add the fifth method: <code>make_prediction</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1">    <span class="kw">def</span> plot_img(<span class="va">self</span>, prediction, actual_label, img):</a>
-<a class="sourceLine" id="cb7-2" title="2">        plt.grid(<span class="va">False</span>)</a>
-<a class="sourceLine" id="cb7-3" title="3">        plt.xticks([])</a>
-<a class="sourceLine" id="cb7-4" title="4">        plt.yticks([])</a>
-<a class="sourceLine" id="cb7-5" title="5"></a>
-<a class="sourceLine" id="cb7-6" title="6">        plt.imshow(img, cmap<span class="op">=</span>plt.cm.binary)</a>
-<a class="sourceLine" id="cb7-7" title="7"></a>
-<a class="sourceLine" id="cb7-8" title="8">        predicted_label <span class="op">=</span> np.argmax(prediction)</a>
-<a class="sourceLine" id="cb7-9" title="9">        <span class="cf">if</span> predicted_label <span class="op">==</span> actual_label:</a>
-<a class="sourceLine" id="cb7-10" title="10">            color <span class="op">=</span> <span class="st">&#39;blue&#39;</span></a>
-<a class="sourceLine" id="cb7-11" title="11">        <span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb7-12" title="12">            color <span class="op">=</span> <span class="st">&#39;red&#39;</span></a>
-<a class="sourceLine" id="cb7-13" title="13"></a>
-<a class="sourceLine" id="cb7-14" title="14">        predicted_class <span class="op">=</span> <span class="va">self</span>.class_names[predicted_label]</a>
-<a class="sourceLine" id="cb7-15" title="15">        confidence <span class="op">=</span> <span class="dv">100</span><span class="op">*</span>np.<span class="bu">max</span>(prediction)</a>
-<a class="sourceLine" id="cb7-16" title="16">        actual_class <span class="op">=</span> <span class="va">self</span>.class_names[actual_label]</a>
-<a class="sourceLine" id="cb7-17" title="17"></a>
-<a class="sourceLine" id="cb7-18" title="18">        plt.xlabel(<span class="ss">f&#39;</span><span class="sc">{</span>predicted_class<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>confidence <span class="sc">:2.0f}</span><span class="ss">% (</span><span class="sc">{</span>actual_class<span class="sc">}</span><span class="ss">)&#39;</span>, color<span class="op">=</span>color)</a>
-<a class="sourceLine" id="cb7-19" title="19"></a>
-<a class="sourceLine" id="cb7-20" title="20">    <span class="kw">def</span> plot_predictions(<span class="va">self</span>, prediction, actual_label):</a>
-<a class="sourceLine" id="cb7-21" title="21">        plt.grid(<span class="va">False</span>)</a>
-<a class="sourceLine" id="cb7-22" title="22">        plt.xticks(<span class="bu">range</span>(<span class="dv">10</span>))</a>
-<a class="sourceLine" id="cb7-23" title="23">        plt.yticks([])</a>
-<a class="sourceLine" id="cb7-24" title="24">        thisplot <span class="op">=</span> plt.bar(<span class="bu">range</span>(<span class="dv">10</span>), prediction, color<span class="op">=</span><span class="st">&quot;#777777&quot;</span>)</a>
-<a class="sourceLine" id="cb7-25" title="25">        plt.ylim([<span class="dv">0</span>, <span class="dv">1</span>])</a>
-<a class="sourceLine" id="cb7-26" title="26">        predicted_label <span class="op">=</span> np.argmax(prediction)</a>
-<a class="sourceLine" id="cb7-27" title="27"></a>
-<a class="sourceLine" id="cb7-28" title="28">        thisplot[predicted_label].set_color(<span class="st">&#39;red&#39;</span>)</a>
-<a class="sourceLine" id="cb7-29" title="29">        thisplot[actual_label].set_color(<span class="st">&#39;blue&#39;</span>)</a>
-<a class="sourceLine" id="cb7-30" title="30"></a>
-<a class="sourceLine" id="cb7-31" title="31"></a>
-<a class="sourceLine" id="cb7-32" title="32">    <span class="kw">def</span> make_predictions(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb7-33" title="33">        probability_model <span class="op">=</span> keras.Sequential([</a>
-<a class="sourceLine" id="cb7-34" title="34">            <span class="va">self</span>.model,</a>
-<a class="sourceLine" id="cb7-35" title="35">            keras.layers.Softmax()</a>
-<a class="sourceLine" id="cb7-36" title="36">        ])</a>
-<a class="sourceLine" id="cb7-37" title="37"></a>
-<a class="sourceLine" id="cb7-38" title="38">        predictions <span class="op">=</span> probability_model.predict(<span class="va">self</span>.test_imgs)</a>
-<a class="sourceLine" id="cb7-39" title="39"></a>
-<a class="sourceLine" id="cb7-40" title="40">        num_rows <span class="op">=</span> <span class="dv">5</span></a>
-<a class="sourceLine" id="cb7-41" title="41">        num_cols <span class="op">=</span> <span class="dv">3</span></a>
-<a class="sourceLine" id="cb7-42" title="42">        num_images <span class="op">=</span> num_rows<span class="op">*</span>num_cols</a>
-<a class="sourceLine" id="cb7-43" title="43">        plt.figure(figsize<span class="op">=</span>(<span class="dv">2</span><span class="op">*</span><span class="dv">2</span><span class="op">*</span>num_cols, <span class="dv">2</span><span class="op">*</span>num_rows))</a>
-<a class="sourceLine" id="cb7-44" title="44">        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_images):</a>
-<a class="sourceLine" id="cb7-45" title="45">            plt.subplot(num_rows, <span class="dv">2</span><span class="op">*</span>num_cols, <span class="dv">2</span><span class="op">*</span>i<span class="op">+</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb7-46" title="46">            prediction, actual_label, img <span class="op">=</span> predictions[i], <span class="va">self</span>.test_labels[i], <span class="va">self</span>.test_imgs[i]</a>
-<a class="sourceLine" id="cb7-47" title="47">            <span class="va">self</span>.plot_img(prediction, actual_label, img)</a>
-<a class="sourceLine" id="cb7-48" title="48">            plt.subplot(num_rows, <span class="dv">2</span><span class="op">*</span>num_cols, <span class="dv">2</span><span class="op">*</span>i<span class="op">+</span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb7-49" title="49">            <span class="va">self</span>.plot_predictions(prediction, actual_label)</a>
-<a class="sourceLine" id="cb7-50" title="50">        plt.tight_layout()</a>
-<a class="sourceLine" id="cb7-51" title="51">        plt.show()</a></code></pre></div>
+<p>With the model trained, it’s time to add the fifth method: <code>make_predictions</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1">    <span class="kw">def</span> plot_img(<span class="va">self</span>, prediction, actual_label, img):</a>
+<a class="sourceLine" id="cb8-2" title="2">        plt.grid(<span class="va">False</span>)</a>
+<a class="sourceLine" id="cb8-3" title="3">        plt.xticks([])</a>
+<a class="sourceLine" id="cb8-4" title="4">        plt.yticks([])</a>
+<a class="sourceLine" id="cb8-5" title="5"></a>
+<a class="sourceLine" id="cb8-6" title="6">        plt.imshow(img, cmap<span class="op">=</span>plt.cm.binary)</a>
+<a class="sourceLine" id="cb8-7" title="7"></a>
+<a class="sourceLine" id="cb8-8" title="8">        predicted_label <span class="op">=</span> np.argmax(prediction)</a>
+<a class="sourceLine" id="cb8-9" title="9">        <span class="cf">if</span> predicted_label <span class="op">==</span> actual_label:</a>
+<a class="sourceLine" id="cb8-10" title="10">            color <span class="op">=</span> <span class="st">&#39;blue&#39;</span></a>
+<a class="sourceLine" id="cb8-11" title="11">        <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb8-12" title="12">            color <span class="op">=</span> <span class="st">&#39;red&#39;</span></a>
+<a class="sourceLine" id="cb8-13" title="13"></a>
+<a class="sourceLine" id="cb8-14" title="14">        predicted_class <span class="op">=</span> <span class="va">self</span>.class_names[predicted_label]</a>
+<a class="sourceLine" id="cb8-15" title="15">        confidence <span class="op">=</span> <span class="dv">100</span><span class="op">*</span>np.<span class="bu">max</span>(prediction)</a>
+<a class="sourceLine" id="cb8-16" title="16">        actual_class <span class="op">=</span> <span class="va">self</span>.class_names[actual_label]</a>
+<a class="sourceLine" id="cb8-17" title="17"></a>
+<a class="sourceLine" id="cb8-18" title="18">        plt.xlabel(<span class="ss">f&#39;</span><span class="sc">{</span>predicted_class<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>confidence <span class="sc">:2.0f}</span><span class="ss">% (</span><span class="sc">{</span>actual_class<span class="sc">}</span><span class="ss">)&#39;</span>, color<span class="op">=</span>color)</a>
+<a class="sourceLine" id="cb8-19" title="19"></a>
+<a class="sourceLine" id="cb8-20" title="20">    <span class="kw">def</span> plot_predictions(<span class="va">self</span>, prediction, actual_label):</a>
+<a class="sourceLine" id="cb8-21" title="21">        plt.grid(<span class="va">False</span>)</a>
+<a class="sourceLine" id="cb8-22" title="22">        plt.xticks(<span class="bu">range</span>(<span class="dv">10</span>))</a>
+<a class="sourceLine" id="cb8-23" title="23">        plt.yticks([])</a>
+<a class="sourceLine" id="cb8-24" title="24">        thisplot <span class="op">=</span> plt.bar(<span class="bu">range</span>(<span class="dv">10</span>), prediction, color<span class="op">=</span><span class="st">&quot;#777777&quot;</span>)</a>
+<a class="sourceLine" id="cb8-25" title="25">        plt.ylim([<span class="dv">0</span>, <span class="dv">1</span>])</a>
+<a class="sourceLine" id="cb8-26" title="26">        predicted_label <span class="op">=</span> np.argmax(prediction)</a>
+<a class="sourceLine" id="cb8-27" title="27"></a>
+<a class="sourceLine" id="cb8-28" title="28">        thisplot[predicted_label].set_color(<span class="st">&#39;red&#39;</span>)</a>
+<a class="sourceLine" id="cb8-29" title="29">        thisplot[actual_label].set_color(<span class="st">&#39;blue&#39;</span>)</a>
+<a class="sourceLine" id="cb8-30" title="30"></a>
+<a class="sourceLine" id="cb8-31" title="31"></a>
+<a class="sourceLine" id="cb8-32" title="32">    <span class="kw">def</span> make_predictions(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb8-33" title="33">        probability_model <span class="op">=</span> keras.Sequential([</a>
+<a class="sourceLine" id="cb8-34" title="34">            <span class="va">self</span>.model,</a>
+<a class="sourceLine" id="cb8-35" title="35">            keras.layers.Softmax()</a>
+<a class="sourceLine" id="cb8-36" title="36">        ])</a>
+<a class="sourceLine" id="cb8-37" title="37"></a>
+<a class="sourceLine" id="cb8-38" title="38">        predictions <span class="op">=</span> probability_model.predict(<span class="va">self</span>.test_imgs)</a>
+<a class="sourceLine" id="cb8-39" title="39"></a>
+<a class="sourceLine" id="cb8-40" title="40">        num_rows <span class="op">=</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb8-41" title="41">        num_cols <span class="op">=</span> <span class="dv">3</span></a>
+<a class="sourceLine" id="cb8-42" title="42">        num_images <span class="op">=</span> num_rows<span class="op">*</span>num_cols</a>
+<a class="sourceLine" id="cb8-43" title="43">        plt.figure(figsize<span class="op">=</span>(<span class="dv">2</span><span class="op">*</span><span class="dv">2</span><span class="op">*</span>num_cols, <span class="dv">2</span><span class="op">*</span>num_rows))</a>
+<a class="sourceLine" id="cb8-44" title="44">        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_images):</a>
+<a class="sourceLine" id="cb8-45" title="45">            plt.subplot(num_rows, <span class="dv">2</span><span class="op">*</span>num_cols, <span class="dv">2</span><span class="op">*</span>i<span class="op">+</span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb8-46" title="46">            prediction, actual_label, img <span class="op">=</span> predictions[i], <span class="va">self</span>.test_labels[i], <span class="va">self</span>.test_imgs[i]</a>
+<a class="sourceLine" id="cb8-47" title="47">            <span class="va">self</span>.plot_img(prediction, actual_label, img)</a>
+<a class="sourceLine" id="cb8-48" title="48">            plt.subplot(num_rows, <span class="dv">2</span><span class="op">*</span>num_cols, <span class="dv">2</span><span class="op">*</span>i<span class="op">+</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb8-49" title="49">            <span class="va">self</span>.plot_predictions(prediction, actual_label)</a>
+<a class="sourceLine" id="cb8-50" title="50">        plt.tight_layout()</a>
+<a class="sourceLine" id="cb8-51" title="51">        plt.show()</a></code></pre></div>
 <p>The <code>make_predictions</code> method is accompanied by two helper functions: <code>plot_img</code> and <code>plot_predictions</code>. First, let’s go through what the <code>make_predictions</code> method is doing. We start by creating a new model with the trained model as the first layer, and softmax for the second layer. Softmax is mathematical function that “turns arbitrary real values into probabilities” <a href="https://victorzhou.com/blog/softmax">[source]</a> We feed the logits value that is returned from our trained model and feed it into the softmax layer, which then transforms the logits vector into probabilities. I found that <a href="https://victorzhou.com/">victor zhou</a> has a really good blog which explains <a href="https://victorzhou.com/blog/softmax">softmax</a> if you want to learn more about it.</p>
 <p>The next thing that happens is we get a <code>predictions</code> value via the <code>predict</code> method, passing the test images. If we take a look at the first prediction made in <code>predictions</code> we see the following.</p>
 <pre><code>[1.8137916e-10 6.0670822e-14 2.0957621e-12 1.5968125e-12 8.8443645e-12
@@ -229,9 +243,7 @@ Test accuracy: 0.8770999908447266</code></pre>
 <p>Each value is a confidence of the model that the given image is the corresponding class. To get the highest confidence we can do <code>np.argmax(predictions[0])</code>, which will result (for this case) <code>9</code>. This means the model is the most confident that the image was an ankle boot, which if we compare to <code>self.test_labels[0]</code>, we see that the model was correct.</p>
 <p>The <code>make_predictions</code> is accompanied by two additional methods: <code>plot_img</code> and <code>plot_predictions</code>. The <code>plot_img</code> method plots the given image, checks if the <code>predicted_label</code> is the same as the <code>actual_label</code>, then sets the <code>plt.xlabel</code> value to the <code>predicted_class</code>/<code>confidence</code>/<code>actual_label</code>. The <code>plot_predictions</code> method plots each value of the given <code>prediction</code>, making the <code>actual_label</code> bar blue and the <code>predicted_label</code> bar red (if the <code>predicted_label</code> is the <code>actual_label</code> only a blue bar will be visible).</p>
 <p>The output:</p>
-<figure>
-<img src="predictions.png" alt="Images with predictions made by the classifier" /><figcaption>Images with predictions made by the classifier</figcaption>
-</figure>
+<p><img src="predictions.png" /></p>
 <p><br />
 </p>
 <p>That’s it for this tutorial. I encourage you to find a piece of clothing online or take a picture of one and test the model out on it!</p>

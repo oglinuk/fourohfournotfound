@@ -3,7 +3,10 @@ title: Basic Image Classification
 draft: false
 ---
 
-This blog is going to cover the [basic image classifciation tutorial](https://www.tensorflow.org/tutorials/keras/classification) provided by Tensorflow. For this blog you will need to install the following dependencies via `pip3`.
+This blog is going to cover the [basic image classifciation tutorial](https://www.tensorflow.org/tutorials/keras/classification) provided by Tensorflow. 
+
+
+Install the following dependencies:
 
 * Tensorflow
 * Numpy
@@ -14,6 +17,12 @@ This blog is going to cover the [basic image classifciation tutorial](https://ww
 First things first, I am going to make a class that will contain the functionality to make it easier for me to reference down the road.
 
 ```Python
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.datasets import fashion_mnist
+
 class BasicImageClassifier(object):
     def __init__(self):
         self.classes = ['t-shirt', 'trousers', 'pullover', 'dress', 'coat', 'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
@@ -31,11 +40,12 @@ The first method we are going to add is `explore_data`, where we explore things 
         print(f'\nTraining image shape: {self.train_imgs.shape}')
         print(f'{len(self.train_imgs)} training images')
         print(f'Labels: {self.train_labels}\n')
-        print(f'Training images type: {type(self.train_imgs)}')
+        print(f'Training labels type: {type(self.train_labels)}')
         
         print(f'\nTesting image shape: {self.test_imgs.shape}')
         print(f'{len(self.test_imgs)} test images')
         print(f'Labels: {self.test_labels}')
+        print(f'Test labels type: {type(self.test_labels)}')
 
         # Visualize a training image
         plt.figure()
@@ -67,8 +77,8 @@ Testing image shape: (10000, 28, 28)
 Labels: [9 2 1 ... 8 1 5]
 ```
 
-![Image of an ankle boot](ankle-boot.png)
-![Image of a shirt](shirt.png)
+![](ankle-boot.png)
+![](shirt.png)
 
 \
 
@@ -92,13 +102,13 @@ The second method we are going to add is `preprocess_data`, which is going to be
 
 There isn't much functionality in this method, but I think it is worth exploring what exactly is happening in this step. Before the `preprocess_data` step, the images are multi-dimensional arrays consisting of pixel values with a range of `[0, 255]`. When we do the `self.train_imgs = self.train_imgs / 255` operation, we then transform every pixel value of the images from a `[0, 255]` range to a range of `[0, 1]`. This is a process called [(image processing) normalization](https://en.wikipedia.org/wiki/Normalization_%28image_processing%29). Without normalization, "inputs with large integer values can disrupt or slow down the learning process." [[source]](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/) To get a different perspective let's compare the ankle boot image from above with a normalized one.
 
-**Pre-normalization**
+**Pre-normalized**
 
-![Pre-normalized ankle boot](ankle-boot.png)
+![](ankle-boot.png)
 
-**Post-normalization**
+**Post-normalized**
 
-![Post-normalized ankle boot](scaled-ankle-boot.png)
+![](scaled-ankle-boot.png)
 
 Pretty neat stuff.
 
@@ -134,6 +144,19 @@ The next option used with `model.compile` is `loss`, and in this case we are usi
 
 With the model built and the data ready, it's time for the fourth method: `train_model`. In this step we are going to feed the training data (training images and labels) to the model. We pass `self.train_imgs` for the x argument, `self.train_labels` for the y argument, and `10` for the number of epochs to the `fit` method. Then we invoke the `evaluate` method which returns the loss and metrics value for the model.
 
+```Python
+    def train_model(self):
+        self.model.fit(
+            self.train_imgs, 
+            self.train_labels, 
+            epochs=10
+        )
+        
+        test_loss, test_acc = self.model.evaluate(self.test_imgs, self.test_labels, verbose=2)
+        print(f'Test loss: {test_loss}')
+        print(f'Test accuracy: {test_acc}')
+```
+
 The output:
 
 ```
@@ -165,7 +188,7 @@ Test accuracy: 0.8770999908447266
 
 \
 
-With the model trained, it's time to add the fifth method: `make_prediction`.
+With the model trained, it's time to add the fifth method: `make_predictions`.
 
 ```Python
     def plot_img(self, prediction, actual_label, img):
@@ -236,7 +259,7 @@ The `make_predictions` is accompanied by two additional methods: `plot_img` and 
 
 The output:
 
-![Images with predictions made by the classifier](predictions.png)
+![](predictions.png)
 
 \
 
