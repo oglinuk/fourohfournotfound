@@ -1,13 +1,13 @@
 ---
-title: "Hello Quake3!"
+title: "Hello Quake 3!"
 date: 2020-04-13T08:31:38+12:00
 draft: false
-tags: ["Hello World,", "Quake3,", "C,", "Linux,", "Open Source"]
+tags: ["Hello World,", "Quake 3,", "C,", "Linux,", "Open Source"]
 ---
 
 In this blog I am going to cover how to get Quake 3 arena running. The source port I am going to use is [ioquake3](https://github.com/ioquake/ioq3). Unlike [DOOM](/games/doom), there is no entirely free version of Quake 3. Quake 3 requires [.pak files](https://quakewiki.org/wiki/.pak), which can found in the game files after purchasing Quake 3 on steam. 
 
-The following dependencies are required.
+The following dependencies are required:
 
 * `build-essential`
 * `make`
