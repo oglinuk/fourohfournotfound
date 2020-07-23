@@ -3,16 +3,16 @@ title: Posts
 draft: false
 ---
 
-## [Gaming](/gaming)
+## [`Gaming`](/posts/gaming)
 
 * [DOOM](/posts/gaming/doom)
 * [Quake 3](/posts/gaming/quake3)
 
-## [Maths](/maths)
+## [`Maths`](/posts/maths)
 
 * [Algebra](/posts/maths/algebra)
 
-## `[Programming](/programming)`
+## [`Programming`](/posts/programming)
 
 * [C](/posts/programming/c)
 * [C++](/posts/programming/c++)
@@ -20,13 +20,13 @@ draft: false
 * [Python](/posts/programming/python)
 * [Rust](/posts/programming/rust)
 
-## [Study](/study)
+## [`Study`](/posts/study)
 
 * [Artificial Intelligence](/posts/study/ai)
 * [Mathematics](/posts/study/maths)
 * [NMIT](/posts/study/nmit)
   
-## [Tools](/tools)
+## [`Tools`](/posts/tools)
 
 * [Alacritty](/posts/tools/alacritty)
 * [Arch Linux](/posts/tools/arch)
