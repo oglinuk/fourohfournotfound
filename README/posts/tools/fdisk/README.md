@@ -3,4 +3,4 @@ title: fdisk
 draft: false
 ---
 
-* [Hello fdisk!](hello-fdisk/index.html)
+* [Hello fdisk!](hello-fdisk)

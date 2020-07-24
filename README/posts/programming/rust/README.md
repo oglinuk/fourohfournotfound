@@ -3,4 +3,4 @@ title: Rust
 draft: false
 ---
 
-* [Hello Rust!](hello-rust/index.html)
+* [Hello Rust!](hello-rust)

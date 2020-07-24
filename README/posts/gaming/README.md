@@ -9,4 +9,4 @@ draft: false
 
 ## [`Quake 3`](quake3)
 
-* [Hello Quake 3!](quake3/index.html)
+* [Hello Quake 3!](quake3)

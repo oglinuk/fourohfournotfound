@@ -3,4 +3,4 @@ title: Golang
 draft: false
 ---
 
-* [Hello Golang!](hello-golang/index.html)
+* [Hello Golang!](hello-golang)

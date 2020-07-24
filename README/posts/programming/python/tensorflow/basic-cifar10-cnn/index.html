@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>Basic CIFAR CNN</title>
+		<title>Basic CIFAR-10 CNN</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
@@ -37,7 +37,7 @@
 				</ul>
 			</nav>
 		</header>
-		<h1>Basic CIFAR CNN</h1>
+		<h1>Basic CIFAR-10 CNN</h1>
 		
 		<br>
 
@@ -229,7 +229,7 @@ Accuracy: 0.7103999853134155</code></pre>
 <p><br />
 </p>
 <p>This is where the tutorial ends, but I am taking it a step further by adding a <code>make_predictions</code> method to see how the model performs. I will be re-using the <code>make_predictions</code> code from <a href="/programming/python/tensorflow/basic-image-classification">basic image classification</a>. Please refer to the basic image classification blog for a more detailed explanation of the code below.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">def</span> plot_img(<span class="va">self</span>, prediction, actual_label, img):</a>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1">    <span class="kw">def</span> plot_img(<span class="va">self</span>, prediction, actual_label, img):</a>
 <a class="sourceLine" id="cb11-2" title="2">        plt.grid(<span class="va">False</span>)</a>
 <a class="sourceLine" id="cb11-3" title="3">        plt.xticks([])</a>
 <a class="sourceLine" id="cb11-4" title="4">        plt.yticks([])</a>

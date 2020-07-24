@@ -3,4 +3,4 @@ title: DOOM
 draft: false
 ---
 
-* [Hello DOOM!](hello-doom/index.html)
+* [Hello DOOM!](hello-doom)

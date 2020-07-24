@@ -3,6 +3,6 @@ title: Docker
 draft: false
 ---
 
-* [Hello Docker!](hello-docker/index.html)
-* [Docker Compose](docker-compose/index.html)
-* [Multitier Architecture](multitier-architecture/index.html)
+* [Hello Docker!](hello-docker)
+* [Docker Compose](docker-compose)
+* [Multitier Architecture](multitier-architecture)

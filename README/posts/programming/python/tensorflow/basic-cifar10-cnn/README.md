@@ -1,6 +1,6 @@
 ---
-title: Basic CIFAR CNN
-draft: true
+title: Basic CIFAR-10 CNN
+draft: false
 ---
 
 This blog is going to cover the [convolutional neural network](https://www.tensorflow.org/tutorials/images/cnn) (CNN) tutorial provided by Tensorflow. The CNN is going to be used to classify [CIFAR-10](https://www.cs.toronto.edu/%7Ekriz/cifar.html) images, which is a dataset consisting of 10 classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck. There are 60000 (32x32 color) images, 6000 for each class, 50000 training images, and 10000 test images. 
@@ -248,7 +248,7 @@ Accuracy: 0.7103999853134155
 This is where the tutorial ends, but I am taking it a step further by adding a `make_predictions` method to see how the model performs. I will be re-using the `make_predictions` code from [basic image classification](/programming/python/tensorflow/basic-image-classification). Please refer to the basic image classification blog for a more detailed explanation of the code below.
 
 ```Python
-def plot_img(self, prediction, actual_label, img):
+    def plot_img(self, prediction, actual_label, img):
         plt.grid(False)
         plt.xticks([])
         plt.yticks([])
