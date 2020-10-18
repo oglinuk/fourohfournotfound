@@ -103,10 +103,13 @@ Since the *real* start to my learnings in the IT industry (back in 2016) I have 
 
 ## Hardware
 
-* Raspberry pi
-* Onion omega (2)
-* IBM x3650 m4
+* Arduino Uno
 * DS6000
+* IBM x3650 m4
+* nRF52
+* Onion omega (2)
+* Raspberry pi
+
 
 ## Networking
 
