@@ -23,13 +23,13 @@ In the [Machine Learning course by Andrew Ng](https://www.coursera.org/learn/mac
 
 ### Notation:
 
-| Symbol         | Meaning                       |
-| -------------- | ----------------------------: | 
-| `m`            | number of training examples   |
-| `x`            | "input" variable or feature   |
-| `y`            | "output" or "target" variable |
-| `(x, y)`       | single training example       |
-| `(x(i), y(i))` | i'th training example         |
+| Symbol                              | Meaning                       |
+| ----------------------------------- | ----------------------------: | 
+| m                                   | number of training examples   |
+| x                                   | "input" variable or feature   |
+| y                                   | "output" or "target" variable |
+| (x, y)                              | single training example       |
+| (x<sup>(i)</sup>, y<sup>(i)</sup>)` | i'th training example         |
 
 \
 
