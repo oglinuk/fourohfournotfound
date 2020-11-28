@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Hello Arduino!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Hello Arduino!</h1>
+		
+		<br>
+
+		<main>
+			<p>Hardware was a side of technology that I never learned about, other than what I learned from my CSA501 (computer system architecture) class, which was the components of a computer. My brother is the one who was always into hardware and gave me his old arduino uno, along with a box of various bits (LEDs, various sensors, ect). Up until recently I never really took the time to play around with it, partially because I didnt know any C, and also because I never really knew how to approach it. With my recent exposure to <a href="/posts/programming/c/nrf5">nrf5</a> via <a href="https://github.com/pigeonhands">Sam</a>, I have decided to dig into the arduino as a means to learn more.</p>
+<p>Much like the nrf5 stuff, the first thing needed is the IDE, which arduino provides two options. The first is a web editor, and the second is an open source IDE available on the arduino websites <a href="https://www.arduino.cc/en/Main/Software">download page</a>. I will be using the arduino IDE and am using ubuntu 20.04, so I downloaded the Linux x64 file. Alternatively if you are using ubuntu, you can download the IDE via <code>apt install arduino</code>.</p>
+<p>Like anything in programming its time to start with a classic <code>hello world!</code>. Since this is (embedded) hardware, the hello world equivelant (in my opinion) would be getting an LED to turn on and off. The arduino IDE has a bunch of examples, one of which is for making an LED turn on and off. Lets grok the code.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="co">/*</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co">  Blink</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co">  Turns on an LED on for one second, then off for one second, repeatedly.</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co"> </span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="co">  This example code is in the public domain.</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co"> */</span></a>
+<a class="sourceLine" id="cb1-7" title="7"> </a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">// Pin 13 has an LED connected on most Arduino boards.</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co">// give it a name:</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="dt">int</span> led = <span class="dv">13</span>;</a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="co">// the setup routine runs once when you press reset:</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="dt">void</span> setup() {                </a>
+<a class="sourceLine" id="cb1-14" title="14">  <span class="co">// initialize the digital pin as an output.</span></a>
+<a class="sourceLine" id="cb1-15" title="15">  pinMode(led, OUTPUT);     </a>
+<a class="sourceLine" id="cb1-16" title="16">}</a>
+<a class="sourceLine" id="cb1-17" title="17"></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="co">// the loop routine runs over and over again forever:</span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="dt">void</span> loop() {</a>
+<a class="sourceLine" id="cb1-20" title="20">  digitalWrite(led, HIGH);   <span class="co">// turn the LED on (HIGH is the voltage level)</span></a>
+<a class="sourceLine" id="cb1-21" title="21">  delay(<span class="dv">1000</span>);               <span class="co">// wait for a second</span></a>
+<a class="sourceLine" id="cb1-22" title="22">  digitalWrite(led, LOW);    <span class="co">// turn the LED off by making the voltage LOW</span></a>
+<a class="sourceLine" id="cb1-23" title="23">  delay(<span class="dv">1000</span>);               <span class="co">// wait for a second</span></a>
+<a class="sourceLine" id="cb1-24" title="24">}</a></code></pre></div>
+<p>The first thing thats happening is an int variable called <code>led</code> is created with the value <code>13</code>. This is because the LED will be plugged into GPIO pin #13. GPIO stands for <a href="https://www.egr.msu.edu/classes/ece480/capstone/fall09/group03/AN_balachandran.pdf"><em>general-purpose input/output</em></a>. The reason behind the use of the specific GPIO pin (#13) is because its right next to a GND (ground) pin. This means you can plug the LED directly into the board: positive (the longer end) plugged into the #13 pin, and negative (the shorter end) plugged into the GND pin.</p>
+<p>The <code>setup</code> function is calling the <code>pinMode</code> function, which as the documentation says is initializing the digital pin as an output. Let look at the <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/">documentation for pinMode</a> to understand a bit more about it. According to the documentation, pinMode “configures the specified pin to behave as an input or an output.” In this case <code>led</code> (aka pin #13) is being set as <code>OUTPUT</code>.</p>
+<p>Finally in the <code>loop</code> function we are calling the <code>digitalWrite</code> function and the <code>delay</code> function. The <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/">digitalWrite function</a>, according to the documentation, “writes a <code>HIGH</code> or <code>LOW</code> value to a digital pin.” Since in this case the pin is configured as an <code>OUTPUT</code>, “its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for <code>HIGH</code>, 0V (ground) for <code>LOW</code>.” The <a href="https://www.arduino.cc/reference/en/language/functions/time/delay/">delay function</a> is pretty self-explanatory, it “pauses the program for the amount of time (in milliseconds) specified as parameter.”</p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

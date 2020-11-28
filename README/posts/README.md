@@ -8,6 +8,11 @@ draft: false
 * [DOOM](gaming/doom)
 * [Quake 3](gaming/quake3)
 
+## [`Hardware`](hardware)
+
+* [Arduino](hardware/arduino)
+* [Nordic](hardware/nordic)
+
 ## [`Programming`](programming)
 
 * [C](programming/c)

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Model Representation</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" href="/static/images/icon.png" type="image/png" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<link rel="stylesheet" href="/static/reset.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	</head>
+
+	<body class="body">
+		<header class=nav-bar>
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/posts">Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/books">Library</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tbl">The Big List</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Model Representation</h1>
+		
+		<br>
+
+		<main>
+			<p>In the <a href="https://www.coursera.org/learn/machine-learning">Machine Learning course by Andrew Ng</a>, Andrew uses a dataset of housing prices in Portland (Oregon), which consists of the size (feet<sup>2</sup>) and price (1000s).</p>
+<h3 id="a-sample-of-the-dataset">A sample of the dataset:</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Size in feet<sup>2</sup> (x)</th>
+<th style="text-align: center;">Price (y)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2104 (x<sup>(1)</sup>)</td>
+<td style="text-align: center;">460000 (y<sup>(1)</sup>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1416 (x<sup>(2)</sup>)</td>
+<td style="text-align: center;">232000 (y<sup>(2)</sup>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">852 (x<sup>(3)</sup>)</td>
+<td style="text-align: center;">178000 (y<sup>(3)</sup>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1534 (x<sup>(4)</sup>)</td>
+<td style="text-align: center;">315000 (y<sup>(4)</sup>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">… (x<sup>(i)</sup>)</td>
+<td style="text-align: center;">… (y<sup>(i)</sup>)</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h3 id="notation">Notation:</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th style="text-align: right;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>m</td>
+<td style="text-align: right;">number of training examples</td>
+</tr>
+<tr class="even">
+<td>x</td>
+<td style="text-align: right;">“input” variable or feature</td>
+</tr>
+<tr class="odd">
+<td>y</td>
+<td style="text-align: right;">“output” or “target” variable</td>
+</tr>
+<tr class="even">
+<td>(x, y)</td>
+<td style="text-align: right;">single training example</td>
+</tr>
+<tr class="odd">
+<td>(x<sup>(i)</sup>, y<sup>(i)</sup>)`</td>
+<td style="text-align: right;">i’th training example</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>The explanatory variable in this case is the size, and the dependent variable is price, since the size of the house correlates to the price of the house.</p>
+<p>Since this is only dealing with one variable this is called <em>univariate linear regression</em>.</p>
+<p>Linear regression is expressed as hθ(x) = θ<sub>0</sub> + θ<sub>1</sub>x</p>
+<p><img src="linear-regression.png" /></p>
+		</main>
+		<br>
+		<br>
+		<footer>
+			<p>
+				2020 OGLinuk (<a href="https://github.com/OGLinuk">GitHub</a> | <a href="https://gitlab.com/OGLinuk">GitLab</a>)
+				~
+				Licensed under Creative Commons Attribution-ShareAlike.
+			</p>
+		</footer>
+		<script src="/static/main.js"></script>
+	</body>
+
+</html>

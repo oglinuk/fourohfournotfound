@@ -6,6 +6,8 @@ draft: false
 ## [`C`](c)
 
 * [Hello C!](c/hello-c)
+* [Nordic](c/nordic)
+* [Arduino](c/arduino)
 
 ## [`C++`](c++)
 
