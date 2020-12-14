@@ -24,3 +24,11 @@ Smile.
 Ask someone how their day is going.
 
 `Reflect on the past, look to the future, live in the now.`
+
+\
+
+---
+
+\
+
+**Most recent blog:** [Blogging](posts/philosophy/blogging)

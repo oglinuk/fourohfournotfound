@@ -21,6 +21,10 @@ draft: false
 * [Python](programming/python)
 * [Rust](programming/rust)
 
+## [`Philosophy`](philosophy)
+
+* [Blogging](philosophy/blogging)
+
 ## [`Study`](study)
 
 * [Artificial Intelligence](study/ai)
