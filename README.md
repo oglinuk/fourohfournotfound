@@ -1,14 +1,15 @@
+# Fourohfournotfound
+
+`fourohfournotfound.com` is my personal [knowledge
+node](https://github.com/afkworks/spec-kn)!
+
+I encourage you to first browse/download (and potentially contribute to)
+my [library](https://library.fourohfournotfound.com).
+
 ---
-title: Fourohfournotfound
----
 
-`fourohfournotfound.com` is the root domain for my [README.World](https://readme.world) knowledge nodes!
-
-I encourage you to first browse/download (and potentially contribute to) my [library](https://library.fourohfournotfound.com).
-
----
-
-I am a ***human*** first, a **thinker** second, and *everything else* third.
+I am a ***human*** first, a **thinker** second, and *everything else*
+third.
 
 Be kind to one another.
 
