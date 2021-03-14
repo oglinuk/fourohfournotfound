@@ -1,4 +1,4 @@
-# (My) Skillstack
+# Skillstack
 
 Since the *real* start to my learnings in the IT industry (back in 2016)
 I have learned many things. This page is a dedicated list to the various
