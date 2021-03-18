@@ -11,7 +11,7 @@ robots and empire reading
 the way of kings - read
 the words of radiance - read
 oathbringer - read
-rythm of war - reading
+rythm of war - read
 
 battleaxe - reading
 enchanter 
