@@ -17,7 +17,7 @@ to the topic
 
 ## [`Philosophy`](philosophy)
 
-* [Posting](philosophy/posting)
+* [Posts](philosophy/posts)
 
 ## [`Programming`](programming)
 
