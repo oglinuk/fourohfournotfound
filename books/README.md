@@ -2,7 +2,7 @@
 
 ## Fiction
 
-* [caves of steel](isaac-asmiov/caves-of-steel) - read
+* [caves of steel](isaac-asimov/caves-of-steel) - read
 * [the naked sun](isaac-asimov/the-naked-sun) - read
 * [the robots of dawn](isaac-asimov/the-robots-of-dawn) - read
 * [robots and empire](isaac-asimov/robots-and-empire) - read
