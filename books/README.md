@@ -110,6 +110,8 @@ harry potter and the goblet of fire
 harry potter and the order of the phoenix
 harry potter and the half-blood prince
 harry potter and the deathly hallows
+
+DUNE
 ```
 
 ## Non-fiction
@@ -166,5 +168,6 @@ understanding econometrics - reading
 
 microeconomics
 
+schaums outline of theory and problems of programming with c++
 ```
 
