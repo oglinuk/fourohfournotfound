@@ -6,6 +6,16 @@ node](https://github.com/afkworks/spec-kn)!
 I encourage you to first browse/download (and potentially contribute to)
 my [library](https://library.fourohfournotfound.com).
 
+Some other cool places in this knowledge node to checkout:
+
+* [books](books)
+* [directories](directories)
+* [learning TODO](learning-todo)
+* [notes](notes)
+* [personality](personality)
+* [posts](posts)
+* [skillstack](skillstack)
+
 ---
 
 I am a ***human*** first, a **thinker** second, and *everything else*
