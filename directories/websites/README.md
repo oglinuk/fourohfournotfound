@@ -1,8 +1,5 @@
----
-title: Websites Directory
----
+# Websites Directory
 
-* [fourohfournotfound.com](https://fourohfournotfound.com)
 * [rwxrob.live](https://rwxrob.live/)
 * [robs.io](https://robs.io)
 * [rwx.gg](https://rwx.gg)

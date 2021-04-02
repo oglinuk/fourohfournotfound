@@ -1,5 +1,5 @@
 # Git Directories
 
-[Individuals](individuals)
+## [`Individuals`](individuals)
 
-[Projects](projects)
+## [`Projects`](projects)

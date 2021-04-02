@@ -1,0 +1,31 @@
+<h1 id="hello-netlify">Hello Netlify!</h1>
+<p>Ever wondered what the cheapest and easiest way to make/host a website is? A Markdown/Git based website hosted with <a href="https://netlify.com">Netlify</a>. This is also known as a <a href="https://jamstack.org/what-is-jamstack/">Jamstack</a> site. The total cost for this setup (aside from your time) is $0, unless you want to use a custom domain name, which then it only totals $8.88/m (Namecheap). Netlify has a free plan which has everything you need, and common hosted git services (Github, Gitlab, Sourcehut, Gitea, …) are free. That is how <a href="https://github.com/oglinuk/fourohfournotfound">this website</a> is made/hosted. In this post I am going to demonstrate how easy and quick it is to create a website and start hosting it on Netlify.</p>
+<h2 id="create-a-website">Create a Website</h2>
+<p>The first thing to do is to create the website, which as stated above will be a Markdown based site. If you arent familiar with Markdown, then I suggest having a look at <a href="https://rwx.gg/lang/md/basic/">the basic syntax</a>. You will also need an account on one of the above mentioned hosted Git services sites. I will be using Github for this post.</p>
+<p>Lets start by creating a new git repository for our website.</p>
+<pre><code>mkdir hello-jamstack
+cd hello-jamstack
+git init
+git remote add origin git@github.com:oglinuk/hello-jamstack.git</code></pre>
+<p>Next lets create a <code>README.md</code> file, which will be our home page, via <code>vi README.md</code>. Now to add some content.</p>
+<pre><code># Hello world!
+
+This is a Jamstack website using Markdown, Git, and Netlify!</code></pre>
+<p>Finally to add the <code>README.md</code> file and push it to the remote repository.</p>
+<pre><code>git add README.md
+git commit -m &#39;Initial commit&#39;
+git push origin master</code></pre>
+<h2 id="hosting-on-netlify">Hosting on Netlify</h2>
+<p>Once you have created a Netlify account, click on the <code>New site from Git</code> button under the <code>sites</code> section. Select <code>Github</code> and authorize Netlify. Next pick the repository, in this case its <code>oglinuk/hello-jamstack</code>. Finally click the <code>Deploy site</code> button`. By default Netlify will generate a random URL for your site, but you can use a custom domain name if you have one. I will cover how to setup the custom domain name a bit later.</p>
+<p>If we click on the link to our newly hosted site we will get <code>Page Not Found</code>, this is because Netlify doesnt handle Markdown files. To resolve this we will need to render the Markdown file as HTML, and we will achieve this using a build script.</p>
+<h2 id="add-a-build-script">Add a Build Script</h2>
+<p>There are various ways we can write the build script, but to keep it simple, we’re just going to write a quick shell script. In the website repository create a file called <code>build</code> and add the following.</p>
+<pre><code>#!/bin/sh
+
+pandoc README -o index.html</code></pre>
+<p>If you have never heard of the tool <a href="https://pandoc.org">Pandoc</a>, then I highly recommend checking it out. Fortunately you dont need to install it on your machine. Lastly you will need to make the script executable via <code>chmod +x build</code>. Before you commit and push the change, click on the <code>Site settings</code> button of your site and then click on the <code>Build &amp; deploy</code> tab on the left. Click the <code>Edit settings</code> button in the <code>Build settings</code> section, add <code>./build</code> in the <code>Build command</code> section, and click the <code>Save</code> button. Once that is done, commit and push the change.</p>
+<p>Now go back to your site and you should see your new website!</p>
+<p>The best thing about Netlify is it automatically updates the site and triggers the build command.</p>
+<h2 id="add-a-custom-domain">Add a Custom Domain</h2>
+<p>If you have a custom domain you can use it by going to the <code>Domain Management</code> section on the left of the <code>Site settings</code> section. Then click the <code>Add custom domain</code> button and type in your domain name. You will need to point to the name servers of your domain name registrar, and it will take a while to propogate.</p>
+<p>Enjoy your new Jamstack site!</p>

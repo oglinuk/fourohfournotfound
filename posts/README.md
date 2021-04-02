@@ -41,3 +41,4 @@ to the topic
 * [Shell](tools/shell)
 * [Tmux](tools/tmux)
 * [Vim](tools/vim)
+* [Netlify](tools/netlify)
