@@ -106,6 +106,14 @@ harry potter and the half-blood prince
 harry potter and the deathly hallows
 
 dune
+
+robinson crusoe
+
+the complete works of william shakespeare
+
+the casquet of literature volume 1 & 2
+the casquet of literature volume 3 & 4
+the casquet of literature volume 5 & 6
 ```
 
 ## Non-fiction
@@ -167,5 +175,27 @@ schaums outline of theory and problems of programming with c++
 winston s. churchill war speeches 1
 winston s. churchill war speeches 2
 winston s. churchill war speeches 3
+
+history of the romans under the empire volume 6
+
+makers of the realm
+
+china by harold e. gorst
+
+memoirs of a chinese revolutionary
+
+the two first centuries of florentine history
+
+hawkins electrical guide 1
+
+the works of plato
+
+chambers information for the people volume 1
+
+historians history of the world volume 11
+historians history of the world volume 18
+historians history of the world volume 19
+
+five
 ```
 
