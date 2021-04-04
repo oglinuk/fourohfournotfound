@@ -66,8 +66,6 @@ the mist of avalon
 
 tron
 
-the dark beyond the stars
-
 first dawn
 
 pluribus
@@ -102,16 +100,12 @@ the tower
 the delta
 the magician
 
-a graveyard for lunatics
-
-the tangle box
-
 harry potter and the goblet of fire
 harry potter and the order of the phoenix
 harry potter and the half-blood prince
 harry potter and the deathly hallows
 
-DUNE
+dune
 ```
 
 ## Non-fiction
@@ -169,5 +163,9 @@ understanding econometrics - reading
 microeconomics
 
 schaums outline of theory and problems of programming with c++
+
+winston s. churchill war speeches 1
+winston s. churchill war speeches 2
+winston s. churchill war speeches 3
 ```
 
