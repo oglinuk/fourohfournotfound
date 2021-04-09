@@ -1,4 +1,4 @@
-# My (Physical) Books
+# My (Physical) Books - 123 total
 
 ## Fiction
 
@@ -114,6 +114,11 @@ the complete works of william shakespeare
 the casquet of literature volume 1 & 2
 the casquet of literature volume 3 & 4
 the casquet of literature volume 5 & 6
+
+forbidden knowledge
+a dark and hungry god arises
+chaos and order
+this day all gods die
 ```
 
 ## Non-fiction
@@ -197,5 +202,13 @@ historians history of the world volume 18
 historians history of the world volume 19
 
 five
+
+the crusades: iron men and saints
+
+lenin selected works 1
+lenin selected works 2
+lenin selected works 3
+
+principles and procedures of statistics
 ```
 

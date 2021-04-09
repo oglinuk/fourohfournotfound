@@ -1,5 +1,23 @@
 # Docker Notes
 
+## Resources
+
+* `man docker`
+* `man docker-system-prune`
+* `man docker-system-df`
+* `man docker-system-events`
+* `man docker-system-info`
+* `man docker ps`
+* `docker container --help`
+* `man docker build`
+
+## Learning Plan
+
+* `docker system` 1 -> 2
+* `docker ps` 1 -> 2
+* `docker container` 1 -> 2
+* `docker build` 2 -> 3
+
 ## Install
 
 ```
@@ -21,6 +39,12 @@ newgrp docker
 `docker build . -t docker-image-name`
 
 `docker run docker-image-name`
+
+## Tips && Tricks
+
+`docker stop $(docker ps -aq) && docker rm $(docker ps -aq)` stops and
+removes all docker containers. The `-q` is required as it only displays
+the IDs.
 
 ## system
 
@@ -58,13 +82,6 @@ containers.
 container.
 
 `docker ps -s` || `docker ps --size` outputs the total file sizes.
-
-## images
-
-`docker images` is an alias for `docker image ls` and outputs Docker
-images.
-
-`docker images -a` || `docker images --all` outputs all Docker images.
 
 ## container
 

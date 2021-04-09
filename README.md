@@ -11,6 +11,7 @@ Some other cool places in this knowledge node to checkout:
 * [books](books)
 * [directories](directories)
 * [learning TODO](learning-todo)
+* [movies](movies)
 * [notes](notes)
 * [personality](personality)
 * [posts](posts)
