@@ -15,6 +15,7 @@ Some other cool places in this knowledge node to checkout:
 * [notes](notes)
 * [personality](personality)
 * [posts](posts)
+* [records](records)
 * [skillstack](skillstack)
 
 ---
