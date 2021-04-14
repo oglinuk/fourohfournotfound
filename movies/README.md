@@ -1,13 +1,15 @@
-# My (Physical) Movies - 23 total
+# My (Physical) Movies - 25 total
 
 * Blade Runner
 * Gladiator
+* V for Vendetta
 * Lord of the Rings Trilogy (extended edition)
 * The Hobbit an Unexpected Journey
 * Shawshank Redemption
 * Seven Years in Tibet
 * Pulp Fiction
 * The Day After Tomorrow
+* Independence Day
 * Inglorious Basterds
 * Rise of the Planet of the Apes
 * Dawn of the Planet of the Apes
