@@ -11,6 +11,7 @@
 
 * [an introduction to game theory](game-theory) - reading
 * [godel, escher, bach: an eternal golden braid](godel-escher-bach) - reading
+* [power and persuasion](power-and-persuasion) - reading
 
 ---
 
@@ -210,5 +211,39 @@ lenin selected works 2
 lenin selected works 3
 
 principles and procedures of statistics
+
+secrets of the c++ masters
+
+data structures and algorithm analysis in c
+
+c: the complete reference
+
+expert c programming
+
+computer graphics: principles and practice
+
+digital systems: principles and applications
+
+advanced modern engineering mathematics
+
+fundamentals of physics
+
+process control: a practical approach
+
+understanding digital logic circuits
+
+electric circuit analysis
+
+applied control theory for embedded systems
+
+control systems engineering
+
+optoelectronics
+
+digital design with cpld applications and vhdl
+
+vhdl: a starters guide
+
+vhdl handbook
 ```
 
