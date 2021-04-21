@@ -9,6 +9,7 @@
 * Seven Years in Tibet
 * Pulp Fiction
 * The Day After Tomorrow
+* V for Vendetta
 * Independence Day
 * Inglorious Basterds
 * Rise of the Planet of the Apes
@@ -19,7 +20,9 @@
 * Predator
 * Batman Begins
 * Batman The Dark Knight
+* The Social Network
 * War of the Worlds
+* Moneyball
 * Willy Wonka & the Chocolate Factory (original)
 * E.T.
 * Elf
