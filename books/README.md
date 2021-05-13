@@ -1,4 +1,4 @@
-# My (Physical) Books - 123 total
+# My (Physical) Books - 142 total
 
 ## Fiction
 
@@ -120,6 +120,12 @@ forbidden knowledge
 a dark and hungry god arises
 chaos and order
 this day all gods die
+
+the lord of the rings (omnibus)
+
+the prince and the pauper
+
+mark twain choice works
 ```
 
 ## Non-fiction
