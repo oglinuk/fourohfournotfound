@@ -34,4 +34,4 @@ Ask someone how their day is going.
 
 `Reflect on the past, look to the future, live in the now.`
 
-**Most Recently Added/Updated**: [Botany](study/botany)
+**Most Recently Added/Updated**: [Botany](posts/study/botany)
