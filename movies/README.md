@@ -1,4 +1,4 @@
-# My (Physical) Movies - 65 total
+# My (Physical) Movies
 
 * Lord of the Rings: Fellowship of the Ring (extended edition)
 * Lord of the Rings: Twin Towers (extended edition)

@@ -10,6 +10,7 @@ Some other cool places in this knowledge node to checkout:
 
 * [books](books)
 * [directories](directories)
+* [games](games)
 * [learning TODO](learning-todo)
 * [movies](movies)
 * [notes](notes)
@@ -32,3 +33,5 @@ Ask someone how their day is going.
 ---
 
 `Reflect on the past, look to the future, live in the now.`
+
+**Most Recently Added/Updated**: [Botany](study/botany)

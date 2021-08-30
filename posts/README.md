@@ -31,6 +31,7 @@ to the topic
 ## [`Study`](study)
 
 * [NMIT](study/nmit)
+* [Botany](study/botany)
   
 ## [`Tools`](tools)
 
