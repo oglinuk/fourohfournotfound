@@ -6,5 +6,9 @@
 
 ## [`Botany`](botany)
 
-* [Soil](soil)
-* [Reproduction](reproduction)
+* [Introductory Survey](botany/intro-survey)
+* [Soil](botany/soil)
+* [The Root and Its Functions](botany/root-and-its-functions)
+* [The Leaf and Its Functions](botany/leaf-and-its-functions)
+* [Reproduction](botany/reproduction)
+* [Pruning](botany/pruning)
