@@ -195,6 +195,7 @@ problems of life itself.
 * [Soil](soil)
 * [The Root and Its Functions](root-and-its-functions)
 * [The Leaf and Its Functions](leaf-and-its-functions)
+* [The Stem and Its Functions](stem-and-its-functions)
 * [Reproduction](reproduction)
 * [Pruning](pruning)
 

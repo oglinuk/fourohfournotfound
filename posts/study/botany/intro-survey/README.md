@@ -35,7 +35,7 @@ toadstools, mushrooms, and similar plants, many o fwhich live as
 parasites and are often the cause of serious disease of man and the lower
 organisms.
 
-## The Bryophytes or Moss Plants
+### The Bryophytes or Moss Plants
 
 These plants are distinguished from the Thallophytes chiefly by their
 more highly developed sexual structures and their more complicated
@@ -47,7 +47,7 @@ in moist situations. Bryophytes are subdivided into the simple and lowly
 *Liverworts* (Hepaticae) and the commoner and more highly specialized
 *Mosses* (Musci).
 
-## The Pteridophytes or Fern Plants
+### The Pteridophytes or Fern Plants
 
 These possess true roots, stems, and leaves, essentially similar in
 structure to those of the Seed Plants, but they still reproduce by spores
@@ -60,7 +60,7 @@ spore-bearing cones, solid stems and scale-like, spirally arranged
 leaves; and the *Horsetails* (Equisetales) also possessing cones but with
 jointed, hollow stems and minute, whorled leaves.
 
-## The Spermatophytes or Seed Plants
+### The Spermatophytes or Seed Plants
 
 The dominant and and familiar portion of the earths vegetation today
 consists of these plants, which are well adapted for life on land and

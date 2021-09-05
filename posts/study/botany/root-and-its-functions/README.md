@@ -136,7 +136,9 @@ involved the physical processes of *diffusion* and *osmosis*, a
 consideration of which is necessary before we can understand clearly this
 primary activity of the root.
 
-*Diffusion* may be defined as the tendency of any substance, when it
+### Diffusion
+
+Diffusion may be defined as the tendency of any substance, when it
 occurs as a gas or in solution, to become evenly distibuted throughout
 the whole space available to it by moving from points of greater to
 points of lesser concentration. Its operation is familiar in the
@@ -177,19 +179,21 @@ inward movement of any given salt will continue so long as its
 concentration is greater in the soil water than in the sap of the
 root-hair.
 
-*Osmotic Movement of Solvents* - This phenomenon of osmosis that is
-complicated, however, by the fact that the dissolving liquid or *solvent*
-(water in ithis case) as well as the dissolved substance will pass
-through the membrane, and by the remarkable circumstance that where such
-movement occurs, it is always more rapid in one direction that in the
-other. Experiment has shown that if two solutions of different densities
-(or a solution and purse water) are separated by a membrane, *a movement
-of water take place from the less concentrated to the more concentrated
-solution*, and tends to continue till both are of the same density; and
-that the rate of this movement is proportional to the difference in
-concentration. The more concentrated solution will therefore tend to
-expand through this access of water, and, if it is confined within a
-closed space, a pressure, often of considerable magnitude, will develop.
+### Osmotic Movement of Solvents
+
+This phenomenon of osmosis that is complicated, however, by the fact that
+the dissolving liquid or *solvent* (water in ithis case) as well as the
+dissolved substance will pass through the membrane, and by the remarkable
+circumstance that where such movement occurs, it is always more rapid in
+one direction that in the other. Experiment has shown that if two
+solutions of different densities (or a solution and purse water) are
+separated by a membrane, *a movement of water take place from the less
+concentrated to the more concentrated solution*, and tends to continue
+till both are of the same density; and that the rate of this movement is
+proportional to the difference in concentration. The more concentrated
+solution will therefore tend to expand through this access of water, and,
+if it is confined within a closed space, a pressure, often of
+considerable magnitude, will develop.
 
 As to why such a movement of water occurs no complete agreement of
 opinion yet exists, for the process of osmotic interchange involves some
@@ -210,20 +214,21 @@ remains that water will pass through a membrane *toward the denser
 solution*, explain it as we may; and upon this fact depends the power of
 the plant to withdraw water from the soil.
 
-*Permeability of the Membrane* - Thus far, we have assumed that both the
-dissolved substance and water may pass with perfect freedom through the
-membrane, or that the membrane is *permeable* to them. All osmotic
-membranes are readily permeable to water, but we find that they differ
-markedly in the ease with which dissolved substances of various sorts can
-diffuse through them. One membrane may be perfectly permeable to a given
-substance; another may allow it to pass slowly and with difficulty, and
-another may exclude it altogether. Nor does even the same membrane
-display an equal degree of permeability to all substances, for some may
-pass through it easily, others with difficulty, and others not at all. To
-what these differences in permeability are due we do not know, but they
-are presumably caused by the relations between the structure of the
-membrane and the size and character of the molucules of the dissolved
-substance.
+### Permeability of the Membrane
+
+Thus far, we have assumed that both thedissolved substance and water may
+pass with perfect freedom through the membrane, or that the membrane is
+*permeable* to them. All osmotic membranes are readily permeable to
+water, but we find that they differ markedly in the ease with which
+dissolved substances of various sorts can diffuse through them. One
+membrane may be perfectly permeable to a given substance; another may
+allow it to pass slowly and with difficulty, and another may exclude it
+altogether. Nor does even the same membrane display an equal degree of
+permeability to all substances, for some may pass through it easily,
+others with difficulty, and others not at all. To what these differences
+in permeability are due we do not know, but they are presumably caused by
+the relations between the structure of the membrane and the size and
+character of the molucules of the dissolved substance.
 
 A membrane which allows water to diffue through it but does not allow a
 given dissolved substance to do so is called *semi-permeable*, and it is
@@ -239,34 +244,35 @@ at a higher concentration than the adjacent soil solution. This same
 membrane, however, is permeable to most of the mineral salts present in
 the soil, which are thus able to diffuse readily into the root-hair.
 
-*Other Principles of Osmotic Action* - Before we attempt to apply the
-principles of osmosis to the living plant, however, we should fix clearly
-in mind certain facts with regard to osmotic phenomena in general about
-which confusion frequently arises. *First*, substances which are not
-soluable or which for any reason are not in solution *cannot diffuse* and
-have no osmotic effect whatever. Sugar, for instance, is soluble and is
-osmotically active, but the moment it is converted into stach, which is
-an insoluble substance, it loses its osmotic effect entirely. *Second*,
-the osmotic strength of a solution, and consequently its power to attact
-water, is determined not by the chemical nature of the dissolved
-substances but by the total concentration of material, of whatever kind,
-which is in solution. A solution of sugar, one of salt, one of a mixture
-of the two, or one containing half a dozen substances, may all have
-exactly the same osmotic concentration. *Third*, the diffusion of water
-through a membrane and the diffusion of salts through the same membrane
-occur *quite independently of one another*. Water will move through a
-membrane from a solution of lesser to a solution of greater total
-concentration, but a dissolved substance, following the general law of
-diffusion, will pass from a point where that substance is abundant to one
-where it is scarce, always providing that the membrane is permeable to
-it. Given the proper conditions, it is quite possible for a dissolved
-substance to pass through a memberane osmotically with no movement of
-water taking place at all, or for water to move without a movement of
-dissolved subtances in the other. *Fourth*, if there is more than one
-substance in solution, each will tend to diffuse quite independently of
-all others. Differences in the concentration of each substance,
-*considered by itself*, are what determine the rate and direction of
-diffusion of that substance.
+### Other Principles of Osmotic Action
+
+Before we attempt to apply the principles of osmosis to the living plant,
+however, we should fix clearly in mind certain facts with regard to
+osmotic phenomena in general about which confusion frequently arises.
+*First*, substances which are not soluable or which for any reason are
+not in solution *cannot diffuse* and have no osmotic effect whatever.
+Sugar, for instance, is soluble and is osmotically active, but the moment
+it is converted into stach, which is an insoluble substance, it loses its
+osmotic effect entirely. *Second*, the osmotic strength of a solution,
+and consequently its power to attact water, is determined not by the
+chemical nature of the dissolved substances but by the total
+concentration of material, of whatever kind, which is in solution. A
+solution of sugar, one of salt, one of a mixture of the two, or one
+containing half a dozen substances, may all have exactly the same osmotic
+concentration. *Third*, the diffusion of water through a membrane and the
+diffusion of salts through the same membrane occur *quite independently
+of one another*. Water will move through a membrane from a solution of
+lesser to a solution of greater total concentration, but a dissolved
+substance, following the general law of diffusion, will pass from a point
+where that substance is abundant to one where it is scarce, always
+providing that the membrane is permeable to it. Given the proper
+conditions, it is quite possible for a dissolved substance to pass
+through a memberane osmotically with no movement of water taking place at
+all, or for water to move without a movement of dissolved subtances in
+the other. *Fourth*, if there is more than one substance in solution,
+each will tend to diffuse quite independently of all others. Differences
+in the concentration of each substance, *considered by itself*, are what
+determine the rate and direction of diffusion of that substance.
 
 ## Diffusion and Osmosis in the Plant Cell
 
