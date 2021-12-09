@@ -1,25 +1,40 @@
-# My (Physical) Books - 142 total
+# My (Physical) Books
 
 ## Fiction
 
-* [caves of steel](isaac-asimov/caves-of-steel) - read
+* [i, robot](isaac-asimov/i-robot) - read
+* [the complete robot](isaac-asimov/the-complete-robot) - read
+* [the caves of steel](isaac-asimov/the-caves-of-steel) - read
 * [the naked sun](isaac-asimov/the-naked-sun) - read
 * [the robots of dawn](isaac-asimov/the-robots-of-dawn) - read
 * [robots and empire](isaac-asimov/robots-and-empire) - read
+* [the currents of space](isaac-asimov/currents-of-space) - read
+* [the stars, like dust](isaac-asimov/the-stars-like-dust) - read
+* [pebble in the sky](isaac-asimov/pebble-in-the-sky) - read
+* [prelude to foundation](isaac-asimov/prelude-to-foundation) - read
+* [foundations fear](second-foundation/foundations-fear) - reading
+* [forward the foundation](isaac-asimov/forward-the-foundation) - read
+* [foundation](isaac-asimov/foundation) - read
+* [second foundation](isaac-asimov/second-foundation) - read
+* [foundations edge](isaac-asimov/foundations-edge) - read
+* [foundations and earth](isaac-asimov/foundation-and-earth) - read
+* [the end of eternity](isaac-asimov/the-end-of-eternity) - read
+
+* [dune](frank-herbert/dune) - read
 
 ## Non-Fiction
 
-* [an introduction to game theory](game-theory) - reading
-* [godel, escher, bach: an eternal golden braid](godel-escher-bach) - reading
-* [power and persuasion](power-and-persuasion) - reading
+* [power and persuasion](power-and-persuasion) - read
+* [tao te ching](tao-te-ching) - read
+* [the collapsing universe](isaac-asimov/the-collapsing-universe) - read
 
 ---
 
 ## Fiction
 
 ```
-1984 - read
 animal farm - read
+1984 - read
 
 the way of kings - read
 the words of radiance - read
@@ -91,6 +106,8 @@ continuum 2
 continuum 3
 continuum 4
 
+dune messiah
+dune: children of dune
 dune: house harkonnen
 
 black sheep
@@ -105,8 +122,6 @@ harry potter and the goblet of fire
 harry potter and the order of the phoenix
 harry potter and the half-blood prince
 harry potter and the deathly hallows
-
-dune
 
 robinson crusoe
 
@@ -251,5 +266,8 @@ digital design with cpld applications and vhdl
 vhdl: a starters guide
 
 vhdl handbook
-```
 
+botany: principles and problems
+
+chaos: making of a new science
+```

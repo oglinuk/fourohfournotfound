@@ -1,9 +1,5 @@
 # The Robots of Dawn
 
-## Author
-
-[Isaac Asimov](https://en.wikipedia.org/wiki/Isaac_Asimov)
-
 ## Table of Contents
 
 ```

@@ -1,7 +1,8 @@
 # Fourohfournotfound
 
 `fourohfournotfound.com` is my personal [knowledge
-node](https://github.com/afkworks/spec-kn)!
+node](https://github.com/afkworks/spec-kn)! Fell free to browse the
+[source code](https://github.com/oglinuk/fourohfournotfound).
 
 I encourage you to first browse/download (and potentially contribute to)
 my [library](https://library.fourohfournotfound.com).
@@ -30,8 +31,8 @@ Smile.
 
 Ask someone how their day is going.
 
----
-
 `Reflect on the past, look to the future, live in the now.`
 
-**Most Recently Added/Updated**: [Botany](posts/study/botany)
+---
+
+**Most Recently Added/Updated**: [Unvanquished](posts/gaming/unvanquished)
