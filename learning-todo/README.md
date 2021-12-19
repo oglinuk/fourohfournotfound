@@ -65,11 +65,11 @@ a writeup that can be referenced.
 	* [ ] `mergetool`
 	* [ ] `worktree`
 * go
-	* modules - mandatory as of 1.16
-	* text/template
+	* [ ] [modules](https://go.dev/blog/go1.16) - mandatory as of 1.16
+	* [ ] [text/template](https://pkg.go.dev/text/template)
 	* design patterns
-		* [ ] Rob Pikes concurrency patterns
-		* [X] [production structure for a go project](https://github.com/oglinuk/restful-go)
+		* [ ] [Rob Pikes concurrency patterns](https://web.archive.org/web/20121015020153/https://vimeo.com/49718712)
+		* [[X](https://github.com/oglinuk/restful-go)] [production structure for a go project](https://github.com/golang-standards/project-layout)
 * c
 	* [ ] pointers
 	* [ ] strings
@@ -89,12 +89,56 @@ a writeup that can be referenced.
 	* statistics
 * vim
 	* [ ] `vimtutor`
+		* [ ] Lesson 1
+		* [ ] Lesson 2
+		* [ ] Lesson 3
+		* [ ] Lesson 4
+		* [ ] Lesson 5
+		* [ ] Lesson 6
+		* [ ] Lesson 7
 	* [ ] [magic wands](https://rwx.gg/tools/editors/vi/how/magic)
-* tmux/screen
+* tmux
+	* [ ] configure to screen keybinds
+	* [ ] commands
+	* [ ] clients && sessions
+	* [ ] widows && panes
+	* [ ] key bindings
+	* [ ] options
+	* [ ] hooks
+	* [ ] names && titles
+	* [ ] status line
+	* [ ] buffers
+	* [ ] control mode
+	* [ ] environment
+	* [ ] files
 * ssh
+	* [ ] escape characters
+	* [ ] tcp forwarding
+	* [ ] x11 forwarding
+	* [ ] verifying host keys
+	* [ ] environment
+	* [ ] files
 * curl
+	* [ ] url
+	* [ ] options
+	* [ ] files
+	* [ ] environment
+	* [ ] proxy protocol prefixes
+	* [ ] exit codes
 * docker
-* kubernetes
+	* [ ] `commit`
+	* [ ] `context`
+	* [ ] `diff`
+	* [ ] `events`
+	* [ ] `exec`
+	* [ ] `export`
+	* [ ] `history`
+	* [ ] `import`
+	* [ ] `info`
+	* [ ] `inspect`
+	* [ ] `network`
+* kind
+* kubectl
 * jq
 * yq
 * PEGN
