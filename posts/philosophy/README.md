@@ -1,3 +1,0 @@
-# (My) Philosopies
-
-* [Posts](posts)

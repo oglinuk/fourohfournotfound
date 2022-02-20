@@ -1,24 +1,24 @@
 # Fourohfournotfound
 
 `fourohfournotfound.com` is my personal [knowledge
-node](https://github.com/afkworks/spec-kn)! Fell free to browse the
-[source code](https://github.com/oglinuk/fourohfournotfound).
+node](https://github.com/afkworks/spec/tree/master/kn)! Fell free to
+browse the [source code](https://github.com/oglinuk/fourohfournotfound).
 
-I encourage you to first browse/download (and potentially contribute to)
-my [library](https://library.fourohfournotfound.com).
+I encourage you to first checkout my personal
+[zettelkasten](https://zet.fourohfournotfound.com) or browse/download
+(and potentially contribute to) my
+[library](https://library.fourohfournotfound.com).
 
 Some other cool places in this knowledge node to checkout:
 
 * [books](books)
-* [directories](directories)
-* [games](games)
-* [learning TODO](learning-todo)
 * [movies](movies)
-* [notes](notes)
-* [personality](personality)
-* [posts](posts)
+* [games](games)
 * [records](records)
+
+* [learning TODO](learning-todo)
 * [skillstack](skillstack)
+* [personality](personality)
 
 ---
 
@@ -35,4 +35,5 @@ Ask someone how their day is going.
 
 ---
 
-**Most Recently Added/Updated**: [Unvanquished](posts/gaming/unvanquished)
+**Most Recently Added/Updated**:
+[Zettelkasten](https://zet.fourohfournotfound.com)
